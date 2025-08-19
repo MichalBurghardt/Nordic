@@ -1,0 +1,13 @@
+console.log('🧪 Test HR Login Credentials:');
+console.log('');
+console.log('📧 Email: anna.schmidt@nordic-zeitarbeit.de');
+console.log('🔑 Password: hr123');
+console.log('👤 Role: hr');
+console.log('');
+console.log('After login, you should be redirected to: /hr/dashboard');
+console.log('');
+console.log('Alternative HR users:');
+console.log('  - michael.fischer@nordic-zeitarbeit.de / hr123');
+console.log('  - julia.wagner@nordic-zeitarbeit.de / hr123');
+console.log('  - daniel.becker@nordic-zeitarbeit.de / hr123');
+console.log('  - lisa.schulz@nordic-zeitarbeit.de / hr123');
