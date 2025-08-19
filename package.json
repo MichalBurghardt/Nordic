@@ -23,6 +23,7 @@
     "bcryptjs": "^3.0.2",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.1",
+    "@dotenvx/dotenvx": "^1.49.0",
     "html2canvas": "^1.4.1",
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^3.0.1",
