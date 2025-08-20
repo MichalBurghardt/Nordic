@@ -1,14 +1,14 @@
 {
-  "name": "zeitarbeit-app",
-  "version": "0.1.0",
+  "name": "nordicapp",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "dotenvx run -- next dev",
     "dev:clean": "npm run clean:full && dotenvx run -- next dev",
     "dev:force": "npm run clean:full && npm run dev",
     "dev:unsafe": "next dev",
-    "build": "dotenvx run -- next build",
-    "start": "dotenvx run -- next start",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
     "clean:ports": "kill-port --port 3000,3001,3002,3003 || echo Ports cleaned",
     "clean:full": "powershell -ExecutionPolicy Bypass -File ./scripts/emergency-cleanup.ps1 || echo Full cleanup completed",
@@ -23,7 +23,6 @@
     "bcryptjs": "^3.0.2",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.1",
-    "@dotenvx/dotenvx": "^1.49.0",
     "html2canvas": "^1.4.1",
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^3.0.1",
@@ -36,6 +35,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.49.0",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
