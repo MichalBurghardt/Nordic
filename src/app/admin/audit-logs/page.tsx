@@ -65,21 +65,32 @@ export default function AuditLogsPage() {
   const fetchAuditLogs = async () => {
     try {
       setLoading(true);
+      setError('');
       const params = new URLSearchParams({
         page: page.toString(),
         limit: limit.toString(),
         ...Object.fromEntries(Object.entries(filters).filter(([, value]) => value))
       });
 
-      const response = await fetch(`/api/admin/audit-logs?${params}`);
+      const response = await fetch(`/api/admin/audit-logs?${params}`, {
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      
       if (response.ok) {
         const data = await response.json();
-        setAuditLogs(data.data);
-        setTotalPages(data.pagination.pages);
+        console.log('Audit logs response:', data);
+        setAuditLogs(data.data || []);
+        setTotalPages(data.pagination?.pages || 1);
       } else {
-        setError('Nie udało się załadować audit logs');
+        const errorData = await response.json();
+        console.error('Audit logs error:', errorData);
+        setError(errorData.error || 'Nie udało się załadować audit logs');
       }
-    } catch {
+    } catch (error) {
+      console.error('Fetch error:', error);
       setError('Błąd połączenia z serwerem');
     } finally {
       setLoading(false);
@@ -90,16 +101,48 @@ export default function AuditLogsPage() {
     try {
       const response = await fetch('/api/admin/audit-logs', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
         body: JSON.stringify({ type: 'stats' })
       });
       
       if (response.ok) {
         const data = await response.json();
+        console.log('Stats response:', data);
         setStats(data.stats);
+      } else {
+        const errorData = await response.json();
+        console.error('Stats error:', errorData);
       }
     } catch (error) {
-      console.error('Failed to fetch stats:', error);
+      console.error('Stats fetch error:', error);
+    }
+  };
+
+  const createTestAudits = async () => {
+    try {
+      const response = await fetch('/api/admin/create-test-audits', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(`✅ ${data.message}`);
+        // Odśwież listę audit logów
+        fetchAuditLogs();
+      } else {
+        const errorData = await response.json();
+        alert(`❌ Błąd: ${errorData.error}`);
+      }
+    } catch (error) {
+      console.error('Error creating test audits:', error);
+      alert('❌ Błąd podczas tworzenia testowych audit logów');
     }
   };
 
@@ -139,6 +182,12 @@ export default function AuditLogsPage() {
               <h1 className="text-3xl font-bold text-gray-900">Audit Logs</h1>
             </div>
             <div className="flex items-center space-x-4">
+              <button
+                onClick={createTestAudits}
+                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+              >
+                + Test Audits
+              </button>
               <button
                 onClick={() => setShowFilters(!showFilters)}
                 className="flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
