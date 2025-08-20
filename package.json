@@ -35,7 +35,6 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@dotenvx/dotenvx": "^1.49.0",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
