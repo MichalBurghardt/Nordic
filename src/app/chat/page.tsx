@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { useChatEnhancements } from '@/hooks/useChatEnhancements';
 
 interface User {
   _id: string;
@@ -46,6 +47,18 @@ export default function ChatPage() {
   const [loading, setLoading] = useState(false);
   const [conversationWith, setConversationWith] = useState<string>('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Enhanced chat functionality
+  const { 
+    unreadCount, 
+    loadChatState,
+    requestNotificationPermission
+  } = useChatEnhancements({
+    currentUserId: currentUser?._id,
+    conversationWith,
+    messages,
+    setMessages
+  });
 
   // Get current user
   useEffect(() => {
@@ -171,10 +184,25 @@ export default function ChatPage() {
     setConversationWith(userId);
   };
 
-  // Fetch users on start
+  // Fetch users on start and restore chat state
   useEffect(() => {
     fetchUsers();
-  }, [fetchUsers]);
+    
+    // Restore last conversation after users are loaded
+    const savedConversation = loadChatState();
+    if (savedConversation) {
+      // Wait a bit for users to load, then restore conversation
+      setTimeout(() => {
+        setSelectedUser(savedConversation);
+        setConversationWith(savedConversation);
+        // Find the role of the saved user to set selectedRole
+        const user = users.find(u => u._id === savedConversation);
+        if (user) {
+          setSelectedRole(user.role);
+        }
+      }, 500);
+    }
+  }, [fetchUsers, loadChatState, users]);
 
   // Fetch messages when conversation partner changes
   useEffect(() => {
@@ -222,7 +250,24 @@ export default function ChatPage() {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Company Chat</h1>
+      <div className="flex justify-between items-center mb-8">
+        <div className="flex items-center space-x-4">
+          <h1 className="text-3xl font-bold text-gray-900">Company Chat</h1>
+          {unreadCount > 0 && (
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+              {unreadCount} unread
+            </span>
+          )}
+        </div>
+        <div className="flex space-x-2">
+          <button
+            onClick={requestNotificationPermission}
+            className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            🔔 Enable Notifications
+          </button>
+        </div>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[600px]">
         {/* Recipient selection panel */}

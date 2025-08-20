@@ -22,11 +22,12 @@ export async function GET(request: NextRequest) {
 
     const { searchParams } = new URL(request.url);
     const conversationWith = searchParams.get('conversationWith');
+    const since = searchParams.get('since'); // New parameter for polling
     const page = parseInt(searchParams.get('page') || '1');
     const limit = parseInt(searchParams.get('limit') || '50');
     const skip = (page - 1) * limit;
 
-    let query = {};
+    let query: Record<string, unknown> = {};
 
     if (conversationWith) {
       // Wiadomości między dwoma użytkownikami
@@ -44,6 +45,11 @@ export async function GET(request: NextRequest) {
           { recipient: decoded.userId }
         ]
       };
+    }
+
+    // Add "since" filter for polling new messages
+    if (since) {
+      query.createdAt = { $gt: new Date(since) };
     }
 
     const messages = await Message.find(query)
