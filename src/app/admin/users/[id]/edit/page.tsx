@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import AdminPageContainer from '@/components/AdminPageContainer';
 import Link from 'next/link';
-import { ArrowLeft, Save, User, Mail, Shield, Eye, EyeOff } from 'lucide-react';
+import { Save, User, Mail, Shield, Eye, EyeOff, UserX, UserCheck, Trash2 } from 'lucide-react';
 
 interface User {
   _id: string;
@@ -26,6 +27,9 @@ export default function EditUserPage() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const [showPasswordFields, setShowPasswordFields] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showStatusModal, setShowStatusModal] = useState(false);
+  const [statusAction, setStatusAction] = useState<'activate' | 'deactivate'>('deactivate');
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -149,72 +153,135 @@ export default function EditUserPage() {
     }
   };
 
+  const handleStatusChange = async () => {
+    try {
+      const newStatus = statusAction === 'activate';
+      const response = await fetch(`/api/admin/users/${userId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ isActive: newStatus }),
+      });
+
+      if (response.ok) {
+        setUser(prev => prev ? { ...prev, isActive: newStatus } : null);
+        setFormData(prev => ({ ...prev, isActive: newStatus }));
+        setShowStatusModal(false);
+        setSuccess(true);
+        setTimeout(() => setSuccess(false), 3000);
+      } else {
+        setError('Fehler beim Aktualisieren des Status');
+      }
+    } catch {
+      setError('Netzwerkfehler');
+    }
+  };
+
+  const handleDeleteUser = async () => {
+    try {
+      const response = await fetch(`/api/admin/users/${userId}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        router.push('/admin/users?deleted=true');
+      } else {
+        setError('Fehler beim Löschen des Benutzers');
+      }
+    } catch {
+      setError('Netzwerkfehler');
+    }
+  };
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mx-auto"></div>
-          <p className="mt-2 text-gray-600">Lade Benutzerdaten...</p>
+      <AdminPageContainer>
+        <div className="text-center py-12">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-nordic-primary mx-auto"></div>
+          <p className="mt-2 text-gray-600 dark:text-gray-400">Lade Benutzerdaten...</p>
         </div>
-      </div>
+      </AdminPageContainer>
     );
   }
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Benutzer nicht gefunden</h1>
+      <AdminPageContainer>
+        <div className="text-center py-12">
+          <h1 className="text-2xl font-bold text-nordic-dark dark:text-nordic-light mb-4">Benutzer nicht gefunden</h1>
           <Link
             href="/admin/users"
-            className="text-indigo-600 hover:text-indigo-800"
+            className="text-nordic-primary hover:text-nordic-dark dark:hover:text-nordic-light"
           >
             ← Zurück zur Benutzerliste
           </Link>
         </div>
-      </div>
+      </AdminPageContainer>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-white shadow-lg">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <Link href="/admin/users" className="text-indigo-600 hover:text-indigo-800 mr-4">
-                <ArrowLeft className="w-5 h-5" />
-              </Link>
-              <h1 className="text-3xl font-bold text-gray-900">
-                Benutzer bearbeiten: {user.lastName}, {user.firstName}
-              </h1>
-            </div>
+    <AdminPageContainer>
+      <div className="mb-6 flex justify-between items-center">
+        <h1 className="text-3xl font-bold text-nordic-dark dark:text-nordic-light">
+          Benutzer bearbeiten: {user.lastName}, {user.firstName}
+        </h1>
+        <div className="flex gap-3">
+          <button
+            onClick={() => {
+              setStatusAction(user.isActive ? 'deactivate' : 'activate');
+              setShowStatusModal(true);
+            }}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-white transition-colors ${
+              user.isActive 
+                ? 'bg-orange-500 hover:bg-orange-600' 
+                : 'bg-green-500 hover:bg-green-600'
+            }`}
+          >
+            {user.isActive ? <UserX className="w-4 h-4" /> : <UserCheck className="w-4 h-4" />}
+            {user.isActive ? 'Deaktivieren' : 'Aktivieren'}
+          </button>
+          <button
+            onClick={() => setShowDeleteModal(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors"
+          >
+            <Trash2 className="w-4 h-4" />
+            Löschen
+          </button>
+        </div>
+      </div>
+
+      {error && (
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-600 text-red-700 dark:text-red-300 px-4 py-3 rounded mb-6">
+          {error}
+        </div>
+      )}
+
+      {success && (
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-300 dark:border-green-600 text-green-700 dark:text-green-300 px-4 py-3 rounded mb-6">
+          {user.isActive 
+            ? 'Benutzer wurde erfolgreich aktualisiert!'
+            : 'Benutzer wurde temporär deaktiviert und kann sich nicht anmelden.'
+          }
+        </div>
+      )}
+
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-600">
+          <div className="flex justify-between items-center">
+            <h2 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light">Benutzerinformationen</h2>
+            <span className={`inline-flex px-3 py-1 text-sm font-semibold rounded-full ${
+              user.isActive 
+                ? 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-300' 
+                : 'bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-300'
+            }`}>
+              {user.isActive ? 'Aktiv' : 'Deaktiviert'}
+            </span>
           </div>
         </div>
-      </header>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {error && (
-          <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded mb-6">
-            {error}
-          </div>
-        )}
-
-        {success && (
-          <div className="bg-green-50 border border-green-300 text-green-700 px-4 py-3 rounded mb-6">
-            Benutzer erfolgreich aktualisiert! Sie werden weitergeleitet...
-          </div>
-        )}
-
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-200">
-            <h2 className="text-lg font-semibold text-gray-900">Benutzerinformationen</h2>
-          </div>
-
-          <form onSubmit={handleSubmit} className="p-6 space-y-6">
-            {/* Basic Information */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="p-6 space-y-6">
+          {/* Basic Information */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                   <User className="w-4 h-4 inline mr-2" />
@@ -408,7 +475,74 @@ export default function EditUserPage() {
             </div>
           </div>
         </div>
-      </main>
-    </div>
+
+        {/* Status Change Modal */}
+        {showStatusModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md w-full">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-4">
+                  Benutzer {statusAction === 'deactivate' ? 'deaktivieren' : 'aktivieren'}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  {statusAction === 'deactivate' 
+                    ? 'Der Benutzer wird temporär deaktiviert und kann sich nicht mehr anmelden. Diese Aktion kann rückgängig gemacht werden.'
+                    : 'Der Benutzer wird wieder aktiviert und kann sich anmelden.'
+                  }
+                </p>
+                <div className="flex gap-3 justify-end">
+                  <button
+                    onClick={() => setShowStatusModal(false)}
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    Abbrechen
+                  </button>
+                  <button
+                    onClick={handleStatusChange}
+                    className={`px-4 py-2 text-white rounded-lg ${
+                      statusAction === 'deactivate' 
+                        ? 'bg-orange-500 hover:bg-orange-600' 
+                        : 'bg-green-500 hover:bg-green-600'
+                    }`}
+                  >
+                    {statusAction === 'deactivate' ? 'Deaktivieren' : 'Aktivieren'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Delete Modal */}
+        {showDeleteModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md w-full">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-red-600 dark:text-red-400 mb-4">
+                  Benutzer löschen
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  Sind Sie sicher, dass Sie den Benutzer <strong>{user.firstName} {user.lastName}</strong> dauerhaft löschen möchten? 
+                  Diese Aktion kann nicht rückgängig gemacht werden.
+                </p>
+                <div className="flex gap-3 justify-end">
+                  <button
+                    onClick={() => setShowDeleteModal(false)}
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  >
+                    Abbrechen
+                  </button>
+                  <button
+                    onClick={handleDeleteUser}
+                    className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg"
+                  >
+                    Löschen
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+    </AdminPageContainer>
   );
 }

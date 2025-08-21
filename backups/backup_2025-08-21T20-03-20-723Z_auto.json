@@ -1,0 +1,5779 @@
+{
+  "timestamp": "2025-08-21T20:03:20.835Z",
+  "version": "1.0",
+  "collections": {
+    "tests": [],
+    "users": [
+      {
+        "_id": "68a392d4c819765e894d801f",
+        "firstName": "Admin",
+        "lastName": "Nordic",
+        "email": "admin@nordic-zeitarbeit.de",
+        "password": "$2b$12$SoNvAVKiGIisC0U.8A/SYuoIrlWz4uWfjhxHPudZYcG6REv06RCIy",
+        "role": "admin",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:40.279Z",
+        "updatedAt": "2025-08-21T19:34:54.216Z",
+        "__v": 0,
+        "colorSettings": {
+          "colorScheme": {},
+          "darknessLevels": {
+            "light": 0.1,
+            "medium": 0.3,
+            "dark": 0.7
+          },
+          "customColors": {}
+        }
+      },
+      {
+        "_id": "68a392d4c819765e894d8021",
+        "firstName": "Thomas",
+        "lastName": "Müller",
+        "email": "thomas.mueller@nordic-zeitarbeit.de",
+        "password": "$2b$12$ADN/e/PwbprD1FrDEBAyu.WdCOlOcOGLTkSVNoycNFnk4wSsyT81S",
+        "role": "admin",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:40.630Z",
+        "updatedAt": "2025-08-18T20:53:40.630Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a392d5c819765e894d8023",
+        "firstName": "Sandra",
+        "lastName": "Weber",
+        "email": "sandra.weber@nordic-zeitarbeit.de",
+        "password": "$2b$12$7PC8RpATpM.gQVufAon2t.SAc.ZCgPxWA.nsnQJZ6T59GR11iwdxC",
+        "role": "admin",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:41.165Z",
+        "updatedAt": "2025-08-18T20:53:41.165Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a392d5c819765e894d8025",
+        "firstName": "Anna",
+        "lastName": "Schmidt",
+        "email": "anna.schmidt@nordic-zeitarbeit.de",
+        "password": "$2b$12$/iNsFcd3dtmCit1mGaZr3uhXAN31xNPjwdltWFK4pnLPYV5JOI.SO",
+        "role": "hr",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:41.503Z",
+        "updatedAt": "2025-08-18T20:53:41.503Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a392d5c819765e894d8027",
+        "firstName": "Michael",
+        "lastName": "Fischer",
+        "email": "michael.fischer@nordic-zeitarbeit.de",
+        "password": "$2b$12$pBL93V6B5vd30gWGjP.M6.uaeDeLBLYv34/lUgBDtUU7m3PmTU9FW",
+        "role": "hr",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:41.814Z",
+        "updatedAt": "2025-08-18T20:53:41.814Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a392d6c819765e894d8029",
+        "firstName": "Julia",
+        "lastName": "Wagner",
+        "email": "julia.wagner@nordic-zeitarbeit.de",
+        "password": "$2b$12$ssjIhwX4T5J.h4x4ymXuiu8/uVFBW.zcuwbo./UbwToyfRYAXMWt2",
+        "role": "hr",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:42.123Z",
+        "updatedAt": "2025-08-18T20:53:42.123Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a392d6c819765e894d802b",
+        "firstName": "Daniel",
+        "lastName": "Becker",
+        "email": "daniel.becker@nordic-zeitarbeit.de",
+        "password": "$2b$12$qYJEIKtNECENspL7TbqIBeYbOEF5WyQsPZ2zsI/.snFEGJuoJWfpe",
+        "role": "hr",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:42.466Z",
+        "updatedAt": "2025-08-18T20:53:42.466Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a392d6c819765e894d802d",
+        "firstName": "Lisa",
+        "lastName": "Schulz",
+        "email": "lisa.schulz@nordic-zeitarbeit.de",
+        "password": "$2b$12$mlLMfbaPmGsMaqNYgBiu3Oe.a8GGMWG1oaT.AHPfSCMV/93BRvlJu",
+        "role": "hr",
+        "isActive": true,
+        "createdAt": "2025-08-18T20:53:42.794Z",
+        "updatedAt": "2025-08-18T20:53:42.794Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a392e6c819765e894d804e",
+        "firstName": "Anna",
+        "lastName": "Schmidt",
+        "email": "kontakt@deutsche-logistik-berlin-gmbh.de",
+        "password": "$2b$12$dRFRPpjaOqkJ.EHyxOLiqOzoPCA9YhU9UAHa1anIBpmPeCetEAq0a",
+        "role": "client",
+        "companyName": "Deutsche Logistik Berlin GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.520Z",
+        "updatedAt": "2025-08-18T20:53:58.520Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d804f",
+        "firstName": "Anna",
+        "lastName": "Meyer",
+        "email": "kontakt@transeuro-hamburg-gmbh.de",
+        "password": "$2b$12$XvVqCcRz3mtO.66SbxX96O5IwgiqYhD1oMnAZbcgwmSdzzCEJzniG",
+        "role": "client",
+        "companyName": "TransEuro Hamburg GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.520Z",
+        "updatedAt": "2025-08-18T20:53:58.520Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8050",
+        "firstName": "Wolfgang",
+        "lastName": "Becker",
+        "email": "kontakt@cargomax-muenchen-gmbh.de",
+        "password": "$2b$12$jrzz8zUxEazU74mwOneTVOblwSFl4oMTWvJawF66mRCqdau8PMEeu",
+        "role": "client",
+        "companyName": "CargoMax München GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.520Z",
+        "updatedAt": "2025-08-18T20:53:58.520Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8051",
+        "firstName": "Dieter",
+        "lastName": "Meyer",
+        "email": "kontakt@logiflow-koeln-gmbh.de",
+        "password": "$2b$12$dnmpYB4qPQojCElU05i8COorsOi9HfyCcGeZ5XWF6HwOKSEt2SDBm",
+        "role": "client",
+        "companyName": "LogiFlow Köln GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.520Z",
+        "updatedAt": "2025-08-18T20:53:58.520Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8052",
+        "firstName": "Dieter",
+        "lastName": "Becker",
+        "email": "kontakt@speedtrans-frankfurt-am-main-gmbh.de",
+        "password": "$2b$12$4qYeby1/lhVh0P4uoM/j7.Ffs2692AP70l9VIKtFmLOJwPvA1IkPW",
+        "role": "client",
+        "companyName": "SpeedTrans Frankfurt am Main GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8053",
+        "firstName": "Petra",
+        "lastName": "Schmidt",
+        "email": "kontakt@eurofreight-stuttgart-gmbh.de",
+        "password": "$2b$12$58NKa7ATfVis5R0z1d6n0.WpidaehoHz8zvQo7v4tYbifTxGYCuH6",
+        "role": "client",
+        "companyName": "EuroFreight Stuttgart GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8054",
+        "firstName": "Jürgen",
+        "lastName": "Müller",
+        "email": "kontakt@fastcargo-duesseldorf-gmbh.de",
+        "password": "$2b$12$7msKpnKo.LgrNX1OZbmIwOqWeLM4Rzi74RcIwmeS1qO3jSWH9uYS2",
+        "role": "client",
+        "companyName": "FastCargo Düsseldorf GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8055",
+        "firstName": "Klaus",
+        "lastName": "Müller",
+        "email": "kontakt@logipartner-dortmund-gmbh.de",
+        "password": "$2b$12$YMGyu7ysNooIsuHh8IbMb.zJ9lh5m734vP9nAGEgtSaonlOpovSVS",
+        "role": "client",
+        "companyName": "LogiPartner Dortmund GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8056",
+        "firstName": "Monika",
+        "lastName": "Weber",
+        "email": "kontakt@transconnect-essen-gmbh.de",
+        "password": "$2b$12$REJbKduA3AYNRuyRr2PiUOdD3NdvEjZ45DY/fKsBA8Y5CzWiPbvs6",
+        "role": "client",
+        "companyName": "TransConnect Essen GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8057",
+        "firstName": "Andrea",
+        "lastName": "Fischer",
+        "email": "kontakt@cargolink-leipzig-gmbh.de",
+        "password": "$2b$12$hM8BtpMRcG2WtlQu1y7O.ubEOE1TF7tubHmTF/8x4CHCZWeePxKwa",
+        "role": "client",
+        "companyName": "CargoLink Leipzig GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8058",
+        "firstName": "Klaus",
+        "lastName": "Wagner",
+        "email": "kontakt@deutsche-logistik-bremen-gmbh.de",
+        "password": "$2b$12$dViH.ov8F44VAIF6Ph8JLeygJ8tVyWp16b28UTuiCn5WpMe.Ej9dG",
+        "role": "client",
+        "companyName": "Deutsche Logistik Bremen GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8059",
+        "firstName": "Jürgen",
+        "lastName": "Fischer",
+        "email": "kontakt@transeuro-dresden-gmbh.de",
+        "password": "$2b$12$Kr1rgWLGL2CGS9/kqJhDO.1MIkKYtRCxQ4wiUbbbjfTSIKmuOv.Oq",
+        "role": "client",
+        "companyName": "TransEuro Dresden GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d805a",
+        "firstName": "Andrea",
+        "lastName": "Fischer",
+        "email": "kontakt@cargomax-hannover-gmbh.de",
+        "password": "$2b$12$C53k8WfJQQ3IByY7S24z4ut1vqdmhIPehA16Up4N1Myx63tyak2Tu",
+        "role": "client",
+        "companyName": "CargoMax Hannover GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d805b",
+        "firstName": "Jürgen",
+        "lastName": "Becker",
+        "email": "kontakt@logiflow-nuernberg-gmbh.de",
+        "password": "$2b$12$C2uQCnPs1T1Ukf7z603aZer3whBpCYukZVinysMuo2cEGDAtC2CaO",
+        "role": "client",
+        "companyName": "LogiFlow Nürnberg GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d805c",
+        "firstName": "Monika",
+        "lastName": "Schmidt",
+        "email": "kontakt@speedtrans-duisburg-gmbh.de",
+        "password": "$2b$12$Xikg7TokO1qSJOzvDsibnuNsCwEnw3YwsCeL4srKCM4DgsSGnbp9q",
+        "role": "client",
+        "companyName": "SpeedTrans Duisburg GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d805d",
+        "firstName": "Sabine",
+        "lastName": "Müller",
+        "email": "kontakt@autoparts-bochum-gmbh.de",
+        "password": "$2b$12$BARctW5REF8UoomzeqLlwuSUbxkS0Q4VEGnHZTtYqwTeNtmMUKjui",
+        "role": "client",
+        "companyName": "AutoParts Bochum GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d805e",
+        "firstName": "Klaus",
+        "lastName": "Schmidt",
+        "email": "kontakt@metallwerk-wuppertal-gmbh.de",
+        "password": "$2b$12$SgDG7nrtvE3k6ScCspJo4.PdqrjxuVH.PLAjt1jOvdOFBmsdOtjYG",
+        "role": "client",
+        "companyName": "MetallWerk Wuppertal GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d805f",
+        "firstName": "Dieter",
+        "lastName": "Müller",
+        "email": "kontakt@chemieindustrie-bielefeld-gmbh.de",
+        "password": "$2b$12$Z2eB7je2UZaVUkH7CLZEVO/vgBa7gvh8bqxkbUbIHOEBCWvGNbjEG",
+        "role": "client",
+        "companyName": "ChemieIndustrie Bielefeld GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8060",
+        "firstName": "Wolfgang",
+        "lastName": "Schneider",
+        "email": "kontakt@elektrotech-bonn-gmbh.de",
+        "password": "$2b$12$Vt8x5wg/DZ5g8PVC6Kgs6.W7oHBQR/PMb7SHkr3giqO3mLFwaB1jG",
+        "role": "client",
+        "companyName": "ElektroTech Bonn GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8061",
+        "firstName": "Anna",
+        "lastName": "Becker",
+        "email": "kontakt@maschinenbau-muenster-gmbh.de",
+        "password": "$2b$12$LPLUHzxm5mwmQSIT4VMeZeTeXAzeB54HubdTmJmQmKZb3Bso76emO",
+        "role": "client",
+        "companyName": "MaschinenBau Münster GmbH",
+        "isActive": false,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-21T18:27:07.586Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8062",
+        "firstName": "Monika",
+        "lastName": "Wagner",
+        "email": "kontakt@prodtech-karlsruhe-gmbh.de",
+        "password": "$2b$12$SpiFsdst4qF.j5Qe5k/r9OfuqfaZg.xuKCRGbiaknwWhODyg./VJG",
+        "role": "client",
+        "companyName": "ProdTech Karlsruhe GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8063",
+        "firstName": "Hans",
+        "lastName": "Fischer",
+        "email": "kontakt@manufacturingpro-mannheim-gmbh.de",
+        "password": "$2b$12$GVFO0LahbwPU88nPP9B4muq3Vm6KSbvjS1D7o.xCmBY.bR.iBPQIK",
+        "role": "client",
+        "companyName": "ManufacturingPro Mannheim GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8064",
+        "firstName": "Jürgen",
+        "lastName": "Meyer",
+        "email": "kontakt@industriewerk-augsburg-gmbh.de",
+        "password": "$2b$12$fj0E5MPA7n9XKqK.0zet6e7k5X4kMjgaoYy1PabouJejrUeEqncc6",
+        "role": "client",
+        "companyName": "IndustrieWerk Augsburg GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8065",
+        "firstName": "Dieter",
+        "lastName": "Müller",
+        "email": "kontakt@productionmax-wiesbaden-gmbh.de",
+        "password": "$2b$12$qTzVfMGaJe60OB/7hiTuzeHG937KJIrn2R/C9zrLzSY0rDvhkMEiG",
+        "role": "client",
+        "companyName": "ProductionMax Wiesbaden GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8066",
+        "firstName": "Klaus",
+        "lastName": "Schmidt",
+        "email": "kontakt@techprod-gelsenkirchen-gmbh.de",
+        "password": "$2b$12$iyYk1f3q4UpovG2OTjQJ0OTUJxdLrBgJseR5tFteGmV.RUgswagTq",
+        "role": "client",
+        "companyName": "TechProd Gelsenkirchen GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8067",
+        "firstName": "Dieter",
+        "lastName": "Becker",
+        "email": "kontakt@autoparts-moenchengladbach-gmbh.de",
+        "password": "$2b$12$YDbyfRojoNe4bIH3/NV87.QWfD8PJc3MEt93bxgHQTv2.UKb2yRX.",
+        "role": "client",
+        "companyName": "AutoParts Mönchengladbach GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8068",
+        "firstName": "Sabine",
+        "lastName": "Schneider",
+        "email": "kontakt@metallwerk-braunschweig-gmbh.de",
+        "password": "$2b$12$sDif2mV2FsWVX06p.R2ebu9HI3jal0K3GG2XXZ3TSF/3kRjBB/69y",
+        "role": "client",
+        "companyName": "MetallWerk Braunschweig GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d8069",
+        "firstName": "Jürgen",
+        "lastName": "Schmidt",
+        "email": "kontakt@chemieindustrie-chemnitz-gmbh.de",
+        "password": "$2b$12$23jvsep4082yQd8yAD/qFu6hZ58MhDLwUCY4OsU./lY7L4eSwNGQe",
+        "role": "client",
+        "companyName": "ChemieIndustrie Chemnitz GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d806a",
+        "firstName": "Wolfgang",
+        "lastName": "Schmidt",
+        "email": "kontakt@elektrotech-kiel-gmbh.de",
+        "password": "$2b$12$pBQn3Yp.aNeS/.NIr9PWdeEOiGBNtZnBKAA40eYDPciDJNo8NaBH6",
+        "role": "client",
+        "companyName": "ElektroTech Kiel GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392e6c819765e894d806b",
+        "firstName": "Jürgen",
+        "lastName": "Schneider",
+        "email": "kontakt@maschinenbau-aachen-gmbh.de",
+        "password": "$2b$12$2FP2suZOJaur3L9DnzoCyuYpCpUqM0k32iAxt7b3R8ZMacdC4poji",
+        "role": "client",
+        "companyName": "MaschinenBau Aachen GmbH",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:58.521Z",
+        "updatedAt": "2025-08-18T20:53:58.521Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d806d",
+        "firstName": "Tomasz",
+        "lastName": "Woźniak",
+        "email": "tomasz.woźniak0@email.com",
+        "password": "$2b$12$efRKNMBPpuEsBFjZGK74v.3BPyxyeBfa7ANveT3xCRlIKahTUUH6G",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d806e",
+        "firstName": "Susanne",
+        "lastName": "Meyer",
+        "email": "susanne.meyer1@email.com",
+        "password": "$2b$12$BfE8mCM4QDAs63vv8XsQFehjAu4WP6saO1v0Ppl7oyQdF8XykKBC.",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d806f",
+        "firstName": "Jan",
+        "lastName": "Novák",
+        "email": "jan.novák2@email.com",
+        "password": "$2b$12$XG4mBmvBzsiNIQAehX9Tw.pWXXo0T8JgU.xlCk/MnJdlXFnL0r2tu",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8070",
+        "firstName": "Lina",
+        "lastName": "Žukauskas",
+        "email": "lina.žukauskas3@email.com",
+        "password": "$2b$12$2BfwNuVSBTq/ne9PODvWwuSUch885a/qe3ekhgePnxW0UOJlzAj82",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8071",
+        "firstName": "Michał",
+        "lastName": "Wójcik",
+        "email": "michał.wójcik4@email.com",
+        "password": "$2b$12$bRs7woksVNCaB4od3FQDueNCgi6uYVd0NAwiXniHtNkFkcR2u/v76",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8072",
+        "firstName": "Jürgen",
+        "lastName": "Schmidt",
+        "email": "jürgen.schmidt5@email.com",
+        "password": "$2b$12$hLNUnr24mGALBWBvzCXlDearU/mULP1W4HVux/Lv9bPAJ8LntVC3C",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8073",
+        "firstName": "Josef",
+        "lastName": "Němec",
+        "email": "josef.němec6@email.com",
+        "password": "$2b$12$TyJIaaq7A8xH4pxSRtzGCO36kgMdqK.BVHDqepiaz6be6qF8mWfi6",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8074",
+        "firstName": "Jonas",
+        "lastName": "Jankauskas",
+        "email": "jonas.jankauskas7@email.com",
+        "password": "$2b$12$WUtTUgEkjJD/99YWCZaj0OMFyZi52ui7vcbgi8nmfP091nFODpLnu",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8075",
+        "firstName": "Joanna",
+        "lastName": "Kowalski",
+        "email": "joanna.kowalski8@email.com",
+        "password": "$2b$12$.ZmCFyLWtmrLoatSBHUfU.xV582EM4tWC4Div8mgrPYXhQV/fG.Zu",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8076",
+        "firstName": "Thomas",
+        "lastName": "Hoffmann",
+        "email": "thomas.hoffmann9@email.com",
+        "password": "$2b$12$NDviEo.bmEaMKyHS/RGkauLa7lkSUli6d0rIGGpX3dFYM66iQAcIC",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8077",
+        "firstName": "Tomáš",
+        "lastName": "Pokorný",
+        "email": "tomáš.pokorný10@email.com",
+        "password": "$2b$12$uYOIbSrbaAYAr4F5HgaVbO3Qk5RCPZ6RhJQ8KQEbCvVRd/UnU66we",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8078",
+        "firstName": "Vytautas",
+        "lastName": "Jankauskas",
+        "email": "vytautas.jankauskas11@email.com",
+        "password": "$2b$12$Gnm29PEL3thjoVTf/4WkCOTY9C/Qifivoqqh/GUF.va5vNv4xnuWK",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8079",
+        "firstName": "Łukasz",
+        "lastName": "Kowalski",
+        "email": "łukasz.kowalski12@email.com",
+        "password": "$2b$12$fWZHtkBrmxwQB.ZlEegWuuVvec5l/52Bx9sQAWKP/mpyxhxkKzj7O",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d807a",
+        "firstName": "Wolfgang",
+        "lastName": "Müller",
+        "email": "wolfgang.müller13@email.com",
+        "password": "$2b$12$GsMFkKPZJJ0WY2h5SacsU.6sQpBtEI1Lj03jlUSjL82A66uhtzzbu",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d807b",
+        "firstName": "Jana",
+        "lastName": "Procházka",
+        "email": "jana.procházka14@email.com",
+        "password": "$2b$12$37pHsO5wrKMqwqqjHKHEcelVNvO.0UkA2KirZLw5Axu8eJYZ5TRtK",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d807c",
+        "firstName": "Vytautas",
+        "lastName": "Butkus",
+        "email": "vytautas.butkus15@email.com",
+        "password": "$2b$12$RJOhCT6bwEWebC3QJCUq7.J5kZO.B1en4F2JMxtJvkCnlnW4ZOgRC",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d807d",
+        "firstName": "Łukasz",
+        "lastName": "Zieliński",
+        "email": "łukasz.zieliński16@email.com",
+        "password": "$2b$12$fIdQu6QSX/A9N/K9dD8J5exWa/I4A7.zgptZ77X/PJf9hLemtsK26",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d807e",
+        "firstName": "Klaus",
+        "lastName": "Müller",
+        "email": "klaus.müller17@email.com",
+        "password": "$2b$12$8O320rbHn1JZ1eF7qHUTuOsDxxEztAZ2lQIHu2pJ0nzBc052F1DKm",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d807f",
+        "firstName": "Jan",
+        "lastName": "Horáček",
+        "email": "jan.horáček18@email.com",
+        "password": "$2b$12$Mn3lUjFskNcBeMrm44g8YeSNgUQyjQJrt.Z9nW4NbNR6rmmVoj1oW",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8080",
+        "firstName": "Andrius",
+        "lastName": "Vasiliauskas",
+        "email": "andrius.vasiliauskas19@email.com",
+        "password": "$2b$12$6go/v7bqKS9lu5owW4nF.uAOXeRBF8ymIw0e0Ak2bMdstxbEyi9FW",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8081",
+        "firstName": "Anna",
+        "lastName": "Kamiński",
+        "email": "anna.kamiński20@email.com",
+        "password": "$2b$12$KvSova8HUmDFmbde9WSRBOuUgExTHoX5k3ONH4s6U7kdyNHylQlwu",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8082",
+        "firstName": "Susanne",
+        "lastName": "Müller",
+        "email": "susanne.müller21@email.com",
+        "password": "$2b$12$O1Q88YoW5tfGLANiHGE.I.HnTMab0AhUpD4QA65Safx3aszv/Z1X.",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8083",
+        "firstName": "Jana",
+        "lastName": "Novák",
+        "email": "jana.novák22@email.com",
+        "password": "$2b$12$BXBngJHGPOnfLe3RtK2eweycrwfO5yWqzXnr7ubwnG6Eztvb3pWWG",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.665Z",
+        "updatedAt": "2025-08-18T20:54:13.665Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8084",
+        "firstName": "Jonas",
+        "lastName": "Urbonas",
+        "email": "jonas.urbonas23@email.com",
+        "password": "$2b$12$n8RwhvC8gPUoxfldGodtrO.e/s1M0xbbMSlmfZqJII.n.p/yumRVq",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8085",
+        "firstName": "Tomasz",
+        "lastName": "Wiśniewski",
+        "email": "tomasz.wiśniewski24@email.com",
+        "password": "$2b$12$OcYig2ibCVnZNxs0xR0Yru9PMmAo8SuuSYDnZ0ARWl8qDryAD4msu",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8086",
+        "firstName": "Andrea",
+        "lastName": "Wagner",
+        "email": "andrea.wagner25@email.com",
+        "password": "$2b$12$KiDis0bqmH2mwnco8T.1UuCSG0nnqt/D94pb5Hc/bHKkFc322EC4S",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8087",
+        "firstName": "Marie",
+        "lastName": "Krejčí",
+        "email": "marie.krejčí26@email.com",
+        "password": "$2b$12$/X1yW2O3XOmOEvAkDEB13eXfAagNUDC5UXpBoumagiVvmO2HBN99i",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8088",
+        "firstName": "Gintė",
+        "lastName": "Pocius",
+        "email": "gintė.pocius27@email.com",
+        "password": "$2b$12$zgBrsoBTQR.cshrkNr3SbuSmrM2Ec9qj01wTf1nlbL0oagg4wIbg.",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8089",
+        "firstName": "Anna",
+        "lastName": "Lewandowski",
+        "email": "anna.lewandowski28@email.com",
+        "password": "$2b$12$DTK./VHCviYUlqF0i.YJTeQPzbVJdSgu3PE.cbm5n/29tH6I1GPV6",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d808a",
+        "firstName": "Monika",
+        "lastName": "Schulz",
+        "email": "monika.schulz29@email.com",
+        "password": "$2b$12$lRVHEFUQOoBNCa7GN46hM.80sDEE81rVlQS5mfU5rlnomyq9spbgi",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d808b",
+        "firstName": "Jiří",
+        "lastName": "Novotný",
+        "email": "jiří.novotný30@email.com",
+        "password": "$2b$12$FXaSNiu742enDloSc8JhqeGtsBFRZRFvLWXqKl6bqH6o45e/UX9SG",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d808c",
+        "firstName": "Darius",
+        "lastName": "Pocius",
+        "email": "darius.pocius31@email.com",
+        "password": "$2b$12$CIK8srbnoAhu7g1Mz0cnf.vUK/uOhqClhizpkZ6KH15r8Ub67q28O",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d808d",
+        "firstName": "Marcin",
+        "lastName": "Woźniak",
+        "email": "marcin.woźniak32@email.com",
+        "password": "$2b$12$4ah1WI3MFyLlKyKycTbO6uprDpbJ5lWRu8qFCZcqwYzI2L3wFTu.e",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d808e",
+        "firstName": "Thomas",
+        "lastName": "Schmidt",
+        "email": "thomas.schmidt33@email.com",
+        "password": "$2b$12$1QuXqhzgONtm.vElUr6F2umucNYLPzsGSS8hWC6gIKciQg/VL4ei6",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d808f",
+        "firstName": "Eva",
+        "lastName": "Němec",
+        "email": "eva.němec34@email.com",
+        "password": "$2b$12$FThPvkwoumeEKIvaa.fwzO/Nxagxl7aWSI1bfL3ULTX/HyUxit356",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8090",
+        "firstName": "Jonas",
+        "lastName": "Petrauskas",
+        "email": "jonas.petrauskas35@email.com",
+        "password": "$2b$12$smg59OwikRMLpbiYrKLKdOXf5SwWT5Km0EpLQkrAQLMjMHdRxWrgS",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8091",
+        "firstName": "Marcin",
+        "lastName": "Wójcik",
+        "email": "marcin.wójcik36@email.com",
+        "password": "$2b$12$Qmwza6KgToVnftySAMnTo.mVnELoHXzuMt1FbAGpiDXnVbC8lcwNO",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8092",
+        "firstName": "Thomas",
+        "lastName": "Meyer",
+        "email": "thomas.meyer37@email.com",
+        "password": "$2b$12$O4ocAqSB6U6rkmu54sPFlutivRfn6y90jVYA.jYRye9yXKR6a99vG",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8093",
+        "firstName": "Jana",
+        "lastName": "Pokorný",
+        "email": "jana.pokorný38@email.com",
+        "password": "$2b$12$j2OV6.CEm3eoCm4sqisRLeECFfAjWcTGNcjTPOMkcT8/dBtwEZRka",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8094",
+        "firstName": "Lina",
+        "lastName": "Kazlauskas",
+        "email": "lina.kazlauskas39@email.com",
+        "password": "$2b$12$dJXtizBJv0CE1wG.NQ24gegEe/b1mDkm026ibpxGC/CroeaLQttnS",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8095",
+        "firstName": "Piotr",
+        "lastName": "Zieliński",
+        "email": "piotr.zieliński40@email.com",
+        "password": "$2b$12$/LqAGqLsgezFgYCiBHx7TubiLFCbV2Y75JBAhzSO248crA4zceFaa",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8096",
+        "firstName": "Jürgen",
+        "lastName": "Fischer",
+        "email": "jürgen.fischer41@email.com",
+        "password": "$2b$12$AIUmbNEuhR1uFnLyof01..xrSbyRvhwQMfCnzOu15C4VZnkt8Sld2",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8097",
+        "firstName": "Pavel",
+        "lastName": "Svoboda",
+        "email": "pavel.svoboda42@email.com",
+        "password": "$2b$12$QyAskOlEF7wYs/.Uw25yVeJaSB/bdXg1kaHaqBy/kAPBQvdIL2idS",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8098",
+        "firstName": "Darius",
+        "lastName": "Vasiliauskas",
+        "email": "darius.vasiliauskas43@email.com",
+        "password": "$2b$12$/E67Fp2hhXadxx4j02ROb.B3vhBH8mg.zXxewAW8m4qmRn1Ng39bK",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d8099",
+        "firstName": "Michał",
+        "lastName": "Kowalski",
+        "email": "michał.kowalski44@email.com",
+        "password": "$2b$12$SxN03EZgoSrUbCXRFj4eL./f0nJAQkB86dSks8rT0zzrK0P/R7gGm",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d809a",
+        "firstName": "Klaus",
+        "lastName": "Müller",
+        "email": "klaus.müller45@email.com",
+        "password": "$2b$12$djd5zcYILIwBo5kMFZRrt.Qj3wm.rPY6KKbFYbZjdDIqZk.yxHPAy",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d809b",
+        "firstName": "Josef",
+        "lastName": "Dvořák",
+        "email": "josef.dvořák46@email.com",
+        "password": "$2b$12$9esISOVZg/s4HlF.PLMnMOFZhUKWt6R0J4RrBDVLuwU8GvOb9wMMO",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d809c",
+        "firstName": "Rūta",
+        "lastName": "Urbonas",
+        "email": "rūta.urbonas47@email.com",
+        "password": "$2b$12$akH7P9WnQrbmeqyDDurDXel3PQdCTsapFt5FH3JJqYuB72ZcdLItC",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d809d",
+        "firstName": "Krzysztof",
+        "lastName": "Zieliński",
+        "email": "krzysztof.zieliński48@email.com",
+        "password": "$2b$12$d48Qgvz50EwknBwVjq4tUO6dTJpv3PXIzSanQDBPR3mSVC29IA8nS",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d809e",
+        "firstName": "Susanne",
+        "lastName": "Fischer",
+        "email": "susanne.fischer49@email.com",
+        "password": "$2b$12$e3oIf4j/LpFrxiQ91gB0ZONNnG.vU4.9OJlTzdaB0GwUB0CLzkY6K",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d809f",
+        "firstName": "Hana",
+        "lastName": "Novák",
+        "email": "hana.novák50@email.com",
+        "password": "$2b$12$9sKHZ0Gc7B6ITuPA8R9dr.glWJVxLHdiSrly5J4s6STvUEiX1lZ/a",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a0",
+        "firstName": "Eglė",
+        "lastName": "Žukauskas",
+        "email": "eglė.žukauskas51@email.com",
+        "password": "$2b$12$Q5KTi2Gx9JDiAD8n4hzaWe/6mHauHj8fhddQhg.BevRsHa5FAtcgS",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a1",
+        "firstName": "Piotr",
+        "lastName": "Nowak",
+        "email": "piotr.nowak52@email.com",
+        "password": "$2b$12$K9v.m92Av.8gG8XOsJSZKupAeI04GfCwO0g9WX9jbBU99eOFoPqCG",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a2",
+        "firstName": "Thomas",
+        "lastName": "Schulz",
+        "email": "thomas.schulz53@email.com",
+        "password": "$2b$12$89W8QwsjK.O/JDtsa1l7yOxMs8pB.4UnDDKWbtiV4xYSjGIe7VJdW",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a3",
+        "firstName": "Jana",
+        "lastName": "Novák",
+        "email": "jana.novák54@email.com",
+        "password": "$2b$12$UBsL5FqKAcbnK3Sz61Gps.iqGbEaStThcoWtGWBr5vpCs8dT8vOPm",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a4",
+        "firstName": "Lina",
+        "lastName": "Paulauskas",
+        "email": "lina.paulauskas55@email.com",
+        "password": "$2b$12$Ky5wfu.tqVinelYK608iXOorBfLwABRdT7FhiZ2tbMG6cazkUkGCO",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a5",
+        "firstName": "Krzysztof",
+        "lastName": "Kamiński",
+        "email": "krzysztof.kamiński56@email.com",
+        "password": "$2b$12$ZUVxgM419Tw/27ewiyUDe.ikjl1wgH9x75CRQ4u6tcbaDHad7haa6",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a6",
+        "firstName": "Susanne",
+        "lastName": "Müller",
+        "email": "susanne.müller57@email.com",
+        "password": "$2b$12$YFPgxOhbI4jZzAECCs7yNuhj42yZLdF.yJfcw3vnmpA.d/1x6v32C",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a7",
+        "firstName": "Jana",
+        "lastName": "Němec",
+        "email": "jana.němec58@email.com",
+        "password": "$2b$12$AIJtZQfS8VPJu.KhOOLmgemVQHsyFgN//x.5w5wTgz3bZ6FiKG9GC",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80a8",
+        "firstName": "Andrius",
+        "lastName": "Paulauskas",
+        "email": "andrius.paulauskas59@email.com",
+        "password": "$2b$12$R7YCXvztAwRNgRjO0iHEhO8k1NB/q6vBStmaCl5Jbkvh0exzJM33S",
+        "role": "employee",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.666Z",
+        "updatedAt": "2025-08-18T20:54:13.666Z"
+      },
+      {
+        "_id": "68a3957bf13351126b40a64a",
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "test@example.com",
+        "password": "$2b$12$raJ7qRjcjIXpzQ31o/XgmucUeGoI7LyfT3zOebrP.5HT.XiPkI6mu",
+        "role": "admin",
+        "isActive": true,
+        "createdAt": "2025-08-18T21:04:59.184Z",
+        "updatedAt": "2025-08-18T21:04:59.184Z",
+        "__v": 0
+      }
+    ],
+    "messages": [
+      {
+        "_id": "68a5a301f20f84cb79b9a41c",
+        "sender": "68a392d4c819765e894d801f",
+        "recipient": "68a3957bf13351126b40a64a",
+        "content": "Test",
+        "messageType": "text",
+        "isRead": false,
+        "attachments": [],
+        "createdAt": "2025-08-20T10:27:13.790Z",
+        "updatedAt": "2025-08-20T10:27:13.790Z",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a385f20f84cb79b9a44b",
+        "sender": "68a392d5c819765e894d8025",
+        "recipient": "68a392d4c819765e894d801f",
+        "content": "Test123",
+        "messageType": "text",
+        "isRead": true,
+        "attachments": [],
+        "createdAt": "2025-08-20T10:29:25.160Z",
+        "updatedAt": "2025-08-20T10:37:46.243Z",
+        "__v": 0,
+        "readAt": "2025-08-20T10:37:46.242Z"
+      },
+      {
+        "_id": "68a5a579f20f84cb79b9a476",
+        "sender": "68a392d4c819765e894d801f",
+        "recipient": "68a392d5c819765e894d8025",
+        "content": "Test2",
+        "messageType": "text",
+        "isRead": true,
+        "attachments": [],
+        "createdAt": "2025-08-20T10:37:45.385Z",
+        "updatedAt": "2025-08-20T10:57:30.671Z",
+        "__v": 0,
+        "readAt": "2025-08-20T10:57:30.670Z"
+      },
+      {
+        "_id": "68a5a6fafcc9f16ba1ebdf13",
+        "sender": "68a392d4c819765e894d801f",
+        "recipient": "68a392d5c819765e894d8025",
+        "content": "Test12345",
+        "messageType": "text",
+        "isRead": true,
+        "attachments": [],
+        "createdAt": "2025-08-20T10:44:10.845Z",
+        "updatedAt": "2025-08-20T10:57:33.345Z",
+        "__v": 0,
+        "readAt": "2025-08-20T10:57:33.341Z"
+      },
+      {
+        "_id": "68a5a9914cb2234f56f69134",
+        "sender": "68a392d4c819765e894d801f",
+        "recipient": "68a392d5c819765e894d8025",
+        "content": "Test121212",
+        "messageType": "text",
+        "isRead": true,
+        "attachments": [],
+        "createdAt": "2025-08-20T10:55:13.656Z",
+        "updatedAt": "2025-08-20T10:57:30.686Z",
+        "__v": 0,
+        "readAt": "2025-08-20T10:57:30.682Z"
+      },
+      {
+        "_id": "68a5aa9944758bb5fbf8e780",
+        "sender": "68a392d4c819765e894d801f",
+        "recipient": "68a392d5c819765e894d8025",
+        "content": "TESTUJEMY123",
+        "messageType": "text",
+        "isRead": true,
+        "attachments": [],
+        "createdAt": "2025-08-20T10:59:37.107Z",
+        "updatedAt": "2025-08-20T11:00:31.828Z",
+        "__v": 0,
+        "readAt": "2025-08-20T11:00:31.827Z"
+      },
+      {
+        "_id": "68a5ae6687459db2971a9e39",
+        "sender": "68a392d4c819765e894d801f",
+        "recipient": "68a392d5c819765e894d8025",
+        "content": "Tesrtesttesr",
+        "messageType": "text",
+        "isRead": false,
+        "attachments": [],
+        "createdAt": "2025-08-20T11:15:50.876Z",
+        "updatedAt": "2025-08-20T11:15:50.876Z",
+        "__v": 0
+      }
+    ],
+    "schedules": [],
+    "audits": [
+      {
+        "_id": "68a396370541626658e19623",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-18T21:08:07.207Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a3a8d87c8a2fc2019d5182",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-18T22:27:36.515Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a3aa1c7c8a2fc2019dbd4c",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGOUT",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-18T22:33:00.700Z",
+        "details": "Użytkownik wylogował się z systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a3aa1e7c8a2fc2019dbe29",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGOUT",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-18T22:33:02.783Z",
+        "details": "Użytkownik wylogował się z systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a40f98abd4ac6267e8cb92",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.1 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36",
+        "timestamp": "2025-08-19T05:46:00.122Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a411683e2aaa7f1d17d8b8",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T05:53:44.749Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a41c2e54ca8ff8d353ac0d",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T06:39:42.960Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a43956791a1331d84de3a8",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T08:44:06.059Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a43aa8791a1331d84de3d5",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T08:49:44.041Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a446dca729824293d59d4d",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T09:41:48.109Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a45487516398fe6e777d4a",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T10:40:07.820Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a454ae516398fe6e777d55",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T10:40:46.305Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a45c2a3405976c67b2ce8f",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T11:12:42.655Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a46b29f108a73a9d9d3de1",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T12:16:41.588Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a46b56f108a73a9d9d3e17",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "UPDATE",
+        "resource": "Schedule",
+        "resourceId": "68a45300a10f7daec2b60f1b",
+        "changes": {
+          "before": {
+            "_id": "68a45300a10f7daec2b60f1b",
+            "employeeId": "68a392f5c819765e894d80b6",
+            "clientId": "68a392dec819765e894d802f",
+            "assignmentId": "68a392f5c819765e894d80f9",
+            "startDate": "2025-08-20T22:00:00.000Z",
+            "endDate": "2025-08-21T21:59:59.999Z",
+            "startTime": "06:00",
+            "endTime": "15:00",
+            "weeklyHours": 40,
+            "status": "planned",
+            "notes": "Tagschicht - 9h",
+            "createdBy": "68a392d5c819765e894d8025",
+            "__v": 0,
+            "createdAt": "2025-08-19T10:33:36.517Z",
+            "updatedAt": "2025-08-19T10:33:36.517Z"
+          },
+          "after": {
+            "_id": "68a45300a10f7daec2b60f1b",
+            "employeeId": "68a392f5c819765e894d80b6",
+            "clientId": "68a392dec819765e894d802f",
+            "assignmentId": "68a392f5c819765e894d80f9",
+            "startDate": "2025-08-20T22:00:00.000Z",
+            "endDate": "2025-08-21T21:59:59.999Z",
+            "startTime": "06:00",
+            "endTime": "17:00",
+            "weeklyHours": 40,
+            "status": "planned",
+            "notes": "Tagschicht - 9h",
+            "createdBy": "68a392d5c819765e894d8025",
+            "__v": 0,
+            "createdAt": "2025-08-19T10:33:36.517Z",
+            "updatedAt": "2025-08-19T12:17:26.049Z"
+          }
+        },
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T12:17:26.569Z",
+        "details": "Zaktualizowano harmonogram ID: 68a45300a10f7daec2b60f1b",
+        "__v": 0
+      },
+      {
+        "_id": "68a47159cec49708935044a9",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T12:43:05.419Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a47184cec49708935044dd",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "UPDATE",
+        "resource": "Schedule",
+        "resourceId": "68a45300a10f7daec2b60f1b",
+        "changes": {
+          "field": "endTime, updatedAt",
+          "details": {
+            "endTime": {
+              "before": "17:00",
+              "after": "19:00"
+            }
+          }
+        },
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T12:43:48.729Z",
+        "details": "Zaktualizowano harmonogram ID: 68a45300a10f7daec2b60f1b",
+        "__v": 0
+      },
+      {
+        "_id": "68a478bb4a7b33d26f9e28cc",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T13:14:35.631Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a47fd54fa1122259d64896",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T13:44:53.878Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a4b8f8a5f84a344bf71b04",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T17:48:40.116Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a4be28a52d24aa97438203",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T18:10:48.654Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a4c3fb77d8679fe6cbff6a",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T18:35:39.823Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a4cecc13c8357dabe045e0",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.1 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36",
+        "timestamp": "2025-08-19T19:21:48.377Z",
+        "details": "Użytkownik Anna Schmidt zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a4ceea13c8357dabe045f7",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGOUT",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T19:22:18.618Z",
+        "details": "Użytkownik wylogował się z systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a4cef713c8357dabe045fa",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T19:22:31.517Z",
+        "details": "Użytkownik Anna Schmidt zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a4d31df76d7ebff6285127",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-19T19:40:13.311Z",
+        "details": "Użytkownik Anna Schmidt zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a59b05f478d5dbdd3af780",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T09:53:09.879Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a302f20f84cb79b9a428",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "CREATE",
+        "resource": "message",
+        "resourceId": "68a5a301f20f84cb79b9a41c",
+        "changes": {
+          "after": {
+            "recipient": "68a3957bf13351126b40a64a",
+            "content": "Test",
+            "messageType": "text"
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:27:14.689Z",
+        "details": "Utworzono nowy message",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a36ff20f84cb79b9a432",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:29:03.952Z",
+        "details": "Użytkownik Anna Schmidt zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a385f20f84cb79b9a450",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "CREATE",
+        "resource": "message",
+        "resourceId": "68a5a385f20f84cb79b9a44b",
+        "changes": {
+          "after": {
+            "recipient": "68a392d4c819765e894d801f",
+            "content": "Test123",
+            "messageType": "text"
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:29:25.447Z",
+        "details": "Utworzono nowy message",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a4d3f20f84cb79b9a45e",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:34:59.636Z",
+        "details": "Użytkownik Anna Schmidt zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a4ea85637d3e73e15ba9",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:35:22.277Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a567f20f84cb79b9a473",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "UPDATE",
+        "resource": "message",
+        "resourceId": "68a5a385f20f84cb79b9a44b",
+        "changes": {
+          "field": "isRead, readAt",
+          "details": {
+            "isRead": {
+              "before": false,
+              "after": true
+            }
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:37:27.193Z",
+        "details": "Zaktualizowano message. Zmienione pola: isRead, readAt",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a579f20f84cb79b9a47b",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "CREATE",
+        "resource": "message",
+        "resourceId": "68a5a579f20f84cb79b9a476",
+        "changes": {
+          "after": {
+            "recipient": "68a392d5c819765e894d8025",
+            "content": "Test2",
+            "messageType": "text"
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:37:45.669Z",
+        "details": "Utworzono nowy message",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a57af20f84cb79b9a47f",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "UPDATE",
+        "resource": "message",
+        "resourceId": "68a5a385f20f84cb79b9a44b",
+        "changes": {
+          "field": "readAt"
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:37:46.338Z",
+        "details": "Zaktualizowano message. Zmienione pola: readAt",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a6fbfcc9f16ba1ebdf18",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "CREATE",
+        "resource": "message",
+        "resourceId": "68a5a6fafcc9f16ba1ebdf13",
+        "changes": {
+          "after": {
+            "recipient": "68a392d5c819765e894d8025",
+            "content": "Test12345",
+            "messageType": "text"
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:44:11.148Z",
+        "details": "Utworzono nowy message",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a9914cb2234f56f6913c",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "CREATE",
+        "resource": "message",
+        "resourceId": "68a5a9914cb2234f56f69134",
+        "changes": {
+          "after": {
+            "recipient": "68a392d5c819765e894d8025",
+            "content": "Test121212",
+            "messageType": "text"
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:55:13.950Z",
+        "details": "Utworzono nowy message",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a9e74cb2234f56f6913e",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGOUT",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:56:39.601Z",
+        "details": "Użytkownik wylogował się z systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5a9fd4cb2234f56f69141",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:57:01.005Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aa0c4cb2234f56f69157",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:57:16.234Z",
+        "details": "Użytkownik Anna Schmidt zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aa1a4cb2234f56f6916b",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "UPDATE",
+        "resource": "message",
+        "resourceId": "68a5a579f20f84cb79b9a476",
+        "changes": {
+          "field": "isRead, readAt",
+          "details": {
+            "isRead": {
+              "before": false,
+              "after": true
+            }
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:57:30.769Z",
+        "details": "Zaktualizowano message. Zmienione pola: isRead, readAt",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aa1a44758bb5fbf8e761",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "UPDATE",
+        "resource": "message",
+        "resourceId": "68a5a9914cb2234f56f69134",
+        "changes": {
+          "field": "isRead, readAt",
+          "details": {
+            "isRead": {
+              "before": false,
+              "after": true
+            }
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:57:30.785Z",
+        "details": "Zaktualizowano message. Zmienione pola: isRead, readAt",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aa1d576161808efcd93c",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "UPDATE",
+        "resource": "message",
+        "resourceId": "68a5a6fafcc9f16ba1ebdf13",
+        "changes": {
+          "field": "isRead, readAt",
+          "details": {
+            "isRead": {
+              "before": false,
+              "after": true
+            }
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:57:33.444Z",
+        "details": "Zaktualizowano message. Zmienione pola: isRead, readAt",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aa61576161808efcd948",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGOUT",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:58:41.664Z",
+        "details": "Użytkownik wylogował się z systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aa72576161808efcd94b",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:58:58.545Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aa9944758bb5fbf8e785",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "CREATE",
+        "resource": "message",
+        "resourceId": "68a5aa9944758bb5fbf8e780",
+        "changes": {
+          "after": {
+            "recipient": "68a392d5c819765e894d8025",
+            "content": "TESTUJEMY123",
+            "messageType": "text"
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T10:59:37.395Z",
+        "details": "Utworzono nowy message",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aab144758bb5fbf8e787",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGOUT",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T11:00:01.321Z",
+        "details": "Użytkownik wylogował się z systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aabc44758bb5fbf8e78a",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T11:00:12.707Z",
+        "details": "Użytkownik Anna Schmidt zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5aacf576161808efcd958",
+        "userId": "68a392d5c819765e894d8025",
+        "action": "UPDATE",
+        "resource": "message",
+        "resourceId": "68a5aa9944758bb5fbf8e780",
+        "changes": {
+          "field": "isRead, readAt",
+          "details": {
+            "isRead": {
+              "before": false,
+              "after": true
+            }
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T11:00:31.924Z",
+        "details": "Zaktualizowano message. Zmienione pola: isRead, readAt",
+        "__v": 0
+      },
+      {
+        "_id": "68a5ad37e9bdd1954581664a",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/138.0.7204.156 Mobile/15E148 Safari/604.1",
+        "timestamp": "2025-08-20T11:10:47.723Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5ad7e87459db2971a9e09",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T11:11:58.667Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a5ae6787459db2971a9e3e",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "CREATE",
+        "resource": "message",
+        "resourceId": "68a5ae6687459db2971a9e39",
+        "changes": {
+          "after": {
+            "recipient": "68a392d5c819765e894d8025",
+            "content": "Tesrtesttesr",
+            "messageType": "text"
+          }
+        },
+        "ipAddress": "188.33.18.52",
+        "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/138.0.7204.156 Mobile/15E148 Safari/604.1",
+        "timestamp": "2025-08-20T11:15:51.163Z",
+        "details": "Utworzono nowy message",
+        "__v": 0
+      },
+      {
+        "_id": "68a5d8ea4ab7ba9ea07af18c",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T14:17:14.124Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a6003ecab173b7d2d6111a",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T17:05:02.290Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a610f786cf29162fa89459",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T18:16:23.512Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a61984554ecc80535f98dc",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T18:52:52.258Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a61f7d2cccc4f099868011",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T19:18:21.309Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a62296d2245fad25a08243",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T19:31:34.677Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a62801d2245fad25a08321",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-20T19:54:41.998Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a714e192669bbedd4d6007",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.1 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36",
+        "timestamp": "2025-08-21T12:45:21.507Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a72740f282e33f10de7002",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-21T14:03:44.038Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a76033063e03df4399d64e",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-21T18:06:43.269Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a76eda94204f27e49f0eac",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-21T19:09:14.242Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a771db57482aa38f4d6ff6",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-21T19:22:03.592Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a7737c0b25fc1b0ee72361",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "LOGIN",
+        "resource": "User",
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-21T19:29:00.013Z",
+        "details": "Użytkownik Admin Nordic zalogował się do systemu",
+        "__v": 0
+      },
+      {
+        "_id": "68a773e00b25fc1b0ee72390",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "UPDATE",
+        "resource": "SystemSettings",
+        "resourceId": "68a773e00b25fc1b0ee7238e",
+        "changes": {
+          "field": "company, notifications, security, system",
+          "details": {
+            "company": {
+              "after": {
+                "name": "Nordic Zeitarbeit GmbH",
+                "address": "Hauptstraße 123, 10115 Berlin",
+                "phone": "+49 30 12345678",
+                "email": "kontakt@nordic-zeitarbeit.de",
+                "website": "www.nordic-zeitarbeit.de",
+                "taxId": "DE123456789"
+              }
+            },
+            "notifications": {
+              "after": {
+                "emailAlerts": true,
+                "smsAlerts": false,
+                "assignmentReminders": true,
+                "paymentReminders": true
+              }
+            },
+            "security": {
+              "after": {
+                "passwordMinLength": 8,
+                "requireTwoFactor": false,
+                "sessionTimeout": 30,
+                "maxLoginAttempts": 5
+              }
+            },
+            "system": {
+              "after": {
+                "defaultHourlyRate": 15,
+                "defaultCurrency": "EUR",
+                "timezone": "Europe/Berlin",
+                "dateFormat": "DD.MM.YYYY",
+                "autoBackup": true,
+                "maintenanceMode": false
+              }
+            }
+          }
+        },
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-21T19:30:40.419Z",
+        "details": "Utworzył ustawienia systemowe - Sekcje: company, notifications, security, system",
+        "__v": 0
+      },
+      {
+        "_id": "68a774de0b25fc1b0ee7239c",
+        "userId": "68a392d4c819765e894d801f",
+        "action": "UPDATE",
+        "resource": "SystemSettings",
+        "resourceId": "68a773e00b25fc1b0ee7238e",
+        "changes": {
+          "field": "company, notifications, security, system, _id, updatedBy, updatedAt, createdAt, __v",
+          "details": {
+            "company": {
+              "after": {
+                "name": "Nordic Zeitarbeit GmbH",
+                "address": "Hauptstraße 123, 10115 Berlin",
+                "phone": "+49 30 12345678",
+                "email": "kontakt@nordic-zeitarbeit.de",
+                "website": "www.nordic-zeitarbeit.de",
+                "taxId": "DE123456789"
+              }
+            },
+            "notifications": {
+              "after": {
+                "emailAlerts": true,
+                "smsAlerts": false,
+                "assignmentReminders": true,
+                "paymentReminders": true
+              }
+            },
+            "security": {
+              "after": {
+                "passwordMinLength": 8,
+                "requireTwoFactor": false,
+                "sessionTimeout": 30,
+                "maxLoginAttempts": 5
+              }
+            },
+            "system": {
+              "after": {
+                "defaultHourlyRate": 15,
+                "defaultCurrency": "EUR",
+                "timezone": "Europe/Berlin",
+                "dateFormat": "DD.MM.YYYY",
+                "autoBackup": true,
+                "maintenanceMode": false
+              }
+            },
+            "_id": {
+              "after": "68a773e00b25fc1b0ee7238e"
+            },
+            "updatedBy": {
+              "after": "68a392d4c819765e894d801f"
+            },
+            "updatedAt": {
+              "after": "2025-08-21T19:30:40.311Z"
+            },
+            "createdAt": {
+              "after": "2025-08-21T19:30:40.311Z"
+            },
+            "__v": {
+              "after": 0
+            }
+          }
+        },
+        "ipAddress": "::1",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+        "timestamp": "2025-08-21T19:34:54.072Z",
+        "details": "Zaktualizował ustawienia systemowe - Sekcje: company, notifications, security, system, _id, updatedBy, updatedAt, createdAt, __v",
+        "__v": 0
+      }
+    ],
+    "employees": [
+      {
+        "_id": "68a392f5c819765e894d80aa",
+        "userId": "68a392f5c819765e894d806d",
+        "employeeId": "EMP001",
+        "hourlyRate": 13,
+        "skills": [
+          "Lagerarbeit",
+          "Maschinenführer"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL7.648130636683324e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL5585177622",
+        "socialSecurityNumber": "85251242381",
+        "emergencyContact": {
+          "name": "Joanna Nowak",
+          "phone": "+48 603278473",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP5330KZSW",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 11,
+        "weeklyHours": 28,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80ab",
+        "userId": "68a392f5c819765e894d806e",
+        "employeeId": "EMP002",
+        "hourlyRate": 17,
+        "skills": [
+          "Lagerarbeit",
+          "Verpackung",
+          "Montage"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": false,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE37814224355939930000",
+          "bankName": "Volksbank"
+        },
+        "taxId": "DE368654646",
+        "socialSecurityNumber": "5476690517534",
+        "emergencyContact": {
+          "name": "Sabine Fischer",
+          "phone": "+49 0211 38265116",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP2WGKEWLF",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 4,
+        "weeklyHours": 28,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80ac",
+        "userId": "68a392f5c819765e894d806f",
+        "employeeId": "EMP003",
+        "hourlyRate": 16,
+        "skills": [
+          "Qualitätskontrolle",
+          "Wartung"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ62880921839888770000",
+          "bankName": "Česká spořitelna"
+        },
+        "taxId": "CZ449915071",
+        "socialSecurityNumber": "2686871707",
+        "emergencyContact": {
+          "name": "Petr Němec",
+          "phone": "+420 654812515",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPZ1CY9NBF",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 38,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80ad",
+        "userId": "68a392f5c819765e894d8070",
+        "employeeId": "EMP004",
+        "hourlyRate": 17,
+        "skills": [
+          "Lagerarbeit",
+          "Kommissionierung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "LT94974078020683970000",
+          "bankName": "Swedbank"
+        },
+        "taxId": "LT826579339",
+        "socialSecurityNumber": "956107933173",
+        "emergencyContact": {
+          "name": "Eglė Urbonas",
+          "phone": "+370 83752341",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPE229KY9U",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 3,
+        "weeklyHours": 37,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80ae",
+        "userId": "68a392f5c819765e894d8071",
+        "employeeId": "EMP005",
+        "hourlyRate": 17,
+        "skills": [
+          "Wartung",
+          "Montage",
+          "Handwerker"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL2.8535770199958414e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL8110708509",
+        "socialSecurityNumber": "70822073850",
+        "emergencyContact": {
+          "name": "Piotr Kowalczyk",
+          "phone": "+48 408533767",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPKBSLLASU",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 11,
+        "weeklyHours": 21,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80af",
+        "userId": "68a392f5c819765e894d8072",
+        "employeeId": "EMP006",
+        "hourlyRate": 17,
+        "skills": [
+          "Lagerarbeit",
+          "Transport",
+          "Handwerker"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": false,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE23280420466717573000",
+          "bankName": "Volksbank"
+        },
+        "taxId": "DE673690847",
+        "socialSecurityNumber": "9706365248397",
+        "emergencyContact": {
+          "name": "Susanne Müller",
+          "phone": "+49 0211 53865776",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPNU4BNRH6",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 39,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b0",
+        "userId": "68a392f5c819765e894d8073",
+        "employeeId": "EMP007",
+        "hourlyRate": 13,
+        "skills": [
+          "Qualitätskontrolle",
+          "Maschinenführer"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ53845717429755970000",
+          "bankName": "Komerční banka"
+        },
+        "taxId": "CZ848286728",
+        "socialSecurityNumber": "2168566099",
+        "emergencyContact": {
+          "name": "Anna Novák",
+          "phone": "+420 128700133",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPWIX6TXW3",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 34,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b1",
+        "userId": "68a392f5c819765e894d8074",
+        "employeeId": "EMP008",
+        "hourlyRate": 16,
+        "skills": [
+          "Staplerfahrer",
+          "Reinigung",
+          "Kommissionierung",
+          "Verpackung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT37375103631412120000",
+          "bankName": "SEB bankas"
+        },
+        "taxId": "LT857888688",
+        "socialSecurityNumber": "255622191158",
+        "emergencyContact": {
+          "name": "Jonas Kazlauskas",
+          "phone": "+370 77283627",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP5YNMDJ7O",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 32,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b2",
+        "userId": "68a392f5c819765e894d8075",
+        "employeeId": "EMP009",
+        "hourlyRate": 18,
+        "skills": [
+          "Lagerarbeit",
+          "Kommissionierung",
+          "Logistik"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "PL2.6466943119776493e+23",
+          "bankName": "ING Bank Śląski"
+        },
+        "taxId": "PL8034030017",
+        "socialSecurityNumber": "85910053659",
+        "emergencyContact": {
+          "name": "Katarzyna Zieliński",
+          "phone": "+48 146859235",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP5DEL6W3Y",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 5,
+        "weeklyHours": 23,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b3",
+        "userId": "68a392f5c819765e894d8076",
+        "employeeId": "EMP010",
+        "hourlyRate": 18,
+        "skills": [
+          "Lagerarbeit",
+          "Verpackung"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE81865551558944130000",
+          "bankName": "Volksbank"
+        },
+        "taxId": "DE615189873",
+        "socialSecurityNumber": "3363534852695",
+        "emergencyContact": {
+          "name": "Petra Meyer",
+          "phone": "+49 030 85418570",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPGE5MTUKD",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 29,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b4",
+        "userId": "68a392f5c819765e894d8077",
+        "employeeId": "EMP011",
+        "hourlyRate": 12,
+        "skills": [
+          "Qualitätskontrolle",
+          "Reinigung",
+          "Schweißen",
+          "Staplerfahrer"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ79120762012248240000",
+          "bankName": "UniCredit Bank"
+        },
+        "taxId": "CZ573684391",
+        "socialSecurityNumber": "3598428657",
+        "emergencyContact": {
+          "name": "Jana Svoboda",
+          "phone": "+420 516059766",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPXW557VLC",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 11,
+        "weeklyHours": 27,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b5",
+        "userId": "68a392f5c819765e894d8078",
+        "employeeId": "EMP012",
+        "hourlyRate": 18,
+        "skills": [
+          "Staplerfahrer",
+          "Wartung",
+          "Verpackung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": false,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT41259954427703080000",
+          "bankName": "Swedbank"
+        },
+        "taxId": "LT386694069",
+        "socialSecurityNumber": "933429060029",
+        "emergencyContact": {
+          "name": "Mindaugas Vasiliauskas",
+          "phone": "+370 87404379",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP9STINWHF",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 2,
+        "weeklyHours": 22,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b6",
+        "userId": "68a392f5c819765e894d8079",
+        "employeeId": "EMP013",
+        "hourlyRate": 18,
+        "skills": [
+          "Wartung",
+          "Lagerarbeit",
+          "Kommissionierung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": false,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL4.922683852910451e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL1088122431",
+        "socialSecurityNumber": "47529876654",
+        "emergencyContact": {
+          "name": "Marcin Lewandowski",
+          "phone": "+48 279963688",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP7ZBFVYV9",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 35,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.837Z",
+        "updatedAt": "2025-08-18T20:54:13.837Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b7",
+        "userId": "68a392f5c819765e894d807a",
+        "employeeId": "EMP014",
+        "hourlyRate": 16,
+        "skills": [
+          "Reinigung",
+          "Schweißen",
+          "Transport"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "DE80027718947913400000",
+          "bankName": "Commerzbank"
+        },
+        "taxId": "DE783504247",
+        "socialSecurityNumber": "6633134819053",
+        "emergencyContact": {
+          "name": "Jürgen Wagner",
+          "phone": "+49 0211 50515035",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP1328B97U",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 1,
+        "weeklyHours": 36,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b8",
+        "userId": "68a392f5c819765e894d807b",
+        "employeeId": "EMP015",
+        "hourlyRate": 13,
+        "skills": [
+          "Lagerarbeit",
+          "Transport",
+          "Logistik",
+          "Kommissionierung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ88414896482966320000",
+          "bankName": "ČSOB"
+        },
+        "taxId": "CZ524285673",
+        "socialSecurityNumber": "4693477637",
+        "emergencyContact": {
+          "name": "Marie Novotný",
+          "phone": "+420 203330300",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP8SVLZXQH",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 4,
+        "weeklyHours": 34,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80b9",
+        "userId": "68a392f5c819765e894d807c",
+        "employeeId": "EMP016",
+        "hourlyRate": 15,
+        "skills": [
+          "Reinigung",
+          "Qualitätskontrolle",
+          "Transport"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT52816940647583130000",
+          "bankName": "SEB bankas"
+        },
+        "taxId": "LT858578869",
+        "socialSecurityNumber": "947781688195",
+        "emergencyContact": {
+          "name": "Gintė Žukauskas",
+          "phone": "+370 70461137",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPX264LOTS",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 4,
+        "weeklyHours": 33,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80ba",
+        "userId": "68a392f5c819765e894d807d",
+        "employeeId": "EMP017",
+        "hourlyRate": 16,
+        "skills": [
+          "Inventur",
+          "Lagerarbeit",
+          "Kommissionierung",
+          "Reinigung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL7.296911274303565e+23",
+          "bankName": "PKO Bank Polski"
+        },
+        "taxId": "PL3086627315",
+        "socialSecurityNumber": "97361895406",
+        "emergencyContact": {
+          "name": "Agnieszka Kamiński",
+          "phone": "+48 762717156",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPDRREKQMA",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 8,
+        "weeklyHours": 35,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80bb",
+        "userId": "68a392f5c819765e894d807e",
+        "employeeId": "EMP018",
+        "hourlyRate": 12,
+        "skills": [
+          "Kommissionierung",
+          "Logistik",
+          "Produktion"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": false,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE14077031962135568000",
+          "bankName": "Commerzbank"
+        },
+        "taxId": "DE764102500",
+        "socialSecurityNumber": "5610710293799",
+        "emergencyContact": {
+          "name": "Monika Fischer",
+          "phone": "+49 089 89993642",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP0PQGLL3E",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 10,
+        "weeklyHours": 21,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80bc",
+        "userId": "68a392f5c819765e894d807f",
+        "employeeId": "EMP019",
+        "hourlyRate": 15,
+        "skills": [
+          "Qualitätskontrolle",
+          "Verpackung",
+          "Handwerker",
+          "Maschinenführer"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ77152513756162500000",
+          "bankName": "Komerční banka"
+        },
+        "taxId": "CZ331215822",
+        "socialSecurityNumber": "5646930940",
+        "emergencyContact": {
+          "name": "Tomáš Němec",
+          "phone": "+420 723388180",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPWHWGE1MZ",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 26,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80bd",
+        "userId": "68a392f5c819765e894d8080",
+        "employeeId": "EMP020",
+        "hourlyRate": 17,
+        "skills": [
+          "Produktion",
+          "Verpackung",
+          "Lagerarbeit",
+          "Maschinenführer"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT50081454856648920000",
+          "bankName": "Šiaulių bankas"
+        },
+        "taxId": "LT663983593",
+        "socialSecurityNumber": "392816782172",
+        "emergencyContact": {
+          "name": "Jonas Urbonas",
+          "phone": "+370 65997705",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPZ3HPE03Z",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 3,
+        "weeklyHours": 28,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80be",
+        "userId": "68a392f5c819765e894d8081",
+        "employeeId": "EMP021",
+        "hourlyRate": 14,
+        "skills": [
+          "Verpackung",
+          "Reinigung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL2.7918699111254003e+23",
+          "bankName": "PKO Bank Polski"
+        },
+        "taxId": "PL7146686972",
+        "socialSecurityNumber": "68617479454",
+        "emergencyContact": {
+          "name": "Michał Wiśniewski",
+          "phone": "+48 301585597",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPEIQJQ67K",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 38,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80bf",
+        "userId": "68a392f5c819765e894d8082",
+        "employeeId": "EMP022",
+        "hourlyRate": 12,
+        "skills": [
+          "Schweißen",
+          "Lagerarbeit",
+          "Reinigung",
+          "Inventur"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "DE85941432201329050000",
+          "bankName": "Commerzbank"
+        },
+        "taxId": "DE851030289",
+        "socialSecurityNumber": "8258248921355",
+        "emergencyContact": {
+          "name": "Wolfgang Meyer",
+          "phone": "+49 0231 80369949",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP3EHTMZXC",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 1,
+        "weeklyHours": 34,
+        "status": "inactive",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c0",
+        "userId": "68a392f5c819765e894d8083",
+        "employeeId": "EMP023",
+        "hourlyRate": 13,
+        "skills": [
+          "Verpackung",
+          "Transport",
+          "Kommissionierung"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ83405860972183780000",
+          "bankName": "Česká spořitelna"
+        },
+        "taxId": "CZ992500149",
+        "socialSecurityNumber": "2278786523",
+        "emergencyContact": {
+          "name": "Věra Novotný",
+          "phone": "+420 547692092",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPBW0VVX42",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 1,
+        "weeklyHours": 21,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c1",
+        "userId": "68a392f5c819765e894d8084",
+        "employeeId": "EMP024",
+        "hourlyRate": 13,
+        "skills": [
+          "Produktion",
+          "Inventur"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": false,
+          "thursday": false,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT40877382470357910000",
+          "bankName": "SEB bankas"
+        },
+        "taxId": "LT826873000",
+        "socialSecurityNumber": "983165724919",
+        "emergencyContact": {
+          "name": "Neringa Kazlauskas",
+          "phone": "+370 33011482",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP20ETZHIV",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 11,
+        "weeklyHours": 38,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c2",
+        "userId": "68a392f5c819765e894d8085",
+        "employeeId": "EMP025",
+        "hourlyRate": 13,
+        "skills": [
+          "Reinigung",
+          "Produktion",
+          "Maschinenführer",
+          "Staplerfahrer"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": false,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL1.9290293186992254e+23",
+          "bankName": "mBank"
+        },
+        "taxId": "PL1492410542",
+        "socialSecurityNumber": "71153742916",
+        "emergencyContact": {
+          "name": "Marcin Szymański",
+          "phone": "+48 532565758",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP41QWKNT8",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 1,
+        "weeklyHours": 27,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c3",
+        "userId": "68a392f5c819765e894d8086",
+        "employeeId": "EMP026",
+        "hourlyRate": 17,
+        "skills": [
+          "Logistik",
+          "Lagerarbeit",
+          "Verpackung",
+          "Wartung"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE76211966943307250000",
+          "bankName": "Deutsche Bank"
+        },
+        "taxId": "DE999017238",
+        "socialSecurityNumber": "1564178099328",
+        "emergencyContact": {
+          "name": "Petra Meyer",
+          "phone": "+49 069 19326051",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPPIGUIZ8T",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 1,
+        "weeklyHours": 31,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c4",
+        "userId": "68a392f5c819765e894d8087",
+        "employeeId": "EMP027",
+        "hourlyRate": 14,
+        "skills": [
+          "Maschinenführer",
+          "Montage",
+          "Lagerarbeit",
+          "Staplerfahrer"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": false,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ52557998400919520000",
+          "bankName": "ČSOB"
+        },
+        "taxId": "CZ396434905",
+        "socialSecurityNumber": "9963693614",
+        "emergencyContact": {
+          "name": "Jana Horáček",
+          "phone": "+420 909954538",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPZFN7J0E1",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 37,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c5",
+        "userId": "68a392f5c819765e894d8088",
+        "employeeId": "EMP028",
+        "hourlyRate": 16,
+        "skills": [
+          "Staplerfahrer",
+          "Wartung",
+          "Lagerarbeit"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "LT64566108784591760000",
+          "bankName": "Swedbank"
+        },
+        "taxId": "LT960419079",
+        "socialSecurityNumber": "963703647140",
+        "emergencyContact": {
+          "name": "Vytautas Urbonas",
+          "phone": "+370 56104521",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPM6Y4DD7R",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 31,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c6",
+        "userId": "68a392f5c819765e894d8089",
+        "employeeId": "EMP029",
+        "hourlyRate": 15,
+        "skills": [
+          "Maschinenführer",
+          "Lagerarbeit",
+          "Handwerker",
+          "Inventur"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL4.028420323092178e+23",
+          "bankName": "PKO Bank Polski"
+        },
+        "taxId": "PL4526034307",
+        "socialSecurityNumber": "28419204720",
+        "emergencyContact": {
+          "name": "Krzysztof Wójcik",
+          "phone": "+48 919524725",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPS696HH7N",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 28,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.838Z",
+        "updatedAt": "2025-08-18T20:54:13.838Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c7",
+        "userId": "68a392f5c819765e894d808a",
+        "employeeId": "EMP030",
+        "hourlyRate": 16,
+        "skills": [
+          "Verpackung",
+          "Kommissionierung",
+          "Reinigung",
+          "Handwerker"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "DE34267672288442900000",
+          "bankName": "Volksbank"
+        },
+        "taxId": "DE974055881",
+        "socialSecurityNumber": "9154685637610",
+        "emergencyContact": {
+          "name": "Jürgen Becker",
+          "phone": "+49 0711 55101909",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPFGKEKOXP",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 26,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c8",
+        "userId": "68a392f5c819765e894d808b",
+        "employeeId": "EMP031",
+        "hourlyRate": 13,
+        "skills": [
+          "Lagerarbeit",
+          "Kommissionierung",
+          "Wartung",
+          "Handwerker"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ36056312206217335000",
+          "bankName": "Komerční banka"
+        },
+        "taxId": "CZ726570198",
+        "socialSecurityNumber": "7209495712",
+        "emergencyContact": {
+          "name": "Pavel Černý",
+          "phone": "+420 442550324",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPI0OXQXJM",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 39,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80c9",
+        "userId": "68a392f5c819765e894d808c",
+        "employeeId": "EMP032",
+        "hourlyRate": 13,
+        "skills": [
+          "Verpackung",
+          "Qualitätskontrolle"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": false,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT18442624103686840000",
+          "bankName": "Luminor Bank"
+        },
+        "taxId": "LT637069884",
+        "socialSecurityNumber": "540615835983",
+        "emergencyContact": {
+          "name": "Rūta Butkus",
+          "phone": "+370 19634694",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPV1Q1L1RJ",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 10,
+        "weeklyHours": 21,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80ca",
+        "userId": "68a392f5c819765e894d808d",
+        "employeeId": "EMP033",
+        "hourlyRate": 14,
+        "skills": [
+          "Staplerfahrer",
+          "Montage"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": false,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL3.754601143045593e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL8382446519",
+        "socialSecurityNumber": "68163391791",
+        "emergencyContact": {
+          "name": "Michał Kowalczyk",
+          "phone": "+48 997611660",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPVCAN6RO1",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 3,
+        "weeklyHours": 36,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80cb",
+        "userId": "68a392f5c819765e894d808e",
+        "employeeId": "EMP034",
+        "hourlyRate": 18,
+        "skills": [
+          "Kommissionierung",
+          "Verpackung"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE37768693435119750000",
+          "bankName": "Commerzbank"
+        },
+        "taxId": "DE689200073",
+        "socialSecurityNumber": "6809480576140",
+        "emergencyContact": {
+          "name": "Dieter Meyer",
+          "phone": "+49 0231 79044799",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP10LDLG8Q",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 29,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80cc",
+        "userId": "68a392f5c819765e894d808f",
+        "employeeId": "EMP035",
+        "hourlyRate": 16,
+        "skills": [
+          "Verpackung",
+          "Kommissionierung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ61997351679755010000",
+          "bankName": "ČSOB"
+        },
+        "taxId": "CZ906992123",
+        "socialSecurityNumber": "9089516321",
+        "emergencyContact": {
+          "name": "Eva Novotný",
+          "phone": "+420 681039529",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP0K2XS0P5",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 22,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80cd",
+        "userId": "68a392f5c819765e894d8090",
+        "employeeId": "EMP036",
+        "hourlyRate": 13,
+        "skills": [
+          "Kommissionierung",
+          "Maschinenführer",
+          "Handwerker",
+          "Logistik"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT77798602855118210000",
+          "bankName": "Swedbank"
+        },
+        "taxId": "LT111770346",
+        "socialSecurityNumber": "154850354215",
+        "emergencyContact": {
+          "name": "Andrius Kazlauskas",
+          "phone": "+370 56183377",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPABEB6OJ0",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 8,
+        "weeklyHours": 22,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80ce",
+        "userId": "68a392f5c819765e894d8091",
+        "employeeId": "EMP037",
+        "hourlyRate": 17,
+        "skills": [
+          "Verpackung",
+          "Reinigung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL9.171739541075188e+23",
+          "bankName": "ING Bank Śląski"
+        },
+        "taxId": "PL3336362114",
+        "socialSecurityNumber": "72261656956",
+        "emergencyContact": {
+          "name": "Tomasz Kamiński",
+          "phone": "+48 474404695",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPLD589I55",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 2,
+        "weeklyHours": 40,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80cf",
+        "userId": "68a392f5c819765e894d8092",
+        "employeeId": "EMP038",
+        "hourlyRate": 15,
+        "skills": [
+          "Wartung",
+          "Lagerarbeit"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE63892304227654870000",
+          "bankName": "Deutsche Bank"
+        },
+        "taxId": "DE850151991",
+        "socialSecurityNumber": "6723226176339",
+        "emergencyContact": {
+          "name": "Sabine Hoffmann",
+          "phone": "+49 0221 47380605",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP22UBSOML",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 3,
+        "weeklyHours": 29,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d0",
+        "userId": "68a392f5c819765e894d8093",
+        "employeeId": "EMP039",
+        "hourlyRate": 13,
+        "skills": [
+          "Montage",
+          "Staplerfahrer"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "CZ70768286380067920000",
+          "bankName": "Komerční banka"
+        },
+        "taxId": "CZ112474731",
+        "socialSecurityNumber": "6987752589",
+        "emergencyContact": {
+          "name": "Jiří Pokorný",
+          "phone": "+420 417856148",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPHE0XRXS2",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 36,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d1",
+        "userId": "68a392f5c819765e894d8094",
+        "employeeId": "EMP040",
+        "hourlyRate": 13,
+        "skills": [
+          "Logistik",
+          "Lagerarbeit",
+          "Transport",
+          "Handwerker"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": false,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT20496750176773720000",
+          "bankName": "Šiaulių bankas"
+        },
+        "taxId": "LT145418377",
+        "socialSecurityNumber": "984740168982",
+        "emergencyContact": {
+          "name": "Darius Urbonas",
+          "phone": "+370 81304917",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP5AMTAY3H",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 11,
+        "weeklyHours": 31,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d2",
+        "userId": "68a392f5c819765e894d8095",
+        "employeeId": "EMP041",
+        "hourlyRate": 12,
+        "skills": [
+          "Lagerarbeit",
+          "Handwerker"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL9.024944414125684e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL2203787999",
+        "socialSecurityNumber": "90535511518",
+        "emergencyContact": {
+          "name": "Krzysztof Kamiński",
+          "phone": "+48 255981889",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPRTOKK2RF",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 4,
+        "weeklyHours": 39,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d3",
+        "userId": "68a392f5c819765e894d8096",
+        "employeeId": "EMP042",
+        "hourlyRate": 17,
+        "skills": [
+          "Staplerfahrer",
+          "Verpackung",
+          "Qualitätskontrolle",
+          "Transport"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE63173920119875080000",
+          "bankName": "Sparkasse"
+        },
+        "taxId": "DE360057476",
+        "socialSecurityNumber": "3686877693713",
+        "emergencyContact": {
+          "name": "Anna Schulz",
+          "phone": "+49 069 78588649",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPI7AW3P9O",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 22,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d4",
+        "userId": "68a392f5c819765e894d8097",
+        "employeeId": "EMP043",
+        "hourlyRate": 16,
+        "skills": [
+          "Kommissionierung",
+          "Produktion"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ48693271460243554000",
+          "bankName": "UniCredit Bank"
+        },
+        "taxId": "CZ843672002",
+        "socialSecurityNumber": "1709806980",
+        "emergencyContact": {
+          "name": "Pavel Horáček",
+          "phone": "+420 574081956",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPOYHGI98M",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 34,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d5",
+        "userId": "68a392f5c819765e894d8098",
+        "employeeId": "EMP044",
+        "hourlyRate": 13,
+        "skills": [
+          "Inventur",
+          "Logistik",
+          "Schweißen",
+          "Qualitätskontrolle"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT54889546790681960000",
+          "bankName": "Šiaulių bankas"
+        },
+        "taxId": "LT857502003",
+        "socialSecurityNumber": "494243784410",
+        "emergencyContact": {
+          "name": "Gintė Kazlauskas",
+          "phone": "+370 23438653",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPH0SDYA67",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 23,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d6",
+        "userId": "68a392f5c819765e894d8099",
+        "employeeId": "EMP045",
+        "hourlyRate": 18,
+        "skills": [
+          "Qualitätskontrolle",
+          "Inventur",
+          "Logistik"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "PL2.875586933861324e+23",
+          "bankName": "ING Bank Śląski"
+        },
+        "taxId": "PL8387163293",
+        "socialSecurityNumber": "76284044115",
+        "emergencyContact": {
+          "name": "Tomasz Kamiński",
+          "phone": "+48 821891355",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP1BGI6TGB",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 29,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d7",
+        "userId": "68a392f5c819765e894d809a",
+        "employeeId": "EMP046",
+        "hourlyRate": 18,
+        "skills": [
+          "Maschinenführer",
+          "Lagerarbeit",
+          "Verpackung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "DE78892154099128860000",
+          "bankName": "Volksbank"
+        },
+        "taxId": "DE968333075",
+        "socialSecurityNumber": "8097654873957",
+        "emergencyContact": {
+          "name": "Susanne Schulz",
+          "phone": "+49 040 66523910",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPZPFLFY6G",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 1,
+        "weeklyHours": 35,
+        "status": "inactive",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d8",
+        "userId": "68a392f5c819765e894d809b",
+        "employeeId": "EMP047",
+        "hourlyRate": 12,
+        "skills": [
+          "Lagerarbeit",
+          "Wartung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "CZ25020378680400716000",
+          "bankName": "Česká spořitelna"
+        },
+        "taxId": "CZ398822038",
+        "socialSecurityNumber": "5454537730",
+        "emergencyContact": {
+          "name": "Anna Horáček",
+          "phone": "+420 791810228",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPIKB9IANY",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 36,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80d9",
+        "userId": "68a392f5c819765e894d809c",
+        "employeeId": "EMP048",
+        "hourlyRate": 12,
+        "skills": [
+          "Transport",
+          "Inventur"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT57294261331214565000",
+          "bankName": "Luminor Bank"
+        },
+        "taxId": "LT149725266",
+        "socialSecurityNumber": "995577833823",
+        "emergencyContact": {
+          "name": "Darius Žukauskas",
+          "phone": "+370 31565833",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPLZ24C7QP",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 40,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80da",
+        "userId": "68a392f5c819765e894d809d",
+        "employeeId": "EMP049",
+        "hourlyRate": 17,
+        "skills": [
+          "Inventur",
+          "Handwerker",
+          "Qualitätskontrolle"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": false,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL2.9323661106306728e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL7946798503",
+        "socialSecurityNumber": "70356967485",
+        "emergencyContact": {
+          "name": "Agnieszka Kowalski",
+          "phone": "+48 834538548",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPBQ42N9UB",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 3,
+        "weeklyHours": 36,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.839Z",
+        "updatedAt": "2025-08-18T20:54:13.839Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80db",
+        "userId": "68a392f5c819765e894d809e",
+        "employeeId": "EMP050",
+        "hourlyRate": 13,
+        "skills": [
+          "Produktion",
+          "Kommissionierung",
+          "Schweißen",
+          "Lagerarbeit"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": false,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE17008130422156001000",
+          "bankName": "Commerzbank"
+        },
+        "taxId": "DE851445930",
+        "socialSecurityNumber": "8836674970738",
+        "emergencyContact": {
+          "name": "Susanne Becker",
+          "phone": "+49 040 61778718",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPTOLOEDUG",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 8,
+        "weeklyHours": 34,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80dc",
+        "userId": "68a392f5c819765e894d809f",
+        "employeeId": "EMP051",
+        "hourlyRate": 12,
+        "skills": [
+          "Verpackung",
+          "Lagerarbeit"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": false,
+          "saturday": false,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "CZ78317555696704720000",
+          "bankName": "Komerční banka"
+        },
+        "taxId": "CZ944576063",
+        "socialSecurityNumber": "9734063548",
+        "emergencyContact": {
+          "name": "Marie Horáček",
+          "phone": "+420 845444514",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPSG6ZMWQE",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 27,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80dd",
+        "userId": "68a392f5c819765e894d80a0",
+        "employeeId": "EMP052",
+        "hourlyRate": 15,
+        "skills": [
+          "Staplerfahrer",
+          "Inventur"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": false,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT86003205347597240000",
+          "bankName": "Swedbank"
+        },
+        "taxId": "LT945141689",
+        "socialSecurityNumber": "931646726203",
+        "emergencyContact": {
+          "name": "Petras Butkus",
+          "phone": "+370 49622448",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPURLHD19O",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 8,
+        "weeklyHours": 27,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80de",
+        "userId": "68a392f5c819765e894d80a1",
+        "employeeId": "EMP053",
+        "hourlyRate": 17,
+        "skills": [
+          "Handwerker",
+          "Staplerfahrer",
+          "Kommissionierung"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL3.2613280228365136e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL3500590683",
+        "socialSecurityNumber": "64378983901",
+        "emergencyContact": {
+          "name": "Łukasz Wiśniewski",
+          "phone": "+48 946835942",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP3IEFK1EA",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 36,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80df",
+        "userId": "68a392f5c819765e894d80a2",
+        "employeeId": "EMP054",
+        "hourlyRate": 12,
+        "skills": [
+          "Kommissionierung",
+          "Maschinenführer",
+          "Inventur"
+        ],
+        "availability": {
+          "monday": false,
+          "tuesday": false,
+          "wednesday": false,
+          "thursday": false,
+          "friday": true,
+          "saturday": true,
+          "sunday": true
+        },
+        "bankAccount": {
+          "iban": "DE44005791073032050000",
+          "bankName": "Commerzbank"
+        },
+        "taxId": "DE848133518",
+        "socialSecurityNumber": "1191789380788",
+        "emergencyContact": {
+          "name": "Thomas Schmidt",
+          "phone": "+49 040 54301319",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPQJEF192K",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 25,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80e0",
+        "userId": "68a392f5c819765e894d80a3",
+        "employeeId": "EMP055",
+        "hourlyRate": 12,
+        "skills": [
+          "Lagerarbeit",
+          "Handwerker"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": false,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ38282450325477360000",
+          "bankName": "Komerční banka"
+        },
+        "taxId": "CZ867871913",
+        "socialSecurityNumber": "4951372222",
+        "emergencyContact": {
+          "name": "Pavel Pokorný",
+          "phone": "+420 388928818",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPNPEWTZAS",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 8,
+        "weeklyHours": 31,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80e1",
+        "userId": "68a392f5c819765e894d80a4",
+        "employeeId": "EMP056",
+        "hourlyRate": 15,
+        "skills": [
+          "Verpackung",
+          "Maschinenführer"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": false,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT45574143565598050000",
+          "bankName": "Luminor Bank"
+        },
+        "taxId": "LT433182958",
+        "socialSecurityNumber": "987604812063",
+        "emergencyContact": {
+          "name": "Lina Urbonas",
+          "phone": "+370 35805783",
+          "relationship": "Partner"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP0UL4FXXJ",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "temporary",
+        "vacationDays": 24,
+        "usedVacationDays": 6,
+        "weeklyHours": 34,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80e2",
+        "userId": "68a392f5c819765e894d80a5",
+        "employeeId": "EMP057",
+        "hourlyRate": 13,
+        "skills": [
+          "Verpackung",
+          "Produktion",
+          "Lagerarbeit"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "PL6.88229386783988e+23",
+          "bankName": "Bank Pekao"
+        },
+        "taxId": "PL6727196752",
+        "socialSecurityNumber": "54097754374",
+        "emergencyContact": {
+          "name": "Tomasz Szymański",
+          "phone": "+48 707800594",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPCFE9Q69B",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Polen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 32,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80e3",
+        "userId": "68a392f5c819765e894d80a6",
+        "employeeId": "EMP058",
+        "hourlyRate": 12,
+        "skills": [
+          "Schweißen",
+          "Reinigung",
+          "Wartung"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "DE96948470165797960000",
+          "bankName": "Sparkasse"
+        },
+        "taxId": "DE802038350",
+        "socialSecurityNumber": "8705913127734",
+        "emergencyContact": {
+          "name": "Sabine Müller",
+          "phone": "+49 0211 76765379",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPN7Y6E7E6",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Deutschland"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 0,
+        "weeklyHours": 32,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80e4",
+        "userId": "68a392f5c819765e894d80a7",
+        "employeeId": "EMP059",
+        "hourlyRate": 18,
+        "skills": [
+          "Verpackung",
+          "Qualitätskontrolle"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": true,
+          "thursday": true,
+          "friday": true,
+          "saturday": false,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "CZ68554612745169590000",
+          "bankName": "UniCredit Bank"
+        },
+        "taxId": "CZ675020204",
+        "socialSecurityNumber": "5758369560",
+        "emergencyContact": {
+          "name": "Věra Novák",
+          "phone": "+420 930533493",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WPA4HEBY5T",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Tschechien"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 9,
+        "weeklyHours": 29,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      },
+      {
+        "_id": "68a392f5c819765e894d80e5",
+        "userId": "68a392f5c819765e894d80a8",
+        "employeeId": "EMP060",
+        "hourlyRate": 18,
+        "skills": [
+          "Logistik",
+          "Montage"
+        ],
+        "availability": {
+          "monday": true,
+          "tuesday": true,
+          "wednesday": false,
+          "thursday": true,
+          "friday": true,
+          "saturday": true,
+          "sunday": false
+        },
+        "bankAccount": {
+          "iban": "LT98098285069762380000",
+          "bankName": "Luminor Bank"
+        },
+        "taxId": "LT688959882",
+        "socialSecurityNumber": "443233960068",
+        "emergencyContact": {
+          "name": "Inga Urbonas",
+          "phone": "+370 74642802",
+          "relationship": "Familie"
+        },
+        "workPermit": {
+          "hasPermit": true,
+          "permitNumber": "WP53POFLC3",
+          "expiryDate": "2025-12-30T23:00:00.000Z",
+          "country": "Litauen"
+        },
+        "contractType": "permanent",
+        "vacationDays": 24,
+        "usedVacationDays": 11,
+        "weeklyHours": 40,
+        "status": "active",
+        "__v": 0,
+        "createdAt": "2025-08-18T20:54:13.840Z",
+        "updatedAt": "2025-08-18T20:54:13.840Z"
+      }
+    ],
+    "clients": [
+      {
+        "_id": "68a392dec819765e894d802f",
+        "name": "Deutsche Logistik Berlin GmbH",
+        "contactPerson": "Anna Schmidt",
+        "email": "kontakt@deutsche-logistik-berlin-gmbh.de",
+        "password": "$2b$12$AdL5X3ezJ/DRybZsOM0ro.8OyjcKVRu0EFvkri8FuBXdtUdoJFyqO",
+        "phoneNumber": "+49 069 10969389",
+        "nordicClientNumber": "NC-0001",
+        "clientReferenceNumber": "CR-89967",
+        "address": {
+          "street": "Marktstraße 74",
+          "city": "Berlin",
+          "postalCode": "10115",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.14,
+        "taxNumber": "DE820427101",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8030",
+        "name": "TransEuro Hamburg GmbH",
+        "contactPerson": "Anna Meyer",
+        "email": "kontakt@transeuro-hamburg-gmbh.de",
+        "password": "$2b$12$u/LcG4gwswBeDv5i9RqIYOu0BzToMPAI9pbnJCSHk0LqImAQJoq32",
+        "phoneNumber": "+49 0711 95353458",
+        "nordicClientNumber": "NC-0002",
+        "clientReferenceNumber": "CR-95379",
+        "address": {
+          "street": "Gartenstraße 123",
+          "city": "Hamburg",
+          "postalCode": "20095",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.1,
+        "taxNumber": "DE987363966",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8031",
+        "name": "CargoMax München GmbH",
+        "contactPerson": "Wolfgang Becker",
+        "email": "kontakt@cargomax-muenchen-gmbh.de",
+        "password": "$2b$12$iQupNEGX7g.uVPaP/UVi/eHuPKPhg3qcdT4rCzCKl1f9k8ObEBq8u",
+        "phoneNumber": "+49 0711 35941499",
+        "nordicClientNumber": "NC-0003",
+        "clientReferenceNumber": "CR-65069",
+        "address": {
+          "street": "Kirchstraße 39",
+          "city": "München",
+          "postalCode": "80331",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.15,
+        "taxNumber": "DE441264486",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8032",
+        "name": "LogiFlow Köln GmbH",
+        "contactPerson": "Dieter Meyer",
+        "email": "kontakt@logiflow-koeln-gmbh.de",
+        "password": "$2b$12$cj9cXSv.XoT43mRhrejoOOj0bLlP1ZCOz5QCjX32.ri7OufJxhK2G",
+        "phoneNumber": "+49 0231 36410790",
+        "nordicClientNumber": "NC-0004",
+        "clientReferenceNumber": "CR-92374",
+        "address": {
+          "street": "Gartenstraße 40",
+          "city": "Köln",
+          "postalCode": "50667",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.15,
+        "taxNumber": "DE856304539",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": false,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8033",
+        "name": "SpeedTrans Frankfurt am Main GmbH",
+        "contactPerson": "Dieter Becker",
+        "email": "kontakt@speedtrans-frankfurt-am-main-gmbh.de",
+        "password": "$2b$12$W2KAkOh7xLJuqi4n0Qhwi.urj6T7CpX7DcxKpSqFm6ABbBUIxj3TO",
+        "phoneNumber": "+49 0221 33135638",
+        "nordicClientNumber": "NC-0005",
+        "clientReferenceNumber": "CR-80370",
+        "address": {
+          "street": "Gartenstraße 150",
+          "city": "Frankfurt am Main",
+          "postalCode": "60311",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.08,
+        "taxNumber": "DE875820248",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8034",
+        "name": "EuroFreight Stuttgart GmbH",
+        "contactPerson": "Petra Schmidt",
+        "email": "kontakt@eurofreight-stuttgart-gmbh.de",
+        "password": "$2b$12$xj2iRhZYWNb0T96QcVOdZedADrsUGBYqx91jdqnKQ.8spRDhF0xai",
+        "phoneNumber": "+49 0231 30435664",
+        "nordicClientNumber": "NC-0006",
+        "clientReferenceNumber": "CR-48208",
+        "address": {
+          "street": "Gartenstraße 80",
+          "city": "Stuttgart",
+          "postalCode": "70173",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.14,
+        "taxNumber": "DE840960072",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8035",
+        "name": "FastCargo Düsseldorf GmbH",
+        "contactPerson": "Jürgen Müller",
+        "email": "kontakt@fastcargo-duesseldorf-gmbh.de",
+        "password": "$2b$12$opfqDO7KccwFqM3A/Is0fefXZ2vZkpEQBxj/DXhmZyVjss5nn9B1.",
+        "phoneNumber": "+49 030 14964603",
+        "nordicClientNumber": "NC-0007",
+        "clientReferenceNumber": "CR-14447",
+        "address": {
+          "street": "Poststraße 46",
+          "city": "Düsseldorf",
+          "postalCode": "40213",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.11,
+        "taxNumber": "DE262629077",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": false,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8036",
+        "name": "LogiPartner Dortmund GmbH",
+        "contactPerson": "Klaus Müller",
+        "email": "kontakt@logipartner-dortmund-gmbh.de",
+        "password": "$2b$12$ot/DQFcS8WoXitnM2c3/TevZRmROO2rYTqLGjXOjJ6hRCyiQ3Ljfu",
+        "phoneNumber": "+49 0211 17759157",
+        "nordicClientNumber": "NC-0008",
+        "clientReferenceNumber": "CR-19521",
+        "address": {
+          "street": "Bahnhofstraße 66",
+          "city": "Dortmund",
+          "postalCode": "87549",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 0.88,
+        "taxNumber": "DE681784254",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8037",
+        "name": "TransConnect Essen GmbH",
+        "contactPerson": "Monika Weber",
+        "email": "kontakt@transconnect-essen-gmbh.de",
+        "password": "$2b$12$CNjmK2EOwOBbLHDafrCB0ubCw/m5EA0SVIyKZJ2cgzTV9emx8WsLa",
+        "phoneNumber": "+49 0221 66122610",
+        "nordicClientNumber": "NC-0009",
+        "clientReferenceNumber": "CR-49823",
+        "address": {
+          "street": "Kirchstraße 174",
+          "city": "Essen",
+          "postalCode": "90365",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 0.99,
+        "taxNumber": "DE357018908",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8038",
+        "name": "CargoLink Leipzig GmbH",
+        "contactPerson": "Andrea Fischer",
+        "email": "kontakt@cargolink-leipzig-gmbh.de",
+        "password": "$2b$12$uExzeaxNZhChtqa5mMhFiuk9gggKqXdyDPXnfOhAZxOQlXXGfnRIu",
+        "phoneNumber": "+49 089 46192637",
+        "nordicClientNumber": "NC-0010",
+        "clientReferenceNumber": "CR-19491",
+        "address": {
+          "street": "Bahnhofstraße 76",
+          "city": "Leipzig",
+          "postalCode": "50820",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.18,
+        "taxNumber": "DE424744901",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8039",
+        "name": "Deutsche Logistik Bremen GmbH",
+        "contactPerson": "Klaus Wagner",
+        "email": "kontakt@deutsche-logistik-bremen-gmbh.de",
+        "password": "$2b$12$1tjcLlxKkCVpuBRvuAgvCO85Hjzk3iZPSG4JxxO.i.7NCoY5BdvLW",
+        "phoneNumber": "+49 069 91198049",
+        "nordicClientNumber": "NC-0011",
+        "clientReferenceNumber": "CR-21929",
+        "address": {
+          "street": "Gartenstraße 10",
+          "city": "Bremen",
+          "postalCode": "15864",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 0.95,
+        "taxNumber": "DE905983915",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": false,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d803a",
+        "name": "TransEuro Dresden GmbH",
+        "contactPerson": "Jürgen Fischer",
+        "email": "kontakt@transeuro-dresden-gmbh.de",
+        "password": "$2b$12$NZX4iy6WLwV615qOVfAhLOrf5ilIppz2rPuQimikcX.b3SXT7Bxbi",
+        "phoneNumber": "+49 0211 85601177",
+        "nordicClientNumber": "NC-0012",
+        "clientReferenceNumber": "CR-11767",
+        "address": {
+          "street": "Bahnhofstraße 82",
+          "city": "Dresden",
+          "postalCode": "69656",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 1.03,
+        "taxNumber": "DE586175136",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d803b",
+        "name": "CargoMax Hannover GmbH",
+        "contactPerson": "Andrea Fischer",
+        "email": "kontakt@cargomax-hannover-gmbh.de",
+        "password": "$2b$12$PbhZUPEbpgbwFackNFR3z.13tZet0eFZsZwtRkdWXfvDUKtUBYqHa",
+        "phoneNumber": "+49 0211 90703788",
+        "nordicClientNumber": "NC-0013",
+        "clientReferenceNumber": "CR-91631",
+        "address": {
+          "street": "Hauptstraße 25",
+          "city": "Hannover",
+          "postalCode": "19174",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 0.95,
+        "taxNumber": "DE675115056",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d803c",
+        "name": "LogiFlow Nürnberg GmbH",
+        "contactPerson": "Jürgen Becker",
+        "email": "kontakt@logiflow-nuernberg-gmbh.de",
+        "password": "$2b$12$rKue36eyUmsFZZbryEtF8e4ksk9.NK4sUmhbTpwK6d3L/iRs9tmKK",
+        "phoneNumber": "+49 0211 97814115",
+        "nordicClientNumber": "NC-0014",
+        "clientReferenceNumber": "CR-96744",
+        "address": {
+          "street": "Hauptstraße 135",
+          "city": "Nürnberg",
+          "postalCode": "21792",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 0.84,
+        "taxNumber": "DE459035495",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d803d",
+        "name": "SpeedTrans Duisburg GmbH",
+        "contactPerson": "Monika Schmidt",
+        "email": "kontakt@speedtrans-duisburg-gmbh.de",
+        "password": "$2b$12$qVNZXdO8E5l07z3kq6wnyOLoNnR5QNcJS9OOhDuan.WxeJTVMA2DS",
+        "phoneNumber": "+49 089 20711180",
+        "nordicClientNumber": "NC-0015",
+        "clientReferenceNumber": "CR-88903",
+        "address": {
+          "street": "Gartenstraße 173",
+          "city": "Duisburg",
+          "postalCode": "28373",
+          "country": "Germany"
+        },
+        "industry": "Logistik",
+        "hourlyRateMultiplier": 0.84,
+        "taxNumber": "DE804420603",
+        "description": "Spezialisiert auf europäische Transporte",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.802Z",
+        "updatedAt": "2025-08-18T20:53:50.802Z"
+      },
+      {
+        "_id": "68a392dec819765e894d803e",
+        "name": "AutoParts Bochum GmbH",
+        "contactPerson": "Sabine Müller",
+        "email": "kontakt@autoparts-bochum-gmbh.de",
+        "password": "$2b$12$fowHUzhO1E.dKl/AuvSOnO5a0PV7NntgJvZsDeNIVJTOyjjSyq9UO",
+        "phoneNumber": "+49 089 44615765",
+        "nordicClientNumber": "NC-0016",
+        "clientReferenceNumber": "CR-94777",
+        "address": {
+          "street": "Kirchstraße 178",
+          "city": "Bochum",
+          "postalCode": "89717",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1,
+        "taxNumber": "DE458699323",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d803f",
+        "name": "MetallWerk Wuppertal GmbH",
+        "contactPerson": "Klaus Schmidt",
+        "email": "kontakt@metallwerk-wuppertal-gmbh.de",
+        "password": "$2b$12$lYgFJbvtRkycd.zWHDLjWu0Ua40otBg7yG7W5v1pRJOTeRrErHGhW",
+        "phoneNumber": "+49 0231 93172138",
+        "nordicClientNumber": "NC-0017",
+        "clientReferenceNumber": "CR-64715",
+        "address": {
+          "street": "Industriestraße 128",
+          "city": "Wuppertal",
+          "postalCode": "58917",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 0.81,
+        "taxNumber": "DE104518937",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8040",
+        "name": "ChemieIndustrie Bielefeld GmbH",
+        "contactPerson": "Dieter Müller",
+        "email": "kontakt@chemieindustrie-bielefeld-gmbh.de",
+        "password": "$2b$12$2b26jGUABtTwknxjdziEM.dfV4LgAcYT4rYHrYWiImJLoM3kr3Qx2",
+        "phoneNumber": "+49 030 10608561",
+        "nordicClientNumber": "NC-0018",
+        "clientReferenceNumber": "CR-98730",
+        "address": {
+          "street": "Marktstraße 76",
+          "city": "Bielefeld",
+          "postalCode": "95166",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 0.84,
+        "taxNumber": "DE629390220",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8041",
+        "name": "ElektroTech Bonn GmbH",
+        "contactPerson": "Wolfgang Schneider",
+        "email": "kontakt@elektrotech-bonn-gmbh.de",
+        "password": "$2b$12$PZK6OHmU8gqeOrzuqd.egey6C54Q8mwDUAqC4/ZiVYjCLYYMn5Wbu",
+        "phoneNumber": "+49 0221 81990822",
+        "nordicClientNumber": "NC-0019",
+        "clientReferenceNumber": "CR-85217",
+        "address": {
+          "street": "Industriestraße 38",
+          "city": "Bonn",
+          "postalCode": "56514",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.02,
+        "taxNumber": "DE510667603",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": false,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8042",
+        "name": "MaschinenBau Münster GmbH",
+        "contactPerson": "Anna Becker",
+        "email": "kontakt@maschinenbau-muenster-gmbh.de",
+        "password": "$2b$12$Z8MXTpRx0GDxl3vRpvzF9.QKQBBb16ZSMu9A7SHc4MjnjSY6orRnq",
+        "phoneNumber": "+49 0711 42575493",
+        "nordicClientNumber": "NC-0020",
+        "clientReferenceNumber": "CR-52227",
+        "address": {
+          "street": "Schulstraße 67",
+          "city": "Münster",
+          "postalCode": "21062",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 0.93,
+        "taxNumber": "DE188150405",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8043",
+        "name": "ProdTech Karlsruhe GmbH",
+        "contactPerson": "Monika Wagner",
+        "email": "kontakt@prodtech-karlsruhe-gmbh.de",
+        "password": "$2b$12$TK8Kg0XBepxvRVe5BeYSDuCb3whu/HViBiGu0gUBWknizfsW6fA2i",
+        "phoneNumber": "+49 0211 65886191",
+        "nordicClientNumber": "NC-0021",
+        "clientReferenceNumber": "CR-34025",
+        "address": {
+          "street": "Hauptstraße 115",
+          "city": "Karlsruhe",
+          "postalCode": "71319",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.07,
+        "taxNumber": "DE469960352",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8044",
+        "name": "ManufacturingPro Mannheim GmbH",
+        "contactPerson": "Hans Fischer",
+        "email": "kontakt@manufacturingpro-mannheim-gmbh.de",
+        "password": "$2b$12$o5sgWvG90cbARqcUfhki5uzaPUiYZll5XUgou0EQ7/TBo1hBGFzzS",
+        "phoneNumber": "+49 0711 67579167",
+        "nordicClientNumber": "NC-0022",
+        "clientReferenceNumber": "CR-69059",
+        "address": {
+          "street": "Marktstraße 24",
+          "city": "Mannheim",
+          "postalCode": "23490",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.19,
+        "taxNumber": "DE778952301",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8045",
+        "name": "IndustrieWerk Augsburg GmbH",
+        "contactPerson": "Jürgen Meyer",
+        "email": "kontakt@industriewerk-augsburg-gmbh.de",
+        "password": "$2b$12$qyvyoYjRW0ZWEw7MoGXIteE2bXkKPqYoaXtSlt/Ea0xpn.I5TbmoK",
+        "phoneNumber": "+49 0221 14688713",
+        "nordicClientNumber": "NC-0023",
+        "clientReferenceNumber": "CR-25081",
+        "address": {
+          "street": "Kirchstraße 155",
+          "city": "Augsburg",
+          "postalCode": "98499",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.11,
+        "taxNumber": "DE205403426",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8046",
+        "name": "ProductionMax Wiesbaden GmbH",
+        "contactPerson": "Dieter Müller",
+        "email": "kontakt@productionmax-wiesbaden-gmbh.de",
+        "password": "$2b$12$CrQzg3GYdMcRk7hztR7NveH7pWQ9PpEVmugH495ZBwYLeMEF/3ovG",
+        "phoneNumber": "+49 0711 17145089",
+        "nordicClientNumber": "NC-0024",
+        "clientReferenceNumber": "CR-54494",
+        "address": {
+          "street": "Kirchstraße 82",
+          "city": "Wiesbaden",
+          "postalCode": "29015",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 0.95,
+        "taxNumber": "DE856431879",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8047",
+        "name": "TechProd Gelsenkirchen GmbH",
+        "contactPerson": "Klaus Schmidt",
+        "email": "kontakt@techprod-gelsenkirchen-gmbh.de",
+        "password": "$2b$12$W1rxgAQlpMZLauujnR.EuOUqDrJd./Xik5zkX8VOtXxl28cNdRRDm",
+        "phoneNumber": "+49 040 64982598",
+        "nordicClientNumber": "NC-0025",
+        "clientReferenceNumber": "CR-31873",
+        "address": {
+          "street": "Industriestraße 103",
+          "city": "Gelsenkirchen",
+          "postalCode": "94669",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.06,
+        "taxNumber": "DE230269901",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8048",
+        "name": "AutoParts Mönchengladbach GmbH",
+        "contactPerson": "Dieter Becker",
+        "email": "kontakt@autoparts-moenchengladbach-gmbh.de",
+        "password": "$2b$12$RqGjaWK13G1YHuBGKxur8eUoVLXncpPyLurCNNOEqky6thg3PTSD2",
+        "phoneNumber": "+49 0221 16751694",
+        "nordicClientNumber": "NC-0026",
+        "clientReferenceNumber": "CR-65803",
+        "address": {
+          "street": "Schulstraße 70",
+          "city": "Mönchengladbach",
+          "postalCode": "67085",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.14,
+        "taxNumber": "DE113090303",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d8049",
+        "name": "MetallWerk Braunschweig GmbH",
+        "contactPerson": "Sabine Schneider",
+        "email": "kontakt@metallwerk-braunschweig-gmbh.de",
+        "password": "$2b$12$zlVBq4.H.Hf2vPcaBvDSF.46fs.vGtU1S3FiKgwgiZ2rE7OHfydaO",
+        "phoneNumber": "+49 040 64745698",
+        "nordicClientNumber": "NC-0027",
+        "clientReferenceNumber": "CR-98043",
+        "address": {
+          "street": "Hauptstraße 100",
+          "city": "Braunschweig",
+          "postalCode": "82519",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 0.97,
+        "taxNumber": "DE906931989",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d804a",
+        "name": "ChemieIndustrie Chemnitz GmbH",
+        "contactPerson": "Jürgen Schmidt",
+        "email": "kontakt@chemieindustrie-chemnitz-gmbh.de",
+        "password": "$2b$12$TbJ4qlWm.Mu1lCp1dW/8juTBKiQlltBJTSOJsqCKKPqvioc.YOjIK",
+        "phoneNumber": "+49 030 71817338",
+        "nordicClientNumber": "NC-0028",
+        "clientReferenceNumber": "CR-83644",
+        "address": {
+          "street": "Industriestraße 15",
+          "city": "Chemnitz",
+          "postalCode": "26454",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.06,
+        "taxNumber": "DE597051849",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d804b",
+        "name": "ElektroTech Kiel GmbH",
+        "contactPerson": "Wolfgang Schmidt",
+        "email": "kontakt@elektrotech-kiel-gmbh.de",
+        "password": "$2b$12$0TQhnOyOthjFT.ADhDD2YeIyteFcrQaDDg7JAYS/kh54VZ4MQj8x6",
+        "phoneNumber": "+49 069 21593307",
+        "nordicClientNumber": "NC-0029",
+        "clientReferenceNumber": "CR-81681",
+        "address": {
+          "street": "Kirchstraße 40",
+          "city": "Kiel",
+          "postalCode": "86459",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.12,
+        "taxNumber": "DE630578441",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      },
+      {
+        "_id": "68a392dec819765e894d804c",
+        "name": "MaschinenBau Aachen GmbH",
+        "contactPerson": "Jürgen Schneider",
+        "email": "kontakt@maschinenbau-aachen-gmbh.de",
+        "password": "$2b$12$mdGOPdpcYHQWHQ50uHx6nuX8gfoyEO/J7wgLcBJt8kWlqRLYRbAH6",
+        "phoneNumber": "+49 0711 82622291",
+        "nordicClientNumber": "NC-0030",
+        "clientReferenceNumber": "CR-31140",
+        "address": {
+          "street": "Industriestraße 115",
+          "city": "Aachen",
+          "postalCode": "18697",
+          "country": "Germany"
+        },
+        "industry": "Produktion",
+        "hourlyRateMultiplier": 1.15,
+        "taxNumber": "DE514957549",
+        "description": "Moderne Produktionsanlagen",
+        "isActive": true,
+        "__v": 0,
+        "createdAt": "2025-08-18T20:53:50.803Z",
+        "updatedAt": "2025-08-18T20:53:50.803Z"
+      }
+    ],
+    "systemsettings": [
+      {
+        "_id": "68a773e00b25fc1b0ee7238e",
+        "company": {
+          "name": "Nordic Zeitarbeit GmbH",
+          "address": "Hauptstraße 123, 10115 Berlin",
+          "phone": "+49 30 12345678",
+          "email": "kontakt@nordic-zeitarbeit.de",
+          "website": "www.nordic-zeitarbeit.de",
+          "taxId": "DE123456789"
+        },
+        "notifications": {
+          "emailAlerts": true,
+          "smsAlerts": false,
+          "assignmentReminders": true,
+          "paymentReminders": true
+        },
+        "security": {
+          "passwordMinLength": 8,
+          "requireTwoFactor": false,
+          "sessionTimeout": 30,
+          "maxLoginAttempts": 5
+        },
+        "system": {
+          "defaultHourlyRate": 15,
+          "defaultCurrency": "EUR",
+          "timezone": "Europe/Berlin",
+          "dateFormat": "DD.MM.YYYY",
+          "autoBackup": true,
+          "maintenanceMode": false
+        },
+        "updatedBy": "68a392d4c819765e894d801f",
+        "updatedAt": "2025-08-21T19:30:40.311Z",
+        "createdAt": "2025-08-21T19:30:40.311Z",
+        "__v": 0
+      }
+    ],
+    "assignments": []
+  }
+}

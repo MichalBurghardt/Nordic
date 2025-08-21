@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import AdminPageContainer from '@/components/AdminPageContainer';
 import Link from 'next/link';
-import { ArrowLeft, Save, Building, User, Calendar, MapPin, Clock, Euro } from 'lucide-react';
+import { Save, Building, User, Calendar, MapPin, Clock, Euro } from 'lucide-react';
 
 interface Client {
   _id: string;
@@ -209,25 +210,14 @@ export default function EditAssignmentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Header */}
-      <header className="bg-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <Link href={`/admin/assignments/${assignmentId}`} className="text-indigo-600 hover:text-indigo-800 mr-4">
-                <ArrowLeft className="w-5 h-5" />
-              </Link>
-              <h1 className="text-3xl font-bold text-gray-900">
-                Einsatz bearbeiten: {assignment.position}
-              </h1>
-            </div>
-          </div>
-        </div>
-      </header>
+    <AdminPageContainer>
+      <div className="mb-6">
+        <h1 className="text-3xl font-bold text-nordic-dark dark:text-nordic-light">
+          Einsatz bearbeiten: {assignment.position}
+        </h1>
+      </div>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {error && (
+      {error && (
           <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded mb-6">
             {error}
           </div>
@@ -464,7 +454,6 @@ export default function EditAssignmentPage() {
             </div>
           </form>
         </div>
-      </main>
-    </div>
+    </AdminPageContainer>
   );
 }

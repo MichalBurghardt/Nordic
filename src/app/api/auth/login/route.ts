@@ -10,7 +10,10 @@ export async function POST(request: NextRequest) {
     await dbConnect();
     const { email, password } = await request.json();
 
+    console.log('Próba logowania dla:', email);
+
     if (!email || !password) {
+      console.log('Brak email lub password');
       return NextResponse.json(
         { error: 'Email and password are required' },
         { status: 400 }
@@ -19,6 +22,8 @@ export async function POST(request: NextRequest) {
 
     // Znajdź użytkownika
     const user = await User.findOne({ email: email.toLowerCase() });
+    console.log('Znaleziony użytkownik:', user ? `${user.firstName} ${user.lastName}` : 'nie znaleziono');
+    
     if (!user) {
       return NextResponse.json(
         { error: 'Invalid credentials' },

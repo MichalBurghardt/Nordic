@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import AdminPageContainer from '@/components/AdminPageContainer';
 import Link from 'next/link';
 import { 
   Search, 
@@ -25,8 +26,6 @@ export default function UsersManagement() {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
   const [search, setSearch] = useState('');
   const [sortBy, setSortBy] = useState('lastName');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
@@ -45,6 +44,12 @@ export default function UsersManagement() {
       window.history.replaceState({}, '', '/admin/users');
       // Auto-hide success message after 5 seconds
       setTimeout(() => setShowSuccess(false), 5000);
+    } else if (urlParams.get('deleted') === 'true') {
+      setShowSuccess(true);
+      // Clear the URL parameter
+      window.history.replaceState({}, '', '/admin/users');
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => setShowSuccess(false), 5000);
     }
   }, []);
 
@@ -52,10 +57,10 @@ export default function UsersManagement() {
     try {
       setLoading(true);
       const params = new URLSearchParams({
-        page: page.toString(),
         search,
         sortBy,
         sortOrder,
+        limit: '1000', // Pobierz wszystkich użytkowników
         ...(roleFilter && { role: roleFilter }),
         ...(statusFilter && { status: statusFilter }),
       });
@@ -64,7 +69,6 @@ export default function UsersManagement() {
       if (response.ok) {
         const data = await response.json();
         setUsers(data.users);
-        setTotalPages(data.pagination.pages);
       } else {
         setError('Failed to load users');
       }
@@ -78,7 +82,7 @@ export default function UsersManagement() {
   useEffect(() => {
     fetchUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page, search, sortBy, sortOrder, roleFilter, statusFilter]);
+  }, [search, sortBy, sortOrder, roleFilter, statusFilter]);
 
   const handleSort = (field: string) => {
     if (sortBy === field) {
@@ -87,7 +91,6 @@ export default function UsersManagement() {
       setSortBy(field);
       setSortOrder('asc');
     }
-    setPage(1); // Reset to first page when sorting
   };
 
   const clearFilters = () => {
@@ -96,7 +99,6 @@ export default function UsersManagement() {
     setStatusFilter('');
     setSortBy('lastName');
     setSortOrder('asc');
-    setPage(1);
   };
 
   const getSortIcon = (field: string) => {
@@ -104,31 +106,13 @@ export default function UsersManagement() {
     return sortOrder === 'asc' ? <ArrowUp className="w-4 h-4" /> : <ArrowDown className="w-4 h-4" />;
   };
 
-  const toggleUserStatus = async (userId: string, currentStatus: boolean) => {
-    try {
-      const response = await fetch(`/api/admin/users/${userId}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ isActive: !currentStatus }),
-      });
-
-      if (response.ok) {
-        fetchUsers(); // Refresh list
-      } else {
-        setError('Failed to update user status');
-      }
-    } catch {
-      setError('Network error');
-    }
-  };
-
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <AdminPageContainer>
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-900">Benutzerverwaltung</h1>
+        <h1 className="text-3xl font-bold text-nordic-dark dark:text-nordic-light">Benutzerverwaltung</h1>
         <Link 
           href="/admin/users/create"
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+          className="bg-nordic-primary text-white px-4 py-2 rounded-lg hover:bg-nordic-dark transition-colors"
         >
           + Neuen Benutzer hinzufügen
         </Link>
@@ -136,8 +120,13 @@ export default function UsersManagement() {
 
       {/* Success Message */}
       {showSuccess && (
-        <div className="bg-green-50 border border-green-300 text-green-700 px-4 py-3 rounded mb-6 relative">
-          <span className="block sm:inline">Benutzer wurde erfolgreich erstellt!</span>
+        <div className="bg-green-50 dark:bg-green-900/20 border border-green-300 dark:border-green-600 text-green-700 dark:text-green-300 px-4 py-3 rounded mb-6 relative">
+          <span className="block sm:inline">
+            {new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '').get('deleted') === 'true' 
+              ? 'Benutzer wurde erfolgreich gelöscht!' 
+              : 'Benutzer wurde erfolgreich erstellt!'
+            }
+          </span>
           <button
             onClick={() => setShowSuccess(false)}
             className="absolute top-0 bottom-0 right-0 px-4 py-3"
@@ -148,35 +137,35 @@ export default function UsersManagement() {
       )}
 
       {error && (
-        <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded mb-6">
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-600 text-red-700 dark:text-red-300 px-4 py-3 rounded mb-6">
           {error}
         </div>
       )}
 
       {/* Search and Filters */}
-      <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6 mb-6">
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Search bar */}
             <div className="flex-1 relative">
-              <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
+              <Search className="w-5 h-5 text-gray-400 dark:text-gray-500 absolute left-3 top-1/2 transform -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Benutzer suchen (Nachname, Vorname, E-Mail)..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-2 border border-nordic-light dark:border-nordic-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-nordic-primary bg-white dark:bg-gray-700 text-nordic-dark dark:text-nordic-light placeholder-gray-500 dark:placeholder-gray-400"
               />
             </div>
 
             {/* Filters toggle */}
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 border border-nordic-light dark:border-nordic-dark rounded-lg hover:bg-nordic-light/50 dark:hover:bg-nordic-dark/50 transition-colors text-nordic-dark dark:text-nordic-light"
             >
               <Filter className="w-4 h-4" />
               Filter
               {(roleFilter || statusFilter) && (
-                <span className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full">
+                <span className="bg-nordic-light text-nordic-primary dark:bg-nordic-dark dark:text-nordic-light text-xs px-2 py-1 rounded-full">
                   {[roleFilter, statusFilter].filter(Boolean).length}
                 </span>
               )}
@@ -186,7 +175,7 @@ export default function UsersManagement() {
             {(search || roleFilter || statusFilter || sortBy !== 'lastName' || sortOrder !== 'asc') && (
               <button
                 onClick={clearFilters}
-                className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-nordic-dark dark:hover:text-nordic-light transition-colors"
               >
                 <X className="w-4 h-4" />
                 Zurücksetzen
@@ -196,17 +185,17 @@ export default function UsersManagement() {
 
           {/* Advanced filters */}
           {showFilters && (
-            <div className="mt-4 pt-4 border-t border-gray-200">
+            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Role filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-nordic-dark dark:text-nordic-light mb-2">
                     Rolle
                   </label>
                   <select
                     value={roleFilter}
                     onChange={(e) => setRoleFilter(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 border border-nordic-light dark:border-nordic-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-nordic-primary bg-white dark:bg-gray-700 text-nordic-dark dark:text-nordic-light"
                   >
                     <option value="">Alle Rollen</option>
                     <option value="admin">Administrator</option>
@@ -218,13 +207,13 @@ export default function UsersManagement() {
 
                 {/* Status filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-nordic-dark dark:text-nordic-light mb-2">
                     Status
                   </label>
                   <select
                     value={statusFilter}
                     onChange={(e) => setStatusFilter(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 border border-nordic-light dark:border-nordic-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-nordic-primary bg-white dark:bg-gray-700 text-nordic-dark dark:text-nordic-light"
                   >
                     <option value="">Alle Status</option>
                     <option value="active">Aktiv</option>
@@ -234,7 +223,7 @@ export default function UsersManagement() {
 
                 {/* Sort options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-nordic-dark dark:text-nordic-light mb-2">
                     Sortierung
                   </label>
                   <select
@@ -244,7 +233,7 @@ export default function UsersManagement() {
                       setSortBy(field);
                       setSortOrder(order as 'asc' | 'desc');
                     }}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-3 py-2 border border-nordic-light dark:border-nordic-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-nordic-primary bg-white dark:bg-gray-700 text-nordic-dark dark:text-nordic-light"
                   >
                     <option value="lastName-asc">Nachname (A-Z)</option>
                     <option value="lastName-desc">Nachname (Z-A)</option>
@@ -264,13 +253,13 @@ export default function UsersManagement() {
         </div>
 
         {/* Users Table */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-            <h3 className="text-lg font-semibold text-gray-900">Alle Benutzer</h3>
-            <div className="text-sm text-gray-600">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-600 flex justify-between items-center">
+            <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light">Alle Benutzer</h3>
+            <div className="text-sm text-gray-600 dark:text-gray-400">
               {users.length > 0 && (
                 <span>
-                  {((page - 1) * 10) + 1}-{Math.min(page * 10, users.length + ((page - 1) * 10))} von {users.length + ((page - 1) * 10)} Ergebnissen
+                  Insgesamt {users.length} Benutzer
                 </span>
               )}
             </div>
@@ -278,16 +267,16 @@ export default function UsersManagement() {
 
           {loading ? (
             <div className="p-8 text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mx-auto"></div>
-              <p className="mt-2 text-gray-600">Lade Benutzer...</p>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-nordic-primary mx-auto"></div>
+              <p className="mt-2 text-gray-600 dark:text-gray-400">Lade Benutzer...</p>
             </div>
           ) : (
             <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
+              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                <thead className="bg-gray-50 dark:bg-gray-700">
                   <tr>
                     <th 
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                       onClick={() => handleSort('lastName')}
                     >
                       <div className="flex items-center gap-2">
@@ -296,7 +285,7 @@ export default function UsersManagement() {
                       </div>
                     </th>
                     <th 
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                       onClick={() => handleSort('email')}
                     >
                       <div className="flex items-center gap-2">
@@ -313,11 +302,11 @@ export default function UsersManagement() {
                         {getSortIcon('role')}
                       </div>
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                       Status
                     </th>
                     <th 
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                       onClick={() => handleSort('createdAt')}
                     >
                       <div className="flex items-center gap-2">
@@ -325,28 +314,28 @@ export default function UsersManagement() {
                         {getSortIcon('createdAt')}
                       </div>
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                       Aktionen
                     </th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-600">
                   {users.map((user) => (
-                    <tr key={user._id} className="hover:bg-gray-50">
+                    <tr key={user._id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm font-medium text-gray-900">
+                        <div className="text-sm font-medium text-nordic-dark dark:text-nordic-light">
                           {user.lastName}, {user.firstName}
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm text-gray-900">{user.email}</div>
+                        <div className="text-sm text-nordic-dark dark:text-nordic-light">{user.email}</div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                          user.role === 'admin' ? 'bg-red-100 text-red-800' :
-                          user.role === 'hr' ? 'bg-blue-100 text-blue-800' :
-                          user.role === 'client' ? 'bg-purple-100 text-purple-800' :
-                          'bg-green-100 text-green-800'
+                          user.role === 'admin' ? 'bg-nordic-dark/10 text-nordic-dark dark:bg-nordic-light/20 dark:text-nordic-light' :
+                          user.role === 'hr' ? 'bg-nordic-primary/10 text-nordic-primary dark:bg-nordic-primary/20 dark:text-nordic-primary' :
+                          user.role === 'client' ? 'bg-nordic-light text-nordic-dark dark:bg-nordic-dark/50 dark:text-nordic-light' :
+                          'bg-nordic-primary/20 text-nordic-dark dark:bg-nordic-primary/30 dark:text-nordic-light'
                         }`}>
                           {user.role === 'admin' ? 'Administrator' :
                            user.role === 'hr' ? 'HR Manager' :
@@ -355,29 +344,21 @@ export default function UsersManagement() {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                          user.isActive ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                          user.isActive ? 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-300' : 'bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-300'
                         }`}>
                           {user.isActive ? 'Aktiv' : 'Inaktiv'}
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                         {new Date(user.createdAt).toLocaleDateString('de-DE')}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                         <Link
                           href={`/admin/users/${user._id}/edit`}
-                          className="text-indigo-600 hover:text-indigo-900"
+                          className="text-nordic-primary hover:text-nordic-dark dark:hover:text-nordic-light"
                         >
                           Bearbeiten
                         </Link>
-                        <button
-                          onClick={() => toggleUserStatus(user._id, user.isActive)}
-                          className={`${
-                            user.isActive ? 'text-red-600 hover:text-red-900' : 'text-green-600 hover:text-green-900'
-                          }`}
-                        >
-                          {user.isActive ? 'Deaktivieren' : 'Aktivieren'}
-                        </button>
                       </td>
                     </tr>
                   ))}
@@ -388,39 +369,39 @@ export default function UsersManagement() {
 
           {/* Active filters summary */}
           {(search || roleFilter || statusFilter || sortBy !== 'lastName' || sortOrder !== 'asc') && (
-            <div className="px-6 py-3 bg-gray-50 border-t border-gray-200">
+            <div className="px-6 py-3 bg-gray-50 dark:bg-gray-700 border-t border-gray-200 dark:border-gray-600">
               <div className="flex flex-wrap gap-2 items-center">
-                <span className="text-sm text-gray-600 font-medium">Aktive Filter:</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400 font-medium">Aktive Filter:</span>
                 {search && (
-                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-nordic-light text-nordic-dark dark:bg-nordic-dark/50 dark:text-nordic-light text-xs rounded-full">
                     Suche: &ldquo;{search}&rdquo;
-                    <button onClick={() => setSearch('')} className="hover:bg-blue-200 rounded-full p-0.5">
+                    <button onClick={() => setSearch('')} className="hover:bg-nordic-primary/20 rounded-full p-0.5">
                       <X className="w-3 h-3" />
                     </button>
                   </span>
                 )}
                 {roleFilter && (
-                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-nordic-primary/20 text-nordic-primary dark:bg-nordic-primary/30 dark:text-nordic-light text-xs rounded-full">
                     Rolle: {roleFilter === 'admin' ? 'Administrator' : 
                             roleFilter === 'hr' ? 'HR Manager' : 
                             roleFilter === 'client' ? 'Kunde' : 'Mitarbeiter'}
-                    <button onClick={() => setRoleFilter('')} className="hover:bg-green-200 rounded-full p-0.5">
+                    <button onClick={() => setRoleFilter('')} className="hover:bg-nordic-primary/30 rounded-full p-0.5">
                       <X className="w-3 h-3" />
                     </button>
                   </span>
                 )}
                 {statusFilter && (
-                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">
+                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-nordic-dark/10 text-nordic-dark dark:bg-nordic-light/20 dark:text-nordic-light text-xs rounded-full">
                     Status: {statusFilter === 'active' ? 'Aktiv' : 'Inaktiv'}
-                    <button onClick={() => setStatusFilter('')} className="hover:bg-yellow-200 rounded-full p-0.5">
+                    <button onClick={() => setStatusFilter('')} className="hover:bg-nordic-dark/20 dark:hover:bg-nordic-light/30 rounded-full p-0.5">
                       <X className="w-3 h-3" />
                     </button>
                   </span>
                 )}
                 {(sortBy !== 'lastName' || sortOrder !== 'asc') && (
-                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">
+                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-nordic-primary/10 text-nordic-primary dark:bg-nordic-primary/20 dark:text-nordic-light text-xs rounded-full">
                     Sortiert: {sortBy} ({sortOrder === 'asc' ? 'A-Z' : 'Z-A'})
-                    <button onClick={() => { setSortBy('lastName'); setSortOrder('asc'); }} className="hover:bg-purple-200 rounded-full p-0.5">
+                    <button onClick={() => { setSortBy('lastName'); setSortOrder('asc'); }} className="hover:bg-nordic-primary/20 dark:hover:bg-nordic-primary/30 rounded-full p-0.5">
                       <X className="w-3 h-3" />
                     </button>
                   </span>
@@ -428,52 +409,7 @@ export default function UsersManagement() {
               </div>
             </div>
           )}
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200">
-              <div className="flex-1 flex justify-between sm:hidden">
-                <button
-                  onClick={() => setPage(page - 1)}
-                  disabled={page === 1}
-                  className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
-                >
-                  Zurück
-                </button>
-                <button
-                  onClick={() => setPage(page + 1)}
-                  disabled={page === totalPages}
-                  className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
-                >
-                  Weiter
-                </button>
-              </div>
-              <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-sm text-gray-700">
-                    Seite <span className="font-medium">{page}</span> von{' '}
-                    <span className="font-medium">{totalPages}</span>
-                  </p>
-                </div>
-                <div className="flex space-x-2">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
-                    <button
-                      key={pageNum}
-                      onClick={() => setPage(pageNum)}
-                      className={`px-3 py-1 rounded ${
-                        page === pageNum
-                          ? 'bg-indigo-600 text-white'
-                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
-                      }`}
-                    >
-                      {pageNum}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
         </div>
-    </div>
+    </AdminPageContainer>
   );
 }

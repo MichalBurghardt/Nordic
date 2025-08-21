@@ -24,6 +24,7 @@ export default function LoginPage() {
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify(formData),
       });
 
@@ -58,33 +59,33 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-nordic-light to-nordic-primary/20 dark:from-gray-900 dark:to-nordic-dark flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
           <Link href="/" className="flex justify-center">
-            <h1 className="text-4xl font-bold text-gray-900">Nordic GmbH</h1>
+            <h1 className="text-4xl font-bold text-nordic-dark dark:text-nordic-light">Nordic GmbH</h1>
           </Link>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-nordic-dark dark:text-nordic-light">
             Anmelden
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-300">
             Oder{' '}
-            <Link href="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link href="/register" className="font-medium text-nordic-primary hover:text-nordic-dark dark:hover:text-nordic-light">
               registrieren Sie sich für ein neues Konto
             </Link>
           </p>
         </div>
         
-        <form className="mt-8 space-y-6 bg-white p-8 rounded-xl shadow-lg" onSubmit={handleSubmit}>
+        <form className="mt-8 space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30" onSubmit={handleSubmit}>
           {error && (
-            <div className="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded">
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-600 text-red-700 dark:text-red-300 px-4 py-3 rounded">
               {error}
             </div>
           )}
           
           <div className="space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-nordic-dark dark:text-nordic-light">
                 E-Mail-Adresse
               </label>
               <input
@@ -95,13 +96,13 @@ export default function LoginPage() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-nordic-light dark:border-nordic-dark placeholder-gray-500 dark:placeholder-gray-400 text-nordic-dark dark:text-nordic-light bg-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-nordic-primary focus:border-nordic-primary focus:z-10 sm:text-sm"
                 placeholder="Ihre E-Mail-Adresse"
               />
             </div>
             
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-nordic-dark dark:text-nordic-light">
                 Passwort
               </label>
               <input
@@ -112,7 +113,7 @@ export default function LoginPage() {
                 required
                 value={formData.password}
                 onChange={handleChange}
-                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="mt-1 appearance-none relative block w-full px-3 py-2 border border-nordic-light dark:border-nordic-dark placeholder-gray-500 dark:placeholder-gray-400 text-nordic-dark dark:text-nordic-light bg-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-nordic-primary focus:border-nordic-primary focus:z-10 sm:text-sm"
                 placeholder="Ihr Passwort"
               />
             </div>
@@ -124,15 +125,15 @@ export default function LoginPage() {
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                className="h-4 w-4 text-nordic-primary focus:ring-nordic-primary border-nordic-light dark:border-nordic-dark rounded bg-white dark:bg-gray-700"
               />
-              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-nordic-dark dark:text-nordic-light">
                 Angemeldet bleiben
               </label>
             </div>
 
             <div className="text-sm">
-              <Link href="/forgot-password" className="font-medium text-indigo-600 hover:text-indigo-500">
+              <Link href="/forgot-password" className="font-medium text-nordic-primary hover:text-nordic-dark dark:hover:text-nordic-light">
                 Passwort vergessen?
               </Link>
             </div>
@@ -142,7 +143,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-nordic-primary hover:bg-nordic-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-nordic-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
             >
               {loading ? (
                 <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

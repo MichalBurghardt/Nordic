@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GlobalActions from "@/components/GlobalActions";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,12 +27,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200`}
       >
-        {children}
-        <GlobalActions 
-          excludeSelectors={['.global-actions', '[data-exclude-from-export="true"]']}
-        />
+        <ThemeProvider>
+          {children}
+          <GlobalActions 
+            excludeSelectors={['.global-actions', '[data-exclude-from-export="true"]']}
+          />
+        </ThemeProvider>
       </body>
     </html>
   );

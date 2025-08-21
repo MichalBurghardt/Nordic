@@ -114,8 +114,8 @@ export default function HRDashboardPage() {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Ładowanie HR Dashboard...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-nordic-primary mx-auto"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">Ładowanie HR Dashboard...</p>
         </div>
       </div>
     );
@@ -125,8 +125,8 @@ export default function HRDashboardPage() {
     return (
       <div className="max-w-4xl mx-auto p-6">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-red-600 mb-4">Błąd autoryzacji</h1>
-          <p className="text-gray-600">Nie udało się załadować danych użytkownika.</p>
+          <h1 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">Błąd autoryzacji</h1>
+          <p className="text-gray-600 dark:text-gray-400">Nie udało się załadować danych użytkownika.</p>
         </div>
       </div>
     );
@@ -136,60 +136,60 @@ export default function HRDashboardPage() {
     <div className="max-w-7xl mx-auto p-6">
       {/* Welcome Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">
+        <h1 className="text-3xl font-bold text-nordic-dark dark:text-nordic-light">
           Willkommen, {currentUser.firstName} {currentUser.lastName}! 👋
         </h1>
-        <p className="text-gray-600 mt-2">
+        <p className="text-gray-600 dark:text-gray-400 mt-2">
           HR Dashboard - Personalverwaltung & Recruitment
         </p>
       </div>
 
       {/* Quick Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-green-100">
-              <Users className="w-6 h-6 text-green-600" />
+            <div className="p-3 rounded-full bg-nordic-light">
+              <Users className="w-6 h-6 text-nordic-primary" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Gesamt Mitarbeiter</p>
-              <p className="text-2xl font-bold text-gray-900">{stats.totalEmployees}</p>
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Gesamt Mitarbeiter</p>
+              <p className="text-2xl font-bold text-nordic-dark dark:text-nordic-light">{stats.totalEmployees}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-blue-100">
-              <Target className="w-6 h-6 text-blue-600" />
+            <div className="p-3 rounded-full bg-nordic-primary/20">
+              <Target className="w-6 h-6 text-nordic-primary" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Aktive Einsätze</p>
-              <p className="text-2xl font-bold text-gray-900">{stats.activeAssignments}</p>
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Aktive Einsätze</p>
+              <p className="text-2xl font-bold text-nordic-dark dark:text-nordic-light">{stats.activeAssignments}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-yellow-100">
-              <Clock className="w-6 h-6 text-yellow-600" />
+            <div className="p-3 rounded-full bg-nordic-dark/10 dark:bg-nordic-light/20">
+              <Clock className="w-6 h-6 text-nordic-dark dark:text-nordic-light" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Wartende Einsätze</p>
-              <p className="text-2xl font-bold text-gray-900">{stats.pendingAssignments}</p>
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Wartende Einsätze</p>
+              <p className="text-2xl font-bold text-nordic-dark dark:text-nordic-light">{stats.pendingAssignments}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-purple-100">
-              <Briefcase className="w-6 h-6 text-purple-600" />
+            <div className="p-3 rounded-full bg-nordic-light">
+              <Briefcase className="w-6 h-6 text-nordic-dark" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-600">Kunden</p>
-              <p className="text-2xl font-bold text-gray-900">{stats.totalClients}</p>
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Kunden</p>
+              <p className="text-2xl font-bold text-nordic-dark dark:text-nordic-light">{stats.totalClients}</p>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import AdminPageContainer from '@/components/AdminPageContainer';
 
 interface User {
   _id: string;
@@ -93,86 +94,75 @@ export default function DashboardPage() {
 
   if (!currentUser) {
     return (
-      <div className="max-w-4xl mx-auto p-6">
+      <AdminPageContainer>
         <div className="text-center">
           <h1 className="text-2xl font-bold text-red-600 mb-4">Błąd autoryzacji</h1>
           <p className="text-gray-600">Nie udało się załadować danych użytkownika.</p>
         </div>
-      </div>
+      </AdminPageContainer>
     );
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">
-          Witaj, {currentUser.firstName} {currentUser.lastName}!
-        </h1>
-        <p className="text-gray-600 mt-2">
-          Panel główny - {currentUser.role === 'admin' ? 'Administrator' : 
-                         currentUser.role === 'hr' ? 'HR' : 
-                         currentUser.role === 'client' ? 'Klient' : 'Pracownik'}
-        </p>
-      </div>
-
+    <AdminPageContainer>
       {/* Statystyki */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-blue-100 text-blue-600">
+            <div className="p-3 rounded-full bg-nordic-light text-nordic-primary">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
               </svg>
             </div>
             <div className="ml-4">
-              <h2 className="text-sm font-medium text-gray-600">Użytkownicy</h2>
-              <p className="text-2xl font-semibold text-gray-900">{stats.totalUsers}</p>
-              <div className="text-xs text-gray-500 mt-1">
+              <h2 className="text-sm font-medium text-gray-600 dark:text-gray-400">Użytkownicy</h2>
+              <p className="text-2xl font-semibold text-nordic-dark dark:text-nordic-light">{stats.totalUsers}</p>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                 Admin: {stats.usersByRole.admin} | HR: {stats.usersByRole.hr} | Klienci: {stats.usersByRole.client}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-green-100 text-green-600">
+            <div className="p-3 rounded-full bg-nordic-light text-nordic-dark">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
               </svg>
             </div>
             <div className="ml-4">
-              <h2 className="text-sm font-medium text-gray-600">Klienci</h2>
-              <p className="text-2xl font-semibold text-gray-900">{stats.totalClients}</p>
+              <h2 className="text-sm font-medium text-gray-600 dark:text-gray-400">Klienci</h2>
+              <p className="text-2xl font-semibold text-nordic-dark dark:text-nordic-light">{stats.totalClients}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-yellow-100 text-yellow-600">
+            <div className="p-3 rounded-full bg-nordic-primary/20 text-nordic-primary">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
               </svg>
             </div>
             <div className="ml-4">
-              <h2 className="text-sm font-medium text-gray-600">Pracownicy</h2>
-              <p className="text-2xl font-semibold text-gray-900">{stats.totalEmployees}</p>
+              <h2 className="text-sm font-medium text-gray-600 dark:text-gray-400">Pracownicy</h2>
+              <p className="text-2xl font-semibold text-nordic-dark dark:text-nordic-light">{stats.totalEmployees}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
           <div className="flex items-center">
-            <div className="p-3 rounded-full bg-red-100 text-red-600">
+            <div className="p-3 rounded-full bg-nordic-dark/10 text-nordic-dark dark:bg-nordic-light/20 dark:text-nordic-light">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
               </svg>
             </div>
             <div className="ml-4">
-              <h2 className="text-sm font-medium text-gray-600">Zlecenia</h2>
-              <p className="text-2xl font-semibold text-gray-900">{stats.totalAssignments}</p>
-              <div className="text-xs text-gray-500 mt-1">
+              <h2 className="text-sm font-medium text-gray-600 dark:text-gray-400">Zlecenia</h2>
+              <p className="text-2xl font-semibold text-nordic-dark dark:text-nordic-light">{stats.totalAssignments}</p>
+              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                 Aktywne: {stats.activeAssignments}
               </div>
             </div>
@@ -182,51 +172,51 @@ export default function DashboardPage() {
 
       {/* Ostatnie aktywności */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Ostatnie aktywności</h3>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
+          <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-4">Ostatnie aktywności</h3>
           <div className="space-y-4">
             <div className="flex items-start space-x-3">
-              <div className="flex-shrink-0 w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+              <div className="flex-shrink-0 w-2 h-2 bg-nordic-primary rounded-full mt-2"></div>
               <div>
-                <p className="text-sm text-gray-900">Nowy użytkownik się zarejestrował</p>
-                <p className="text-xs text-gray-500">2 godziny temu</p>
+                <p className="text-sm text-nordic-dark dark:text-nordic-light">Nowy użytkownik się zarejestrował</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">2 godziny temu</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="flex-shrink-0 w-2 h-2 bg-green-400 rounded-full mt-2"></div>
+              <div className="flex-shrink-0 w-2 h-2 bg-nordic-dark rounded-full mt-2"></div>
               <div>
-                <p className="text-sm text-gray-900">Projekt został ukończony</p>
-                <p className="text-xs text-gray-500">5 godzin temu</p>
+                <p className="text-sm text-nordic-dark dark:text-nordic-light">Projekt został ukończony</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">5 godzin temu</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="flex-shrink-0 w-2 h-2 bg-yellow-400 rounded-full mt-2"></div>
+              <div className="flex-shrink-0 w-2 h-2 bg-nordic-light rounded-full mt-2"></div>
               <div>
-                <p className="text-sm text-gray-900">Nowe zadanie zostało przypisane</p>
-                <p className="text-xs text-gray-500">1 dzień temu</p>
+                <p className="text-sm text-nordic-dark dark:text-nordic-light">Nowe zadanie zostało przypisane</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">1 dzień temu</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Szybkie akcje</h3>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-nordic-light/30 dark:border-nordic-dark/30 p-6">
+          <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-4">Szybkie akcje</h3>
           <div className="space-y-3">
-            <button className="w-full text-left px-4 py-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
-              <span className="text-sm font-medium text-blue-700">Dodaj nowego użytkownika</span>
+            <button className="w-full text-left px-4 py-3 bg-nordic-light hover:bg-nordic-primary/20 dark:bg-nordic-dark/20 dark:hover:bg-nordic-primary/30 rounded-lg transition-colors">
+              <span className="text-sm font-medium text-nordic-primary dark:text-nordic-light">Dodaj nowego użytkownika</span>
             </button>
-            <button className="w-full text-left px-4 py-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors">
-              <span className="text-sm font-medium text-green-700">Utwórz nowy projekt</span>
+            <button className="w-full text-left px-4 py-3 bg-nordic-light hover:bg-nordic-primary/20 dark:bg-nordic-dark/20 dark:hover:bg-nordic-primary/30 rounded-lg transition-colors">
+              <span className="text-sm font-medium text-nordic-primary dark:text-nordic-light">Utwórz nowy projekt</span>
             </button>
-            <button className="w-full text-left px-4 py-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors">
-              <span className="text-sm font-medium text-purple-700">Wyświetl raporty</span>
+            <button className="w-full text-left px-4 py-3 bg-nordic-light hover:bg-nordic-primary/20 dark:bg-nordic-dark/20 dark:hover:bg-nordic-primary/30 rounded-lg transition-colors">
+              <span className="text-sm font-medium text-nordic-primary dark:text-nordic-light">Wyświetl raporty</span>
             </button>
-            <button className="w-full text-left px-4 py-3 bg-orange-50 hover:bg-orange-100 rounded-lg transition-colors">
-              <span className="text-sm font-medium text-orange-700">Zarządzaj ustawieniami</span>
+            <button className="w-full text-left px-4 py-3 bg-nordic-light hover:bg-nordic-primary/20 dark:bg-nordic-dark/20 dark:hover:bg-nordic-primary/30 rounded-lg transition-colors">
+              <span className="text-sm font-medium text-nordic-primary dark:text-nordic-light">Zarządzaj ustawieniami</span>
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </AdminPageContainer>
   );
 }

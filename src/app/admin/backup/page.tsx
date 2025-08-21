@@ -26,45 +26,18 @@ export default function BackupManagement() {
     try {
       setLoading(true);
       
-      // Mockowe dane - w prawdziwej aplikacji byłyby pobierane z API
-      const mockBackups: BackupFile[] = [
-        {
-          id: '1',
-          filename: 'backup_2024_01_15_auto.sql',
-          size: 2456789,
-          createdAt: '2024-01-15T02:00:00Z',
-          type: 'auto',
-          status: 'success'
-        },
-        {
-          id: '2',
-          filename: 'backup_2024_01_14_manual.sql',
-          size: 2398765,
-          createdAt: '2024-01-14T14:30:00Z',
-          type: 'manual',
-          status: 'success'
-        },
-        {
-          id: '3',
-          filename: 'backup_2024_01_14_auto.sql',
-          size: 2387654,
-          createdAt: '2024-01-14T02:00:00Z',
-          type: 'auto',
-          status: 'success'
-        },
-        {
-          id: '4',
-          filename: 'backup_2024_01_13_auto.sql',
-          size: 0,
-          createdAt: '2024-01-13T02:00:00Z',
-          type: 'auto',
-          status: 'failed'
-        },
-      ];
+      const response = await fetch('/api/admin/backup');
+      const data = await response.json();
       
-      setBackups(mockBackups);
+      if (data.success) {
+        setBackups(data.backups);
+      } else {
+        console.error('Failed to fetch backups:', data.error);
+        setBackups([]);
+      }
     } catch (error) {
       console.error('Error fetching backups:', error);
+      setBackups([]);
     } finally {
       setLoading(false);
     }
@@ -74,25 +47,23 @@ export default function BackupManagement() {
     try {
       setIsCreatingBackup(true);
       
-      const response = await fetch('/api/admin/backup/create', {
+      const response = await fetch('/api/admin/backup', {
         method: 'POST',
       });
       
-      if (response.ok) {
-        // Symuluj dodanie nowego backupu
-        const newBackup: BackupFile = {
-          id: Date.now().toString(),
-          filename: `backup_${new Date().toISOString().split('T')[0].replace(/-/g, '_')}_manual.sql`,
-          size: 2456789,
-          createdAt: new Date().toISOString(),
-          type: 'manual',
-          status: 'success'
-        };
-        
-        setBackups(prev => [newBackup, ...prev]);
+      const data = await response.json();
+      
+      if (data.success) {
+        // Odśwież listę backupów
+        await fetchBackups();
+        console.log('✅ Manual backup created successfully');
+      } else {
+        console.error('Failed to create backup:', data.error);
+        alert('Wystąpił błąd podczas tworzenia backupu: ' + data.error);
       }
     } catch (error) {
       console.error('Error creating backup:', error);
+      alert('Wystąpił błąd podczas tworzenia backupu.');
     } finally {
       setIsCreatingBackup(false);
     }
@@ -126,11 +97,19 @@ export default function BackupManagement() {
         method: 'DELETE',
       });
 
-      if (response.ok) {
-        setBackups(prev => prev.filter(b => b.id !== backupId));
+      const data = await response.json();
+
+      if (data.success) {
+        // Odśwież listę backupów
+        await fetchBackups();
+        console.log('✅ Backup deleted successfully');
+      } else {
+        console.error('Failed to delete backup:', data.error);
+        alert('Wystąpił błąd podczas usuwania backupu: ' + data.error);
       }
     } catch (error) {
       console.error('Error deleting backup:', error);
+      alert('Wystąpił błąd podczas usuwania backupu.');
     }
   };
 
@@ -246,8 +225,8 @@ export default function BackupManagement() {
           <div>
             <h3 className="font-medium text-blue-900">Automatyczne kopie zapasowe</h3>
             <p className="text-blue-700 text-sm mt-1">
-              System automatycznie tworzy kopie zapasowe codziennie o 02:00. 
-              Przechowywane są kopie z ostatnich 30 dni.
+              System automatycznie tworzy kopie zapasowe co 5 minut gdy funkcja jest włączona w ustawieniach. 
+              Przechowywane są kopie z ostatnich 72 godzin.
             </p>
           </div>
         </div>

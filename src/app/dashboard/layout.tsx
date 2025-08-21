@@ -1,8 +1,18 @@
 'use client';
 
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { 
+  Home, 
+  Users, 
+  Building2, 
+  UserCheck, 
+  Calendar, 
+  MessageSquare, 
+  FileText, 
+  Database
+} from 'lucide-react';
+import ResponsiveHeader from '../../components/ResponsiveHeader';
 
 export default function DashboardLayout({
   children,
@@ -12,6 +22,18 @@ export default function DashboardLayout({
   const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Definicja menu items dla dashboard
+  const dashboardMenuItems = [
+    { href: '/dashboard', label: 'Dashboard', icon: Home },
+    { href: '/admin/users', label: 'Benutzer', icon: Users },
+    { href: '/admin/clients', label: 'Kunden', icon: Building2 },
+    { href: '/admin/employees', label: 'Mitarbeiter', icon: UserCheck },
+    { href: '/admin/assignments', label: 'Einsätze', icon: Calendar },
+    { href: '/chat', label: 'Chat', icon: MessageSquare },
+    { href: '/admin/audit-logs', label: 'Audit', icon: FileText },
+    { href: '/admin/database', label: 'Datenbank', icon: Database },
+  ];
 
   useEffect(() => {
     // Sprawdź autoryzację
@@ -69,51 +91,13 @@ export default function DashboardLayout({
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Global Header */}
-      <header className="bg-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <Link href="/dashboard">
-                <h1 className="text-3xl font-bold text-gray-900 cursor-pointer">Nordic GmbH</h1>
-              </Link>
-              <span className="ml-2 text-sm text-gray-500">Admin Dashboard</span>
-            </div>
-            <nav className="flex space-x-6">
-              <Link href="/dashboard" className="text-gray-600 hover:text-indigo-600 font-medium">
-                Dashboard
-              </Link>
-              <Link href="/admin/users" className="text-gray-600 hover:text-indigo-600 font-medium">
-                Benutzer
-              </Link>
-              <Link href="/admin/clients" className="text-gray-600 hover:text-indigo-600 font-medium">
-                Kunden
-              </Link>
-              <Link href="/admin/employees" className="text-gray-600 hover:text-indigo-600 font-medium">
-                Mitarbeiter
-              </Link>
-              <Link href="/admin/assignments" className="text-gray-600 hover:text-indigo-600 font-medium">
-                Einsätze
-              </Link>
-              <Link href="/chat" className="text-gray-600 hover:text-indigo-600 font-medium">
-                💬 Chat
-              </Link>
-              <Link href="/admin/audit-logs" className="text-gray-600 hover:text-indigo-600 font-medium">
-                Audit Logs
-              </Link>
-              <Link href="/admin/database" className="text-gray-600 hover:text-indigo-600 font-medium">
-                Datenbank
-              </Link>
-              <button 
-                onClick={handleLogout}
-                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
-              >
-                Abmelden
-              </button>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <ResponsiveHeader
+        title="Nordic GmbH"
+        subtitle="Admin Dashboard"
+        menuItems={dashboardMenuItems}
+        onLogout={handleLogout}
+        theme="admin"
+      />
 
       {/* Content */}
       {children}

@@ -1,5 +1,25 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
+export interface ColorSettings {
+  colorScheme: {
+    primary: string;
+    secondary: string;
+    accent: string;
+  };
+  darknessLevels: {
+    light: number;
+    medium: number;
+    dark: number;
+  };
+  customColors: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    light: string;
+    dark: string;
+  };
+}
+
 export interface IUser extends Document {
   email: string;
   password: string;
@@ -14,6 +34,7 @@ export interface IUser extends Document {
     postalCode: string;
     country: string;
   };
+  colorSettings?: ColorSettings;
   isActive: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -60,6 +81,25 @@ const UserSchema: Schema = new Schema({
     city: String,
     postalCode: String,
     country: String,
+  },
+  colorSettings: {
+    colorScheme: {
+      primary: { type: String, default: '#3B82F6' },
+      secondary: { type: String, default: '#10B981' },
+      accent: { type: String, default: '#F59E0B' },
+    },
+    darknessLevels: {
+      light: { type: Number, default: 0.1 },
+      medium: { type: Number, default: 0.3 },
+      dark: { type: Number, default: 0.7 },
+    },
+    customColors: {
+      primary: { type: String, default: '#3B82F6' },
+      secondary: { type: String, default: '#10B981' },
+      accent: { type: String, default: '#F59E0B' },
+      light: { type: String, default: '#F8FAFC' },
+      dark: { type: String, default: '#1E293B' },
+    },
   },
   isActive: {
     type: Boolean,

@@ -52,6 +52,19 @@ export async function PATCH(
       const data = await request.json();
       const { isActive, role, firstName, lastName, email } = data;
 
+      const { id } = await params;
+      
+      // Pobierz istniejące dane do audit log
+      const existingUser = await User.findById(id);
+      if (!existingUser) {
+        return NextResponse.json(
+          { error: 'User not found' },
+          { status: 404 }
+        );
+      }
+
+      const oldData = existingUser.toObject();
+
       const updateData: Record<string, unknown> = {};
       if (isActive !== undefined) updateData.isActive = isActive;
       if (role) updateData.role = role;
@@ -59,7 +72,6 @@ export async function PATCH(
       if (lastName) updateData.lastName = lastName;
       if (email) updateData.email = email;
 
-      const { id } = await params;
       const user = await User.findByIdAndUpdate(
         id,
         updateData,
@@ -72,6 +84,29 @@ export async function PATCH(
           { status: 404 }
         );
       }
+
+      // Określ typ zmiany dla audit log
+      let actionDescription = '';
+      if (isActive !== undefined) {
+        actionDescription = isActive 
+          ? `Aktiviert użytkownika: ${user.firstName} ${user.lastName} (${user.email})`
+          : `Deaktiviert użytkownika: ${user.firstName} ${user.lastName} (${user.email})`;
+      } else if (role) {
+        actionDescription = `Zmieniono rolę użytkownika: ${user.firstName} ${user.lastName} na ${role}`;
+      } else {
+        actionDescription = `Zaktualizowano dane użytkownika: ${user.firstName} ${user.lastName}`;
+      }
+
+      // Audit log - User update
+      await AuditLogger.logUpdate(
+        (request as AuthenticatedRequest).user?.userId || 'unknown',
+        'User',
+        id,
+        AuditLogger.sanitizeData(oldData),
+        AuditLogger.sanitizeData(user.toObject()),
+        request,
+        actionDescription
+      );
 
       return NextResponse.json({
         success: true,
@@ -189,6 +224,65 @@ export async function PUT(
 
     } catch (error) {
       console.error('Update user error:', error);
+      return NextResponse.json(
+        { error: 'Interner Serverfehler' },
+        { status: 500 }
+      );
+    }
+  });
+
+  return authCheck(request as AuthenticatedRequest);
+}
+
+// DELETE - usuń użytkownika
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const authCheck = requireAuth(['admin'])(async () => {
+    try {
+      await dbConnect();
+      
+      const { id } = await params;
+      
+      // Sprawdź czy użytkownik istnieje
+      const user = await User.findById(id).select('-password');
+      if (!user) {
+        return NextResponse.json(
+          { error: 'Benutzer nicht gefunden' },
+          { status: 404 }
+        );
+      }
+
+      // Nie pozwól na usunięcie samego siebie
+      const currentUserId = (request as AuthenticatedRequest).user?.userId;
+      if (currentUserId === id) {
+        return NextResponse.json(
+          { error: 'Sie können sich selbst nicht löschen' },
+          { status: 400 }
+        );
+      }
+
+      // Usuń użytkownika
+      await User.findByIdAndDelete(id);
+
+      // Audit log - User deletion
+      await AuditLogger.logDelete(
+        currentUserId || 'unknown',
+        'User',
+        id,
+        AuditLogger.sanitizeData(user.toObject()),
+        request,
+        `Usunięto użytkownika: ${user.firstName} ${user.lastName} (${user.email})`
+      );
+
+      return NextResponse.json({
+        success: true,
+        message: 'Benutzer erfolgreich gelöscht',
+      });
+
+    } catch (error) {
+      console.error('Delete user error:', error);
       return NextResponse.json(
         { error: 'Interner Serverfehler' },
         { status: 500 }
