@@ -5,12 +5,13 @@ import path from 'path';
 // Endpoint do usuwania backupu
 export async function DELETE(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     // TODO: Dodaj sprawdzanie autoryzacji gdy będzie gotowe
     
-    const backupId = params.id;
+    const { id } = await params;
+    const backupId = id;
     const filename = `${backupId}.json`;
     const backupPath = path.join(process.cwd(), 'backups', filename);
 
@@ -25,7 +26,8 @@ export async function DELETE(
         message: `Backup ${filename} deleted successfully`
       });
       
-    } catch (error) {
+    } catch (fileError) {
+      console.log('File not found:', fileError);
       return NextResponse.json(
         { success: false, error: 'Backup file not found' },
         { status: 404 }
