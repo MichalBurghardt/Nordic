@@ -67,10 +67,10 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white dark:bg-nordic-dark border-b border-nordic-light dark:border-nordic-primary shadow-sm transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center py-4 sm:py-6">
             <div className="flex items-center">
-              <h1 className="text-3xl font-bold text-nordic-dark dark:text-nordic-light">Nordic</h1>
-              <span className="ml-2 text-3xl font-bold text-nordic-primary">Zeitarbeit GmbH</span>
+              <h1 className="text-2xl sm:text-3xl font-bold text-nordic-dark dark:text-nordic-light">Nordic</h1>
+              <span className="ml-1 sm:ml-2 text-2xl sm:text-3xl font-bold text-nordic-primary">Zeitarbeit GmbH</span>
             </div>
             <div className="flex items-center space-x-4">
               <AdvancedThemeToggle />
@@ -80,16 +80,16 @@ export default function Home() {
       </header>
 
       {/* Main Content with Login */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           
-          {/* Left Side - Login Form */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="w-full max-w-md">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl border border-nordic-light dark:border-nordic-dark">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-nordic-dark dark:text-nordic-light">Anmelden</h3>
-                  <p className="text-nordic-primary mt-2">Melden Sie sich in Ihr Konto an</p>
+          {/* Mobile: Welcome & Features First, Desktop: Login Form First */}
+          <div className="order-2 lg:order-1 flex justify-center lg:justify-start w-full">
+            <div className="w-full max-w-md mx-auto lg:mx-0">
+              <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-2xl border border-nordic-light dark:border-nordic-dark">
+                <div className="text-center mb-6 lg:mb-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-nordic-dark dark:text-nordic-light">Anmelden</h3>
+                  <p className="text-nordic-primary mt-2 text-sm sm:text-base">Melden Sie sich in Ihr Konto an</p>
                 </div>
 
                 {error && (
@@ -98,7 +98,7 @@ export default function Home() {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-nordic-dark dark:text-nordic-light mb-1">
                       E-Mail-Adresse
@@ -111,7 +111,7 @@ export default function Home() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 border border-nordic-light dark:border-nordic-dark placeholder-gray-500 dark:placeholder-gray-400 text-nordic-dark dark:text-nordic-light bg-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-nordic-primary focus:border-nordic-primary sm:text-sm"
+                      className="w-full px-3 py-2.5 border border-nordic-light dark:border-nordic-dark placeholder-gray-500 dark:placeholder-gray-400 text-nordic-dark dark:text-nordic-light bg-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-nordic-primary focus:border-nordic-primary text-sm sm:text-base"
                       placeholder="ihre.email@beispiel.de"
                     />
                   </div>
@@ -129,7 +129,7 @@ export default function Home() {
                         required
                         value={formData.password}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 pr-10 border border-nordic-light dark:border-nordic-dark placeholder-gray-500 dark:placeholder-gray-400 text-nordic-dark dark:text-nordic-light bg-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-nordic-primary focus:border-nordic-primary sm:text-sm"
+                        className="w-full px-3 py-2.5 pr-10 border border-nordic-light dark:border-nordic-dark placeholder-gray-500 dark:placeholder-gray-400 text-nordic-dark dark:text-nordic-light bg-white dark:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-nordic-primary focus:border-nordic-primary text-sm sm:text-base"
                         placeholder="Ihr Passwort"
                       />
                       <button
@@ -151,7 +151,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
                     <div className="flex items-center">
                       <input
                         id="remember-me"
@@ -175,7 +175,7 @@ export default function Home() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-nordic-primary hover:bg-nordic-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-nordic-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+                      className="w-full flex justify-center py-2.5 sm:py-3 px-4 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-nordic-primary hover:bg-nordic-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-nordic-primary disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
                     >
                       {loading ? (
                         <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -200,55 +200,55 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Side - Welcome & Features */}
-          <div className="text-center lg:text-right">
-            <h2 className="text-5xl font-bold text-nordic-dark dark:text-nordic-light mb-6">
+          {/* Mobile: Welcome & Features First, Desktop: Right Side */}
+          <div className="order-1 lg:order-2 text-center lg:text-right w-full">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-nordic-dark dark:text-nordic-light mb-4 lg:mb-6 leading-tight">
               Moderne Zeitarbeit
-              <span className="text-nordic-primary"> Verwaltung</span>
+              <span className="text-nordic-primary block sm:inline"> Verwaltung</span>
             </h2>
-            <p className="text-xl text-nordic-primary mb-8">
+            <p className="text-base sm:text-lg lg:text-xl text-nordic-primary mb-6 lg:mb-8 px-2 lg:px-0">
               Effiziente Verwaltung von Zeitarbeitskräften, Kunden und Einsätzen. 
               Optimieren Sie Ihre Personalvermittlung mit unserem intelligenten System.
             </p>
             
             {/* Feature Carousel */}
-            <div className="mt-12">
+            <div className="mt-8 lg:mt-12 px-2 lg:px-0">
               <FeatureCarousel>
                 {/* Feature 1 */}
-                <div className="card p-6 hover:shadow-xl transition-all duration-200">
-                  <div className="w-12 h-12 bg-nordic-light dark:bg-nordic-primary rounded-lg flex items-center justify-center mx-auto lg:ml-auto lg:mr-0 mb-4">
-                    <svg className="w-6 h-6 text-nordic-primary dark:text-nordic-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="card p-4 sm:p-6 hover:shadow-xl transition-all duration-200 mx-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-nordic-light dark:bg-nordic-primary rounded-lg flex items-center justify-center mx-auto lg:ml-auto lg:mr-0 mb-3 sm:mb-4">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-nordic-primary dark:text-nordic-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-2">Personal Management</h3>
-                  <p className="text-sm text-nordic-primary">
+                  <h3 className="text-base sm:text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-2">Personal Management</h3>
+                  <p className="text-xs sm:text-sm text-nordic-primary leading-relaxed">
                     Verwalten Sie Ihre Zeitarbeitskräfte mit detaillierten Profilen und Qualifikationen.
                   </p>
                 </div>
 
                 {/* Feature 2 */}
-                <div className="card p-6 hover:shadow-xl transition-all duration-200">
-                  <div className="w-12 h-12 bg-nordic-light dark:bg-nordic-primary rounded-lg flex items-center justify-center mx-auto lg:ml-auto lg:mr-0 mb-4">
-                    <svg className="w-6 h-6 text-nordic-primary dark:text-nordic-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="card p-4 sm:p-6 hover:shadow-xl transition-all duration-200 mx-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-nordic-light dark:bg-nordic-primary rounded-lg flex items-center justify-center mx-auto lg:ml-auto lg:mr-0 mb-3 sm:mb-4">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-nordic-primary dark:text-nordic-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-2">Kunden Verwaltung</h3>
-                  <p className="text-sm text-nordic-primary">
+                  <h3 className="text-base sm:text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-2">Kunden Verwaltung</h3>
+                  <p className="text-xs sm:text-sm text-nordic-primary leading-relaxed">
                     Zentrale Verwaltung aller Kundendaten mit Kontaktinformationen.
                   </p>
                 </div>
 
                 {/* Feature 3 */}
-                <div className="card p-6 hover:shadow-xl transition-all duration-200">
-                  <div className="w-12 h-12 bg-nordic-light dark:bg-nordic-primary rounded-lg flex items-center justify-center mx-auto lg:ml-auto lg:mr-0 mb-4">
-                    <svg className="w-6 h-6 text-nordic-primary dark:text-nordic-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="card p-4 sm:p-6 hover:shadow-xl transition-all duration-200 mx-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-nordic-light dark:bg-nordic-primary rounded-lg flex items-center justify-center mx-auto lg:ml-auto lg:mr-0 mb-3 sm:mb-4">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-nordic-primary dark:text-nordic-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-2">Einsatz Planung</h3>
-                  <p className="text-sm text-nordic-primary">
+                  <h3 className="text-base sm:text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-2">Einsatz Planung</h3>
+                  <p className="text-xs sm:text-sm text-nordic-primary leading-relaxed">
                     Intelligente Zuordnung von Personal zu Einsätzen basierend auf Qualifikationen.
                   </p>
                 </div>
@@ -259,17 +259,17 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-nordic-dark text-nordic-light py-12 mt-20 transition-colors duration-300">
+      <footer className="bg-nordic-dark text-nordic-light py-8 sm:py-12 mt-12 sm:mt-20 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Nordic Zeitarbeit GmbH</h3>
-            <p className="text-nordic-primary mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Nordic Zeitarbeit GmbH</h3>
+            <p className="text-nordic-primary mb-4 sm:mb-6 text-sm sm:text-base">
               Professionelle Lösung für die Zeitarbeitsbranche
             </p>
-            <div className="flex justify-center space-x-6">
-              <Link href="/about" className="text-nordic-primary hover:text-nordic-light transition-colors">Über uns</Link>
-              <Link href="/contact" className="text-nordic-primary hover:text-nordic-light transition-colors">Kontakt</Link>
-              <Link href="/privacy" className="text-nordic-primary hover:text-nordic-light transition-colors">Datenschutz</Link>
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <Link href="/about" className="text-nordic-primary hover:text-nordic-light transition-colors text-sm sm:text-base">Über uns</Link>
+              <Link href="/contact" className="text-nordic-primary hover:text-nordic-light transition-colors text-sm sm:text-base">Kontakt</Link>
+              <Link href="/privacy" className="text-nordic-primary hover:text-nordic-light transition-colors text-sm sm:text-base">Datenschutz</Link>
             </div>
           </div>
         </div>
