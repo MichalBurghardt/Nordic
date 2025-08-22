@@ -43,11 +43,39 @@ export const GET = requireAuth(['admin', 'hr'])(async (request: AuthenticatedReq
       .skip(skip)
       .limit(limit);
 
+    // Dodaj informacje o obecnych umowach dla każdego pracownika
+    const Assignment = (await import('@/models/Assignment')).default;
+    
+    const employeesWithAssignments = await Promise.all(
+      employees.map(async (employee) => {
+        // Znajdź aktualną umowę (active lub pending)
+        const currentAssignment = await Assignment.findOne({
+          employeeId: employee._id,
+          status: { $in: ['active', 'pending'] }
+        })
+        .populate({
+          path: 'clientId',
+          select: 'name'
+        })
+        .sort({ startDate: -1 }); // najnowsza umowa
+
+        return {
+          ...employee.toObject(),
+          currentAssignment: currentAssignment ? {
+            clientId: currentAssignment.clientId,
+            status: currentAssignment.status,
+            startDate: currentAssignment.startDate,
+            endDate: currentAssignment.endDate
+          } : null
+        };
+      })
+    );
+
     const total = await Employee.countDocuments(filter);
 
     return NextResponse.json({
       success: true,
-      employees,
+      employees: employeesWithAssignments,
       pagination: {
         page,
         limit,

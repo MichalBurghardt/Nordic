@@ -32,7 +32,9 @@ export interface IEmployee extends Document {
     uploadDate: Date;
     url: string;
   }[];
-  status: 'available' | 'assigned' | 'inactive';
+  status: 'available' | 'assigned' | 'inactive' | 'awaiting_assignment' | 'on_leave' | 'comp_time' | 'sick_leave' | 'with_assignments';
+  statusUpdatedAt?: Date;
+  statusReason?: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -114,8 +116,15 @@ const EmployeeSchema: Schema = new Schema({
   }],
   status: {
     type: String,
-    enum: ['available', 'assigned', 'inactive'],
+    enum: ['available', 'assigned', 'inactive', 'awaiting_assignment', 'on_leave', 'comp_time', 'sick_leave', 'with_assignments'],
     default: 'available',
+  },
+  statusUpdatedAt: {
+    type: Date,
+  },
+  statusReason: {
+    type: String,
+    trim: true,
   },
 }, {
   timestamps: true,

@@ -24,7 +24,7 @@ interface Assignment {
   hourlyRate: number;
   maxHours: number;
   description: string;
-  status: 'active' | 'completed' | 'cancelled' | 'paused';
+  status: 'active' | 'pending' | 'completed' | 'cancelled' | 'paused';
   createdAt: string;
 }
 
@@ -97,6 +97,7 @@ export default function AssignmentsManagement() {
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       active: { bg: 'bg-green-100', text: 'text-green-800', label: 'Aktywny' },
+      pending: { bg: 'bg-orange-100', text: 'text-orange-800', label: 'Oczekujący' },
       completed: { bg: 'bg-blue-100', text: 'text-blue-800', label: 'Zakończony' },
       cancelled: { bg: 'bg-red-100', text: 'text-red-800', label: 'Anulowany' },
       paused: { bg: 'bg-yellow-100', text: 'text-yellow-800', label: 'Wstrzymany' }
@@ -171,7 +172,8 @@ export default function AssignmentsManagement() {
                   className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 >
                   <option value="all">Wszystkie statusy</option>
-                  <option value="active">Aktywne</option>
+                  <option value="active">Aktywne (w realizacji)</option>
+                  <option value="pending">Oczekujące na realizację</option>
                   <option value="completed">Zakończone</option>
                   <option value="paused">Wstrzymane</option>
                   <option value="cancelled">Anulowane</option>

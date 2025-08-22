@@ -58,6 +58,7 @@ export async function PATCH(
         'employeeId',
         'hourlyRate',
         'skills',
+        'qualifications',
         'availability',
         'bankAccount',
         'taxId',
@@ -124,4 +125,12 @@ export async function PATCH(
       );
     }
   })(request);
+}
+
+// PUT - metoda alternatywna do PATCH dla kompatybilności
+export async function PUT(
+  request: AuthenticatedRequest,
+  { params }: RouteParams
+) {
+  return PATCH(request, { params });
 }

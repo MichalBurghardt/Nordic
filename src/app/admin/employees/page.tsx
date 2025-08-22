@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import AdminPageContainer from '@/components/AdminPageContainer';
 import Link from 'next/link';
 import { ChevronUpIcon, ChevronDownIcon, XIcon } from 'lucide-react';
@@ -18,9 +19,18 @@ interface Employee {
   hourlyRate: number;
   status: string;
   createdAt: string;
+  currentAssignment?: {
+    clientId: {
+      name: string;
+    };
+    status: string;
+    startDate: string;
+    endDate: string;
+  };
 }
 
 export default function EmployeesManagement() {
+  const router = useRouter();
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -105,12 +115,20 @@ export default function EmployeesManagement() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'active':
+      case 'available':
         return 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100';
-      case 'inactive':
-        return 'bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100';
-      case 'pending':
+      case 'with_assignments':
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100';
+      case 'awaiting_assignment':
         return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-800 dark:text-yellow-100';
+      case 'on_leave':
+        return 'bg-purple-100 text-purple-800 dark:bg-purple-800 dark:text-purple-100';
+      case 'sick_leave':
+        return 'bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100';
+      case 'comp_time':
+        return 'bg-orange-100 text-orange-800 dark:bg-orange-800 dark:text-orange-100';
+      case 'inactive':
+        return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100';
       default:
         return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100';
     }
@@ -118,15 +136,27 @@ export default function EmployeesManagement() {
 
   const getStatusText = (status: string) => {
     switch (status) {
-      case 'active':
-        return 'Aktiv';
+      case 'available':
+        return 'Verfügbar';
+      case 'with_assignments':
+        return 'Mit Umowa';
+      case 'awaiting_assignment':
+        return 'Wartet auf Umowa';
+      case 'on_leave':
+        return 'Urlaub';
+      case 'sick_leave':
+        return 'Krankenschein';
+      case 'comp_time':
+        return 'Freie Zeit';
       case 'inactive':
         return 'Inaktiv';
-      case 'pending':
-        return 'Ausstehend';
       default:
         return status;
     }
+  };
+
+  const handleEmployeeClick = (employeeId: string) => {
+    router.push(`/admin/employees/${employeeId}/edit`);
   };
 
   return (
@@ -248,16 +278,20 @@ export default function EmployeesManagement() {
                     </button>
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                    Qualifikationen
+                    Aktuelle Firma
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
-                    Aktionen
+                    Qualifikationen
                   </th>
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-600">
                 {employees.map((employee) => (
-                  <tr key={employee._id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
+                  <tr 
+                    key={employee._id} 
+                    onClick={() => handleEmployeeClick(employee._id)}
+                    className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors"
+                  >
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm font-medium text-nordic-dark dark:text-nordic-light">
                         {employee.userId.firstName} {employee.userId.lastName}
@@ -276,6 +310,18 @@ export default function EmployeesManagement() {
                       <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(employee.status)}`}>
                         {getStatusText(employee.status)}
                       </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-nordic-dark dark:text-nordic-light">
+                      {employee.currentAssignment ? (
+                        <div>
+                          <div className="font-medium">{employee.currentAssignment.clientId.name}</div>
+                          <div className="text-xs text-gray-500 dark:text-gray-400">
+                            {employee.currentAssignment.status === 'active' ? 'Aktiv' : 'Oczekujący'}
+                          </div>
+                        </div>
+                      ) : (
+                        <span className="text-gray-500 dark:text-gray-400 text-xs">Keine Firma</span>
+                      )}
                     </td>
                     <td className="px-6 py-4 text-sm text-nordic-dark dark:text-nordic-light">
                       <div className="max-w-xs">
@@ -296,14 +342,6 @@ export default function EmployeesManagement() {
                           <span className="text-gray-500 dark:text-gray-400 text-xs">Keine</span>
                         )}
                       </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <Link
-                        href={`/admin/employees/${employee._id}/edit`}
-                        className="text-nordic-primary hover:text-nordic-dark dark:hover:text-nordic-light"
-                      >
-                        Bearbeiten
-                      </Link>
                     </td>
                   </tr>
                 ))}
