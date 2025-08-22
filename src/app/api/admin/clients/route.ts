@@ -4,7 +4,7 @@ import Client from '@/models/Client';
 import { requireAuth, AuthenticatedRequest } from '@/lib/auth';
 
 // GET - pobierz wszystkich klientów
-export const GET = requireAuth(['admin', 'hr'])(async (request: AuthenticatedRequest) => {
+export const GET = requireAuth(['admin', 'hr', 'manager'])(async (request: AuthenticatedRequest) => {
   try {
     await dbConnect();
     

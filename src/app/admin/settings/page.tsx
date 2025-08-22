@@ -91,6 +91,43 @@ export default function SystemSettings() {
     fetchSettings();
   }, []);
 
+  // useEffect do aktualizowania CSS variables w czasie rzeczywistym
+  useEffect(() => {
+    if (settings.colors?.customColors) {
+      const root = document.documentElement;
+      const colors = settings.colors.customColors;
+      
+      // Aktualizuj CSS variables dla wszystkich kolorów Nordic
+      // ColorSet ma strukturę: { nordic1: "hsl(...)", nordic2: "hsl(...)", ... }
+      Object.entries(colors).forEach(([colorKey, colorValue]) => {
+        const cssVarName = `--color-nordic-${colorKey}`;
+        root.style.setProperty(cssVarName, String(colorValue));
+      });
+      
+      console.log('🎨 Updated CSS variables:', colors);
+    }
+  }, [settings.colors?.customColors]);
+
+  // Funkcja do aktualizacji CSS variables
+  const updateCSSVariables = (hue: number, saturation: number) => {
+    const root = document.documentElement;
+    const tempColorScheme: ColorScheme = {
+      id: 'temp',
+      name: 'Temporary',
+      hue,
+      saturation
+    };
+    const colors = ColorUtils.generateColorSet(tempColorScheme, DEFAULT_DARKNESS_LEVELS);
+    
+    // Aktualizuj CSS variables dla wszystkich kolorów Nordic
+    Object.entries(colors).forEach(([colorKey, colorValue]) => {
+      const cssVarName = `--color-nordic-${colorKey}`;
+      root.style.setProperty(cssVarName, String(colorValue));
+    });
+    
+    console.log('🎨 Updated CSS variables manually:', colors);
+  };
+
   // Usunęliśmy problematyczny useEffect, który powodował nieskończoną pętlę
 
   const fetchSettings = async () => {
@@ -194,6 +231,76 @@ export default function SystemSettings() {
 
       return newSettings;
     });
+  };
+
+  // Fabryczne kolory Nordic
+  const FACTORY_COLORS = {
+    hue: 210,        // Niebieski
+    saturation: 80   // 80% nasycenia
+  };
+
+  // Reset do kolorów fabrycznych
+  const resetToFactoryColors = () => {
+    if (window.confirm('Czy na pewno chcesz przywrócić fabryczne kolory Nordic? Niezapisane zmiany zostaną utracone.')) {
+      updateSettings('colors', 'colorScheme', {
+        hue: FACTORY_COLORS.hue,
+        saturation: FACTORY_COLORS.saturation
+      });
+      
+      // Zastosuj od razu do CSS
+      updateCSSVariables(FACTORY_COLORS.hue, FACTORY_COLORS.saturation);
+      
+      alert('Przywrócono fabryczne kolory Nordic');
+    }
+  };
+
+  // Podgląd zmian (otwórz stronę główną)
+  const previewChanges = () => {
+    // Otwórz nową kartę z dashboard aby zobaczyć zmiany
+    window.open('/admin/dashboard', '_blank');
+    alert('Otwarto podgląd w nowej karcie');
+  };
+
+  // Zapisz ustawienia kolorów do bazy
+  const saveColorSettings = async () => {
+    setLoading(true);
+    
+    try {
+      const response = await fetch('/api/admin/settings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          colorScheme: settings.colors?.colorScheme
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Błąd podczas zapisywania ustawień');
+      }
+
+      await response.json(); // Pobierz odpowiedź ale nie używaj
+      
+      // Zastosuj kolory globalnie
+      const colorScheme = settings.colors?.colorScheme;
+      if (colorScheme) {
+        updateCSSVariables(colorScheme.hue, colorScheme.saturation);
+      }
+      
+      alert('Ustawienia kolorów zostały zapisane i zastosowane globalnie!');
+      
+      // Odśwież stronę po 1 sekundzie aby pokazać globalne zmiany
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+      
+    } catch (error) {
+      console.error('Błąd zapisywania ustawień:', error);
+      alert('Nie udało się zapisać ustawień');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const getSaveButtonText = () => {
@@ -610,13 +717,21 @@ export default function SystemSettings() {
                   }
                 }}
                 onInput={(e) => {
-                  // Aktualizacja kółeczka w czasie rzeczywistym
+                  // Aktualizacja w czasie rzeczywistym podczas przeciągania
                   const target = e.target as HTMLInputElement;
+                  const hue = parseInt(target.value);
+                  
+                  // Aktualizuj kółeczko
                   const thumb = target.nextElementSibling as HTMLElement;
                   if (thumb) {
-                    const hue = parseInt(target.value);
                     thumb.style.left = `${(hue / 360) * 100}%`;
                     thumb.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+                  }
+                  
+                  // Aktualizuj ustawienia w czasie rzeczywistym
+                  if (settings.colors?.colorScheme) {
+                    const newScheme = { ...settings.colors.colorScheme, hue };
+                    updateSettings('colors', 'colorScheme', newScheme);
                   }
                 }}
                 className="w-full h-4 rounded-full appearance-none cursor-pointer"
@@ -663,13 +778,21 @@ export default function SystemSettings() {
                   }
                 }}
                 onInput={(e) => {
-                  // Aktualizacja kółeczka w czasie rzeczywistym
+                  // Aktualizacja w czasie rzeczywistym podczas przeciągania
                   const target = e.target as HTMLInputElement;
+                  const saturation = parseInt(target.value);
+                  
+                  // Aktualizuj kółeczko
                   const thumb = target.nextElementSibling as HTMLElement;
                   if (thumb) {
-                    const saturation = parseInt(target.value);
                     thumb.style.left = `${saturation}%`;
                     thumb.style.backgroundColor = `hsl(${settings.colors?.colorScheme?.hue || 220}, ${saturation}%, 50%)`;
+                  }
+                  
+                  // Aktualizuj ustawienia w czasie rzeczywistym
+                  if (settings.colors?.colorScheme) {
+                    const newScheme = { ...settings.colors.colorScheme, saturation };
+                    updateSettings('colors', 'colorScheme', newScheme);
                   }
                 }}
                 className="w-full h-4 rounded-full appearance-none cursor-pointer"
@@ -752,15 +875,14 @@ export default function SystemSettings() {
             ].map((color) => {
               const hue = settings.colors?.colorScheme?.hue || 220;
               const saturation = settings.colors?.colorScheme?.saturation || 100;
-              const customColor = settings.colors?.customColors?.[color.key as keyof ColorSet];
-              const fallbackColor = ColorUtils.generateHSLColor(hue, saturation, color.darkness);
-              const finalColor = customColor || fallbackColor;
+              // Zawsze używaj aktualnych wartości z sliderów do wygenerowania koloru
+              const currentColor = ColorUtils.generateHSLColor(hue, saturation, color.darkness);
               
               return (
                 <div key={color.name} className="text-center">
                   <div 
-                    className="w-full h-16 rounded-lg border border-gray-200 mb-2"
-                    style={{ backgroundColor: finalColor }}
+                    className="w-full h-16 rounded-lg border border-gray-200 mb-2 transition-colors duration-200"
+                    style={{ backgroundColor: currentColor }}
                   />
                   <div className="text-xs font-medium text-gray-700">{color.name}</div>
                   <div className="text-xs text-gray-500">{color.darkness}%</div>
@@ -786,16 +908,15 @@ export default function SystemSettings() {
             ].map((level) => {
               const hue = settings.colors?.colorScheme?.hue || 220;
               const saturation = settings.colors?.colorScheme?.saturation || 100;
-              const customColor = settings.colors?.customColors?.[level.key as keyof ColorSet];
-              const fallbackColor = ColorUtils.generateHSLColor(hue, saturation, level.value);
-              const finalColor = customColor || fallbackColor;
+              // Zawsze używaj aktualnych wartości z sliderów
+              const currentColor = ColorUtils.generateHSLColor(hue, saturation, level.value);
               
               return (
                 <div key={level.key} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                   <div className="flex items-center gap-3">
                     <div 
-                      className="w-8 h-8 rounded border border-gray-300"
-                      style={{ backgroundColor: finalColor }}
+                      className="w-8 h-8 rounded border border-gray-300 transition-colors duration-200"
+                      style={{ backgroundColor: currentColor }}
                     />
                     <div>
                       <div className="text-sm font-medium text-gray-700">{level.name}</div>
@@ -836,6 +957,58 @@ export default function SystemSettings() {
               </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Przyciski akcji dla kolorów */}
+        <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className="flex flex-wrap gap-3 justify-between items-center">
+            <div className="flex gap-3">
+              <button
+                onClick={resetToFactoryColors}
+                className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg transition-colors flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Resetuj do fabrycznych
+              </button>
+              
+              <button
+                onClick={previewChanges}
+                className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Podgląd na stronie
+              </button>
+            </div>
+            
+            <button
+              onClick={saveColorSettings}
+              disabled={loading}
+              className="px-6 py-2 bg-green-600 hover:bg-green-700 disabled:opacity-50 text-white rounded-lg transition-colors flex items-center gap-2 font-medium"
+            >
+              {loading ? (
+                <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              ) : (
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              )}
+              {loading ? 'Zapisywanie...' : 'Zapisz kolory'}
+            </button>
+          </div>
+          
+          <div className="mt-3 text-sm text-gray-600">
+            <p><strong>Fabryczne:</strong> Domyślne kolory Nordic (niebieski, odcień 210°, nasycenie 80%)</p>
+            <p><strong>Podgląd:</strong> Zobacz zmiany na stronie bez zapisywania</p>
+            <p><strong>Zapisz:</strong> Zastosuj kolory globalnie dla całej aplikacji</p>
           </div>
         </div>
       </div>

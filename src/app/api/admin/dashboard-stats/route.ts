@@ -7,7 +7,7 @@ import Assignment from '@/models/Assignment';
 import { requireAuth } from '@/lib/auth';
 
 // GET - pobierz statystyki dashboard
-export const GET = requireAuth(['admin', 'hr'])(async () => {
+export const GET = requireAuth(['admin', 'hr', 'manager'])(async () => {
   try {
     await dbConnect();
 

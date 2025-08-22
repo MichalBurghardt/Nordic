@@ -26,6 +26,7 @@ export async function GET(request: NextRequest) {
       activeUsers,
       adminCount,
       hrCount,
+      managerCount,
       employeeUserCount,
       clientUserCount,
       
@@ -58,6 +59,7 @@ export async function GET(request: NextRequest) {
       User.countDocuments({ isActive: true }), // z loginem
       User.countDocuments({ role: 'admin', isActive: true }),
       User.countDocuments({ role: 'hr', isActive: true }),
+      User.countDocuments({ role: 'manager', isActive: true }),
       User.countDocuments({ role: 'employee', isActive: true }),
       User.countDocuments({ role: 'client', isActive: true }),
       
@@ -134,6 +136,7 @@ export async function GET(request: NextRequest) {
       usersByRole: {
         admin: adminCount,
         hr: hrCount,
+        manager: managerCount,
         employee: employeeUserCount,
         client: clientUserCount
       },

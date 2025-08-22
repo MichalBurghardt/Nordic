@@ -7,7 +7,7 @@ interface User {
   firstName: string;
   lastName: string;
   email: string;
-  role: 'admin' | 'hr' | 'employee' | 'client';
+  role: 'admin' | 'hr' | 'manager' | 'employee' | 'client';
 }
 
 interface Message {
@@ -25,6 +25,7 @@ interface Message {
 interface UsersByRole {
   admin: User[];
   hr: User[];
+  manager: User[];
   employee: User[];
   client: User[];
 }
@@ -39,7 +40,7 @@ export default function ChatPage() {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [users, setUsers] = useState<User[]>([]);
-  const [usersByRole, setUsersByRole] = useState<UsersByRole>({ admin: [], hr: [], employee: [], client: [] });
+  const [usersByRole, setUsersByRole] = useState<UsersByRole>({ admin: [], hr: [], manager: [], employee: [], client: [] });
   const [roles, setRoles] = useState<RoleInfo[]>([]);
   const [selectedRole, setSelectedRole] = useState<string>('');
   const [selectedUser, setSelectedUser] = useState<string>('');

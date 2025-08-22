@@ -60,6 +60,7 @@ export const GET = requireAuth(['admin'])(async () => {
       totalUsers,
       adminCount,
       hrCount,
+      managerCount,
       employeeCount,
       clientCount,
       totalClients,
@@ -69,6 +70,7 @@ export const GET = requireAuth(['admin'])(async () => {
       User.countDocuments(),
       User.countDocuments({ role: 'admin' }),
       User.countDocuments({ role: 'hr' }),
+      User.countDocuments({ role: 'manager' }),
       User.countDocuments({ role: 'employee' }),
       User.countDocuments({ role: 'client' }),
       Client.countDocuments(),
@@ -83,6 +85,7 @@ export const GET = requireAuth(['admin'])(async () => {
         usersByRole: {
           admin: adminCount,
           hr: hrCount,
+          manager: managerCount,
           employee: employeeCount,
           client: clientCount
         },

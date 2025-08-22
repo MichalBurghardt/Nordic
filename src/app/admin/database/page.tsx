@@ -7,6 +7,7 @@ interface DatabaseStatus {
   usersByRole: {
     admin: number;
     hr: number;
+    manager: number;
     employee: number;
     client: number;
   };
@@ -111,7 +112,7 @@ export default function DatabaseAdminPage() {
                   <ul className="space-y-1">
                     <li>👥 Users: {status.users}</li>
                     <li className="ml-4 text-sm text-gray-600">
-                      └ Admin: {status.usersByRole.admin} | HR: {status.usersByRole.hr} | Employees: {status.usersByRole.employee} | Clients: {status.usersByRole.client}
+                      └ Admin: {status.usersByRole.admin} | HR: {status.usersByRole.hr} | Manager: {status.usersByRole.manager} | Employees: {status.usersByRole.employee} | Clients: {status.usersByRole.client}
                     </li>
                     <li>🏢 Clients: {status.clients}</li>
                     <li>👷 Employees: {status.employees}</li>

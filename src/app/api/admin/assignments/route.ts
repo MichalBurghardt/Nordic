@@ -6,7 +6,7 @@ import { requireAuth, AuthenticatedRequest } from '@/lib/auth';
 import { AuditLogger } from '@/lib/auditLogger';
 
 // GET - pobierz wszystkie einsätze
-export const GET = requireAuth(['admin', 'hr'])(async (request: AuthenticatedRequest) => {
+export const GET = requireAuth(['admin', 'hr', 'manager'])(async (request: AuthenticatedRequest) => {
   try {
     await dbConnect();
     
@@ -89,7 +89,7 @@ export const GET = requireAuth(['admin', 'hr'])(async (request: AuthenticatedReq
 });
 
 // POST - utwórz nowy einsatz
-export const POST = requireAuth(['admin', 'hr'])(async (request: AuthenticatedRequest) => {
+export const POST = requireAuth(['admin', 'hr', 'manager'])(async (request: AuthenticatedRequest) => {
   try {
     await dbConnect();
     

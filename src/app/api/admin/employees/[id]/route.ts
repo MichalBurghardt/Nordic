@@ -13,7 +13,7 @@ export async function GET(
   request: AuthenticatedRequest,
   { params }: RouteParams
 ) {
-  return requireAuth(['admin', 'hr'])(async () => {
+  return requireAuth(['admin', 'hr', 'manager'])(async () => {
     try {
       await dbConnect();
       const { id } = await params;
@@ -48,7 +48,7 @@ export async function PATCH(
   request: AuthenticatedRequest,
   { params }: RouteParams
 ) {
-  return requireAuth(['admin', 'hr'])(async () => {
+  return requireAuth(['admin', 'hr', 'manager'])(async () => {
     try {
       await dbConnect();
       const { id } = await params;

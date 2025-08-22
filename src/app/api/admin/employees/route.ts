@@ -4,7 +4,7 @@ import Employee from '@/models/Employee';
 import { requireAuth, AuthenticatedRequest } from '@/lib/auth';
 
 // GET - pobierz wszystkich pracowników
-export const GET = requireAuth(['admin', 'hr'])(async (request: AuthenticatedRequest) => {
+export const GET = requireAuth(['admin', 'hr', 'manager'])(async (request: AuthenticatedRequest) => {
   try {
     await dbConnect();
     

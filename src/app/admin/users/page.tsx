@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import AdminPageContainer from '@/components/AdminPageContainer';
+import ResponsiveContainer from '@/components/ResponsiveContainer';
+import ResponsiveCard from '@/components/ResponsiveCard';
+import ResponsiveButton from '@/components/ResponsiveButton';
+import ResponsiveInput from '@/components/ResponsiveInput';
 import Link from 'next/link';
 import { 
   Search, 

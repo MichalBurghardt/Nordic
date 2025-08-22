@@ -46,7 +46,7 @@ export async function middleware(request: NextRequest) {
     // Check for admin routes
     if (pathname.startsWith('/admin')) {
       const userRole = payload.role;
-      if (userRole !== 'admin' && userRole !== 'hr') {
+      if (userRole !== 'admin' && userRole !== 'hr' && userRole !== 'manager') {
         return NextResponse.redirect(new URL('/dashboard', request.url));
       }
     }

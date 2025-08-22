@@ -3,6 +3,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { format, startOfWeek, addDays, addWeeks, subWeeks } from 'date-fns';
 import { de } from 'date-fns/locale';
+import ResponsiveContainer from '../../../components/ResponsiveContainer';
+import ResponsiveCard from '../../../components/ResponsiveCard';
+import ResponsiveButton from '../../../components/ResponsiveButton';
 
 interface Schedule {
   _id: string;

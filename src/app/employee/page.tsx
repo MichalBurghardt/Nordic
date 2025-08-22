@@ -1,6 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import ResponsiveContainer from '../../components/ResponsiveContainer';
+import ResponsiveCard from '../../components/ResponsiveCard';
+import ResponsiveButton from '../../components/ResponsiveButton';
 
 interface User {
   name: string;
@@ -16,59 +19,62 @@ export default function EmployeePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       {/* Header */}
-      <header className="bg-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="bg-white dark:bg-gray-800 shadow-lg">
+        <ResponsiveContainer maxWidth="full" padding="md">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <h1 className="text-3xl font-bold text-gray-900">Nordic GmbH</h1>
-              <span className="ml-2 text-sm text-gray-500">Mitarbeiter Portal</span>
+              <h1 className="text-3xl font-bold text-nordic-dark dark:text-nordic-light">Nordic GmbH</h1>
+              <span className="ml-2 text-sm text-gray-500 dark:text-gray-400">Mitarbeiter Portal</span>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="text-gray-600">Willkommen, {user?.name}</span>
-              <button 
+              <span className="hidden sm:block text-gray-600 dark:text-gray-300">Willkommen, {user?.name}</span>
+              <ResponsiveButton 
+                variant="secondary" 
+                size="sm"
                 onClick={() => fetch('/api/auth/logout', { method: 'POST' }).then(() => window.location.href = '/')}
-                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
               >
                 Abmelden
-              </button>
+              </ResponsiveButton>
             </div>
           </div>
-        </div>
+        </ResponsiveContainer>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Mitarbeiter Dashboard</h2>
-          <p className="text-gray-600 mb-8">Hier können Sie Ihre Einsätze und Arbeitszeiten verwalten.</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Meine Einsätze</h3>
-              <p className="text-gray-600 mb-4">Aktuelle und geplante Arbeitseinsätze</p>
-              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                Einsätze anzeigen
-              </button>
-            </div>
+      <main>
+        <ResponsiveContainer maxWidth="2xl" padding="lg">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-nordic-dark dark:text-nordic-light mb-4">Mitarbeiter Dashboard</h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">Hier können Sie Ihre Einsätze und Arbeitszeiten verwalten.</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <ResponsiveCard padding="lg" shadow="lg" hover>
+                <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-4">Meine Einsätze</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Aktuelle und geplante Arbeitseinsätze</p>
+                <ResponsiveButton variant="primary" size="md" fullWidth>
+                  Einsätze anzeigen
+                </ResponsiveButton>
+              </ResponsiveCard>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Arbeitszeiten</h3>
-              <p className="text-gray-600 mb-4">Zeiterfassung und Stundenzettel</p>
-              <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">
-                Zeit erfassen
-              </button>
-            </div>
+              <ResponsiveCard padding="lg" shadow="lg" hover>
+                <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-4">Arbeitszeiten</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Zeiterfassung und Stundenzettel</p>
+                <ResponsiveButton variant="primary" size="md" fullWidth>
+                  Zeit erfassen
+                </ResponsiveButton>
+              </ResponsiveCard>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Mein Profil</h3>
-              <p className="text-gray-600 mb-4">Persönliche Daten und Qualifikationen</p>
-              <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors">
-                Profil bearbeiten
-              </button>
+              <ResponsiveCard padding="lg" shadow="lg" hover>
+                <h3 className="text-lg font-semibold text-nordic-dark dark:text-nordic-light mb-4">Mein Profil</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Persönliche Daten und Qualifikationen</p>
+                <ResponsiveButton variant="primary" size="md" fullWidth>
+                  Profil bearbeiten
+                </ResponsiveButton>
+              </ResponsiveCard>
             </div>
           </div>
-        </div>
+        </ResponsiveContainer>
       </main>
     </div>
   );

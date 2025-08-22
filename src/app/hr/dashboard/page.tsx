@@ -20,7 +20,7 @@ interface User {
   firstName: string;
   lastName: string;
   email: string;
-  role: 'admin' | 'hr' | 'employee' | 'client';
+  role: 'admin' | 'hr' | 'manager' | 'employee' | 'client';
 }
 
 interface HRStats {
